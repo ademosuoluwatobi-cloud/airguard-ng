@@ -17,8 +17,16 @@ import os, json, time, requests, pandas as pd
 from datetime import datetime
 from styles import load_device_data, classify_gas, gas_is_dangerous, RISK_ADVICE
 
-BOT_TOKEN = "8735966522:AAEkM9gnlILy5Qc6ejkAoWBKCxWSyDwHmJ4"
-CHAT_ID   = "6436519383"
+from dotenv import load_dotenv
+load_dotenv(dotenv_path=".env")
+load_dotenv(dotenv_path="key.env")
+
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID", "")
+
+if not BOT_TOKEN or not CHAT_ID:
+    print("ERROR: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not found in key.env")
+    raise SystemExit(1)
 USER_NAME = "Oluwatobi"
 BASE_URL  = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
