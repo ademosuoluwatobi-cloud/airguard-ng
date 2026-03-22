@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AirGuard NG — Nigeria Air Quality Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --brand:#16A34A; --brand-hover:#15803D; --brand-soft:rgba(22,163,74,0.12); --brand-border:rgba(22,163,74,0.28);
+  --risk-good:#16A34A; --risk-moderate:#EAB308; --risk-sensitive:#F97316; --risk-unhealthy:#DC2626; --risk-very:#9333EA; --risk-hazardous:#7E22CE; --risk-nodata:#64748B;
+  --bg:#07110C; --surface:#0F172A; --surface2:#111827; --card:#111827; --card-elevated:#172033;
+  --border:rgba(255,255,255,0.08); --border-strong:rgba(255,255,255,0.14);
+  --text:#F8FAFC; --text-2:#CBD5E1; --text-3:#94A3B8; --text-4:#64748B;
+  --shadow:0 10px 30px rgba(0,0,0,0.28); --shadow-hover:0 16px 40px rgba(0,0,0,0.38);
+  --radius-sm:10px; --radius:14px; --radius-lg:20px; --radius-xl:24px; --radius-pill:999px;
+}
+[data-theme="light"] {
+  --bg:#F8FAFC; --surface:#F1F5F9; --surface2:#FFFFFF; --card:#FFFFFF; --card-elevated:#FFFFFF;
+  --border:#E2E8F0; --border-strong:#CBD5E1; --text:#0F172A; --text-2:#334155; --text-3:#64748B; --text-4:#94A3B8;
+  --shadow:0 8px 24px rgba(15,23,42,0.09); --shadow-hover:0 14px 36px rgba(15,23,42,0.14);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.6;min-height:100vh;transition:background .3s,color .3s;overflow-x:hidden;}
+::-webkit-scrollbar{width:6px;} ::-webkit-scrollbar-track{background:var(--surface);} ::-webkit-scrollbar-thumb{background:var(--border-strong);border-radius:99px;}
+
+/* MODAL */
+#modal-overlay{position:fixed;inset:0;z-index:1000;background:rgba(7,17,12,0.9);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;padding:16px;animation:fadeIn .35s ease;}
+[data-theme="light"] #modal-overlay{background:rgba(248,250,252,0.85);}
+.modal{background:var(--card);border:1px solid var(--border-strong);border-radius:var(--radius-xl);padding:36px 40px;width:100%;max-width:520px;box-shadow:var(--shadow);animation:slideUp .38s cubic-bezier(.16,1,.3,1);}
+@media(max-width:600px){.modal{padding:24px 20px;}}
+.modal-logo{display:flex;align-items:center;gap:10px;margin-bottom:24px;}
+.modal-logo-icon{width:36px;height:36px;background:var(--brand-soft);border:1px solid var(--brand-border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.modal-logo-text{font-family:'Sora',sans-serif;font-size:18px;font-weight:700;color:var(--text);letter-spacing:-.01em;}
+.modal-logo-text span{color:var(--brand);}
+.modal h2{font-family:'Sora',sans-serif;font-size:22px;font-weight:700;color:var(--text);margin-bottom:6px;letter-spacing:-.02em;}
+.modal p.sub{font-size:14px;color:var(--text-3);margin-bottom:28px;line-height:1.6;}
+.form-group{margin-bottom:16px;}
+.form-group label{display:block;font-size:12px;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px;}
+.form-group input,.form-group select{width:100%;height:48px;background:var(--surface);border:1px solid var(--border-strong);border-radius:12px;color:var(--text);font-family:'Inter',sans-serif;font-size:14px;padding:0 16px;outline:none;transition:border-color .2s,box-shadow .2s;appearance:none;-webkit-appearance:none;}
+.form-group input:focus,.form-group select:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(22,163,74,0.14);}
+.form-group select{cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:480px){.form-row{grid-template-columns:1fr;}}
+.btn-primary{width:100%;height:50px;margin-top:8px;background:var(--brand);color:#fff;border:none;border-radius:12px;font-family:'Sora',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s,transform .15s,box-shadow .2s;letter-spacing:-.01em;}
+.btn-primary:hover{background:var(--brand-hover);box-shadow:0 4px 16px rgba(22,163,74,0.32);}
+.btn-primary:active{transform:scale(0.98);}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:200;height:68px;background:rgba(7,17,12,0.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 32px;transition:background .3s;}
+[data-theme="light"] header{background:rgba(248,250,252,0.84);}
+@media(max-width:768px){header{padding:0 16px;}}
+.header-inner{width:100%;max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-icon{width:34px;height:34px;background:var(--brand-soft);border:1px solid var(--brand-border);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;}
+.logo-text{font-family:'Sora',sans-serif;font-size:17px;font-weight:700;color:var(--text);letter-spacing:-.01em;white-space:nowrap;}
+.logo-text span{color:var(--brand);}
+nav{display:flex;align-items:center;gap:4px;}
+@media(max-width:768px){nav{display:none;}}
+nav a{font-size:14px;font-weight:500;color:var(--text-3);text-decoration:none;padding:7px 14px;border-radius:9px;transition:color .2s,background .2s;cursor:pointer;}
+nav a:hover{color:var(--text);background:var(--surface2);}
+nav a.active{color:var(--brand);background:var(--brand-soft);}
+.header-right{display:flex;align-items:center;gap:12px;}
+.user-chip{display:flex;align-items:center;gap:8px;background:var(--surface2);border:1px solid var(--border);border-radius:var(--radius-pill);padding:6px 14px 6px 8px;font-size:13px;font-weight:500;color:var(--text-2);cursor:pointer;}
+.user-chip .dot{width:8px;height:8px;border-radius:50%;background:var(--brand);animation:pulse-dot 2s infinite;}
+.theme-toggle{width:40px;height:40px;background:var(--surface2);border:1px solid var(--border);border-radius:10px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:17px;transition:background .2s,transform .15s;color:var(--text-3);}
+.theme-toggle:hover{background:var(--card-elevated);transform:scale(1.06);}
+
+/* MAIN */
+main{max-width:1280px;margin:0 auto;padding:32px 32px 64px;}
+@media(max-width:768px){main{padding:20px 16px 48px;}}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,rgba(5,46,22,0.85) 0%,rgba(15,23,42,0.9) 100%);border:1px solid var(--brand-border);border-radius:var(--radius-xl);padding:32px 36px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden;}
+[data-theme="light"] .hero{background:linear-gradient(135deg,#F0FDF4 0%,#ECFCCB 100%);border-color:rgba(22,163,74,0.22);}
+.hero::before{content:'';position:absolute;top:-60px;right:-60px;width:260px;height:260px;background:radial-gradient(circle,rgba(22,163,74,0.10) 0%,transparent 70%);pointer-events:none;}
+@media(max-width:768px){.hero{flex-direction:column;padding:24px 20px;gap:20px;}}
+.hero-greeting{font-size:13px;font-weight:600;color:var(--brand);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px;}
+.hero-title{font-family:'Sora',sans-serif;font-size:28px;font-weight:700;color:var(--text);letter-spacing:-.02em;line-height:1.25;margin-bottom:8px;}
+@media(max-width:768px){.hero-title{font-size:22px;}}
+.hero-sub{font-size:14px;color:var(--text-3);line-height:1.6;max-width:440px;}
+.hero-right{flex-shrink:0;text-align:right;}
+@media(max-width:768px){.hero-right{text-align:left;width:100%;}}
+.hero-status-card{background:rgba(22,163,74,0.10);border:1px solid var(--brand-border);border-radius:var(--radius);padding:16px 20px;min-width:200px;}
+.hero-status-label{font-size:11px;font-weight:600;color:var(--brand);text-transform:uppercase;letter-spacing:.07em;margin-bottom:4px;}
+.hero-status-value{font-family:'Sora',sans-serif;font-size:32px;font-weight:800;color:var(--brand);letter-spacing:-.03em;line-height:1;margin-bottom:4px;}
+.hero-status-city{font-size:13px;color:var(--text-3);margin-bottom:10px;}
+.hero-updated{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-4);display:flex;align-items:center;gap:6px;justify-content:flex-end;}
+@media(max-width:768px){.hero-updated{justify-content:flex-start;}}
+.live-dot{width:7px;height:7px;border-radius:50%;background:var(--brand);animation:pulse-dot 2s infinite;flex-shrink:0;}
+
+/* SECTION LABEL */
+.section-label{font-size:11px;font-weight:600;color:var(--text-4);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* CARDS GRID */
+.cards-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:32px;}
+@media(max-width:1100px){.cards-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:720px){.cards-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:440px){.cards-grid{grid-template-columns:1fr;}}
+
+.state-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;overflow:hidden;}
+.state-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--border-strong);}
+.state-card.selected{border-color:var(--brand)!important;box-shadow:0 0 0 1px var(--brand),var(--shadow-hover);}
+.state-card.user-card{border-color:var(--brand-border);background:linear-gradient(135deg,var(--card) 0%,rgba(22,163,74,0.04) 100%);}
+.state-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--radius-lg) var(--radius-lg) 0 0;}
+.card-good::before{background:var(--risk-good);} .card-moderate::before{background:var(--risk-moderate);}
+.card-sensitive::before{background:var(--risk-sensitive);} .card-unhealthy::before{background:var(--risk-unhealthy);}
+.card-very::before{background:var(--risk-very);} .card-hazardous::before{background:var(--risk-hazardous);}
+.card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:14px;}
+.card-state{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:var(--text);letter-spacing:-.01em;line-height:1.3;}
+.card-sensors{font-size:11px;font-weight:500;color:var(--text-4);display:flex;align-items:center;gap:5px;margin-top:2px;}
+.sensor-dot{width:6px;height:6px;border-radius:50%;background:var(--brand);animation:pulse-dot 2.5s infinite;}
+.card-badge{font-size:10px;font-weight:600;padding:3px 9px;border-radius:var(--radius-pill);white-space:nowrap;flex-shrink:0;}
+.card-hrs{font-family:'Sora',sans-serif;font-size:38px;font-weight:800;line-height:1;margin-bottom:4px;letter-spacing:-.04em;}
+.card-hrs-label{font-size:11px;font-weight:500;color:var(--text-4);margin-bottom:12px;}
+.card-divider{height:1px;background:var(--border);margin-bottom:12px;}
+.card-pollutant{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text-3);margin-bottom:4px;}
+.card-risk-text{font-size:12px;font-weight:500;}
+.card-note{font-size:11px;color:var(--text-4);margin-top:8px;line-height:1.5;}
+.user-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;font-weight:600;color:var(--brand);background:var(--brand-soft);border:1px solid var(--brand-border);border-radius:var(--radius-pill);padding:2px 9px;margin-bottom:8px;}
+.view-map-btn{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--brand);background:var(--brand-soft);border:none;border-radius:8px;padding:7px 12px;cursor:pointer;margin-top:12px;transition:background .2s;font-family:'Inter',sans-serif;}
+.view-map-btn:hover{background:rgba(22,163,74,0.2);}
+
+/* TWO COL */
+.two-col{display:grid;grid-template-columns:1.2fr 0.8fr;gap:20px;margin-bottom:32px;}
+@media(max-width:900px){.two-col{grid-template-columns:1fr;}}
+.panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px;overflow:hidden;}
+.panel-title{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px;letter-spacing:-.01em;}
+.panel-sub{font-size:13px;color:var(--text-4);margin-bottom:16px;}
+
+/* MAP */
+.map-container{width:100%;height:380px;background:var(--surface);border-radius:var(--radius);position:relative;overflow:hidden;border:1px solid var(--border);}
+.map-svg{width:100%;height:100%;}
+.map-marker{cursor:pointer;}
+.marker-outer{animation:marker-pulse 2.5s infinite;transform-origin:center;}
+@keyframes marker-pulse{0%,100%{opacity:.5;r:11px;}50%{opacity:.08;r:17px;}}
+.map-legend{position:absolute;bottom:12px;left:12px;background:rgba(17,24,39,0.9);backdrop-filter:blur(8px);border:1px solid var(--border);border-radius:10px;padding:10px 12px;}
+[data-theme="light"] .map-legend{background:rgba(255,255,255,0.92);}
+.legend-item{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--text-3);margin-bottom:5px;}
+.legend-item:last-child{margin-bottom:0;}
+.legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.map-count-badge{position:absolute;top:12px;right:12px;background:rgba(22,163,74,0.15);border:1px solid var(--brand-border);border-radius:20px;padding:5px 12px;font-size:11px;font-weight:600;color:var(--brand);font-family:'JetBrains Mono',monospace;}
+.map-tooltip{position:absolute;background:rgba(17,24,39,0.95);border:1px solid var(--border-strong);border-radius:10px;padding:10px 14px;font-size:12px;pointer-events:none;min-width:160px;display:none;z-index:10;}
+[data-theme="light"] .map-tooltip{background:rgba(255,255,255,0.97);}
+.map-tooltip.visible{display:block;}
+.tt-name{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.tt-row{display:flex;justify-content:space-between;gap:14px;font-size:11px;margin-bottom:2px;}
+.tt-label{color:var(--text-4);}
+.tt-value{font-family:'JetBrains Mono',monospace;color:var(--text-2);}
+
+/* DETAIL PANEL */
+.detail-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:220px;color:var(--text-4);font-size:14px;text-align:center;gap:10px;}
+.detail-empty-icon{font-size:32px;opacity:0.45;}
+.detail-location{display:none;}
+.detail-location.active{display:block;}
+.detail-loc-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;gap:12px;}
+.detail-loc-name{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;color:var(--text);letter-spacing:-.01em;line-height:1.3;}
+.detail-loc-state{font-size:12px;color:var(--text-4);margin-top:3px;}
+.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.metric-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 14px;}
+.metric-label{font-size:10px;font-weight:600;color:var(--text-4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px;}
+.metric-value{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:600;color:var(--text);}
+.metric-unit{font-size:10px;color:var(--text-4);}
+.detail-warning{border-radius:10px;padding:12px 14px;font-size:13px;line-height:1.55;margin-top:14px;}
+
+/* ESP32 SECTION */
+.esp-card{background:var(--card);border:1px solid var(--brand-border);border-radius:var(--radius-lg);padding:22px;margin-bottom:32px;}
+.esp-header{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.esp-icon{width:40px;height:40px;background:var(--brand-soft);border:1px solid var(--brand-border);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.esp-title{font-family:'Sora',sans-serif;font-size:16px;font-weight:700;color:var(--text);}
+.esp-sub{font-size:13px;color:var(--text-4);}
+.esp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+@media(max-width:768px){.esp-grid{grid-template-columns:repeat(2,1fr);}}
+.esp-metric{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;}
+.esp-metric-label{font-size:10px;font-weight:600;color:var(--text-4);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;}
+.esp-metric-value{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;color:var(--text);}
+.esp-metric-unit{font-size:10px;color:var(--text-4);margin-top:2px;}
+.esp-status-row{display:flex;align-items:center;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid var(--border);}
+.esp-status-dot{width:9px;height:9px;border-radius:50%;background:var(--text-4);}
+.esp-status-dot.connected{background:var(--brand);animation:pulse-dot 2s infinite;}
+.esp-status-text{font-size:12px;color:var(--text-4);}
+.setup-steps{margin-top:16px;padding-top:16px;border-top:1px solid var(--border);}
+.setup-step{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px;}
+.setup-step:last-child{border-bottom:none;}
+.step-num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--brand);background:var(--brand-soft);border-radius:50%;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.step-text{color:var(--text-3);line-height:1.6;}
+code{font-family:'JetBrains Mono',monospace;font-size:12px;background:var(--surface);border:1px solid var(--border);border-radius:5px;padding:1px 6px;color:var(--brand);}
+
+/* CHIPS */
+.chip{font-size:12px;font-weight:600;padding:5px 14px;border-radius:var(--radius-pill);border:1px solid var(--border);background:transparent;color:var(--text-3);cursor:pointer;transition:all .18s;font-family:'Inter',sans-serif;}
+.chip.active{background:var(--brand-soft);color:var(--brand);border-color:var(--brand-border);}
+.chip:hover:not(.active){border-color:var(--border-strong);color:var(--text-2);}
+.chart-filters{display:flex;gap:6px;margin-bottom:16px;}
+.chart-area{width:100%;height:200px;position:relative;}
+.chart-svg{width:100%;height:100%;overflow:visible;}
+
+/* HEALTH CARDS */
+.health-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:640px){.health-grid{grid-template-columns:1fr;}}
+.health-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px 20px;transition:border-color .2s,box-shadow .2s;}
+.health-card:hover{border-color:var(--border-strong);box-shadow:var(--shadow);}
+.health-card-header{display:flex;align-items:flex-start;gap:12px;margin-bottom:10px;}
+.health-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+.health-card-title{font-family:'Sora',sans-serif;font-size:14px;font-weight:700;color:var(--text);letter-spacing:-.01em;}
+.health-card-sub{font-size:12px;color:var(--text-4);margin-top:2px;}
+.health-card-body{font-size:13px;color:var(--text-3);line-height:1.65;}
+
+footer{text-align:center;padding:24px 32px;border-top:1px solid var(--border);font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-4);letter-spacing:.02em;}
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 0 0 rgba(22,163,74,.5)}50%{box-shadow:0 0 0 5px rgba(22,163,74,0)}}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.anim-in{animation:fadeInUp .45s cubic-bezier(.16,1,.3,1) forwards;opacity:0;}
+.delay-1{animation-delay:.07s} .delay-2{animation-delay:.14s} .delay-3{animation-delay:.21s} .delay-4{animation-delay:.28s} .delay-5{animation-delay:.35s}
+</style>
+</head>
+<body>
+
+<!-- ONBOARDING MODAL -->
+<div id="modal-overlay">
+  <div class="modal">
+    <div class="modal-logo">
+      <div class="modal-logo-icon">🛡️</div>
+      <span class="modal-logo-text">AirGuard <span>NG</span></span>
+    </div>
+    <h2>Welcome to AirGuard NG</h2>
+    <p class="sub">Set up your profile for personalised air quality insights and condition-aware health alerts across Nigeria.</p>
+    <div class="form-group">
+      <label>Your name</label>
+      <input type="text" id="user-name" placeholder="e.g. Tobi Ademosu"/>
+    </div>
+    <div class="form-group">
+      <label>Health condition</label>
+      <select id="user-condition">
+        <option value="">My condition</option>
+        <option value="Asthma">Asthma</option>
+        <option value="COPD">COPD</option>
+        <option value="Heart Disease">Heart Disease</option>
+        <option value="Diabetes">Diabetes</option>
+        <option value="Hypertension">Hypertension</option>
+        <option value="Pregnancy">Pregnancy</option>
+        <option value="Child Under 12">Child Under 12</option>
+        <option value="None">No condition</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Your state</label>
+        <select id="user-state">
+          <option value="">Select state</option>
+          <option value="Abia">Abia</option>
+          <option value="Adamawa">Adamawa</option>
+          <option value="Akwa Ibom">Akwa Ibom</option>
+          <option value="Anambra">Anambra</option>
+          <option value="Bauchi">Bauchi</option>
+          <option value="Bayelsa">Bayelsa</option>
+          <option value="Benue">Benue</option>
+          <option value="Borno">Borno</option>
+          <option value="Cross River">Cross River</option>
+          <option value="Delta">Delta</option>
+          <option value="Ebonyi">Ebonyi</option>
+          <option value="Edo">Edo</option>
+          <option value="Ekiti">Ekiti</option>
+          <option value="Enugu">Enugu</option>
+          <option value="FCT Abuja">FCT Abuja</option>
+          <option value="Gombe">Gombe</option>
+          <option value="Imo">Imo</option>
+          <option value="Jigawa">Jigawa</option>
+          <option value="Kaduna">Kaduna</option>
+          <option value="Kano">Kano</option>
+          <option value="Katsina">Katsina</option>
+          <option value="Kebbi">Kebbi</option>
+          <option value="Kogi">Kogi</option>
+          <option value="Kwara">Kwara</option>
+          <option value="Lagos">Lagos</option>
+          <option value="Nasarawa">Nasarawa</option>
+          <option value="Niger">Niger</option>
+          <option value="Ogun">Ogun</option>
+          <option value="Ondo">Ondo</option>
+          <option value="Osun">Osun</option>
+          <option value="Oyo">Oyo</option>
+          <option value="Plateau">Plateau</option>
+          <option value="Rivers">Rivers</option>
+          <option value="Sokoto">Sokoto</option>
+          <option value="Taraba">Taraba</option>
+          <option value="Yobe">Yobe</option>
+          <option value="Zamfara">Zamfara</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>City / LGA</label>
+        <input type="text" id="user-city" placeholder="e.g. Yaba"/>
+      </div>
+    </div>
+    <button class="btn-primary" onclick="startDashboard()">Continue to dashboard →</button>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#">
+      <div class="logo-icon">🛡️</div>
+      <span class="logo-text">AirGuard <span>NG</span></span>
+    </a>
+    <nav>
+      <a class="active" onclick="scrollTo(0,0)">Overview</a>
+      <a onclick="document.getElementById('map-section').scrollIntoView({behavior:'smooth'})">Map</a>
+      <a onclick="document.getElementById('esp-section').scrollIntoView({behavior:'smooth'})">Device</a>
+      <a onclick="document.getElementById('trends-section').scrollIntoView({behavior:'smooth'})">Trends</a>
+      <a onclick="document.getElementById('health-section').scrollIntoView({behavior:'smooth'})">Health</a>
+    </nav>
+    <div class="header-right">
+      <div class="user-chip" id="user-chip">
+        <div class="dot"></div>
+        <span id="chip-name">Setting up…</span>
+      </div>
+      <button class="theme-toggle" id="theme-btn" onclick="toggleTheme()" title="Toggle theme">🌙</button>
+    </div>
+  </div>
+</header>
+
+<!-- MAIN -->
+<main id="main-content" style="display:none">
+
+  <!-- HERO -->
+  <div class="hero anim-in">
+    <div class="hero-left">
+      <p class="hero-greeting" id="hero-greeting">Good morning</p>
+      <h1 class="hero-title" id="hero-title">Nigeria Air Quality Overview</h1>
+      <p class="hero-sub" id="hero-sub">Loading your personalised health summary…</p>
+    </div>
+    <div class="hero-right">
+      <div class="hero-status-card">
+        <p class="hero-status-label">Your location risk</p>
+        <p class="hero-status-value" id="hero-hrs">—</p>
+        <p class="hero-status-city" id="hero-city-label">—</p>
+        <div class="hero-updated">
+          <div class="live-dot"></div>
+          <span id="hero-updated">Updated just now</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATE CARDS -->
+  <p class="section-label anim-in delay-1">Active monitoring locations</p>
+  <div class="cards-grid">
+    <!-- Lagos -->
+    <div class="state-card card-sensitive anim-in delay-1" onclick="selectCard(this)">
+      <div class="card-header">
+        <div><p class="card-state">Lagos State</p><p class="card-sensors"><span class="sensor-dot"></span>18 active sensors</p></div>
+        <span class="card-badge" style="background:rgba(249,115,22,0.12);color:#F97316">Sensitive</span>
+      </div>
+      <p class="card-hrs" style="color:#F97316">46.2</p>
+      <p class="card-hrs-label">Health Risk Score</p>
+      <div class="card-divider"></div>
+      <p class="card-pollutant">PM2.5 · 41.6 µg/m³</p>
+      <p class="card-risk-text" style="color:#F97316">Unhealthy for Sensitive Groups</p>
+      <p class="card-note">Asthma & heart patients should limit outdoor activity today.</p>
+    </div>
+    <!-- Ogun -->
+    <div class="state-card card-moderate anim-in delay-2" onclick="selectCard(this)">
+      <div class="card-header">
+        <div><p class="card-state">Ogun State</p><p class="card-sensors"><span class="sensor-dot"></span>3 active sensors</p></div>
+        <span class="card-badge" style="background:rgba(234,179,8,0.12);color:#EAB308">Moderate</span>
+      </div>
+      <p class="card-hrs" style="color:#EAB308">32.1</p>
+      <p class="card-hrs-label">Health Risk Score</p>
+      <div class="card-divider"></div>
+      <p class="card-pollutant">PM2.5 · 26.2 µg/m³</p>
+      <p class="card-risk-text" style="color:#EAB308">Moderate — Acceptable</p>
+      <p class="card-note">Generally safe. Sensitive individuals may reduce strenuous activity.</p>
+    </div>
+    <!-- Cross River -->
+    <div class="state-card card-sensitive anim-in delay-3" onclick="selectCard(this)">
+      <div class="card-header">
+        <div><p class="card-state">Cross River State</p><p class="card-sensors"><span class="sensor-dot"></span>2 active sensors</p></div>
+        <span class="card-badge" style="background:rgba(249,115,22,0.12);color:#F97316">Sensitive</span>
+      </div>
+      <p class="card-hrs" style="color:#F97316">44.0</p>
+      <p class="card-hrs-label">Health Risk Score</p>
+      <div class="card-divider"></div>
+      <p class="card-pollutant">PM2.5 · 39.4 µg/m³</p>
+      <p class="card-risk-text" style="color:#F97316">Unhealthy for Sensitive Groups</p>
+      <p class="card-note">Chronic disease patients should avoid prolonged outdoor time.</p>
+    </div>
+    <!-- FCT Abuja -->
+    <div class="state-card card-unhealthy anim-in delay-4" onclick="selectCard(this)">
+      <div class="card-header">
+        <div><p class="card-state">FCT Abuja</p><p class="card-sensors"><span class="sensor-dot"></span>3 active sensors</p></div>
+        <span class="card-badge" style="background:rgba(220,38,38,0.12);color:#DC2626">Unhealthy</span>
+      </div>
+      <p class="card-hrs" style="color:#DC2626">61.7</p>
+      <p class="card-hrs-label">Health Risk Score</p>
+      <div class="card-divider"></div>
+      <p class="card-pollutant">PM2.5 · 63.4 µg/m³</p>
+      <p class="card-risk-text" style="color:#DC2626">Unhealthy — Everyone at risk</p>
+      <p class="card-note">Limit all outdoor activity. Keep windows closed today.</p>
+    </div>
+    <!-- USER CARD -->
+    <div class="state-card user-card anim-in delay-5" id="user-location-card">
+      <div class="user-badge">📍 Your Location</div>
+      <p class="card-state" id="ul-state-city" style="font-size:15px;margin-bottom:4px">Not set yet</p>
+      <p style="font-size:12px;color:var(--text-4);margin-bottom:14px" id="ul-condition">Complete your profile above</p>
+      <p class="card-hrs" id="ul-hrs" style="color:var(--brand)">—</p>
+      <p class="card-hrs-label">Your area HRS</p>
+      <div class="card-divider"></div>
+      <p class="card-note" id="ul-advice">Your personalised health advice will appear here once your profile is set.</p>
+      <button class="view-map-btn" onclick="document.getElementById('map-section').scrollIntoView({behavior:'smooth'})">🗺️ View on map</button>
+    </div>
+  </div>
+
+  <!-- MAP + DETAIL -->
+  <div id="map-section" class="two-col">
+    <div class="panel">
+      <p class="panel-title">Sensor Network Map</p>
+      <p class="panel-sub">All 22 active sensor locations — hover for details, click to inspect</p>
+      <div class="map-container" id="map-container">
+        <!-- Tooltip -->
+        <div class="map-tooltip" id="map-tooltip">
+          <p class="tt-name" id="tt-name">—</p>
+          <div class="tt-row"><span class="tt-label">State</span><span class="tt-value" id="tt-state">—</span></div>
+          <div class="tt-row"><span class="tt-label">PM2.5</span><span class="tt-value" id="tt-pm25">—</span></div>
+          <div class="tt-row"><span class="tt-label">Risk</span><span class="tt-value" id="tt-risk">—</span></div>
+        </div>
+        <div class="map-count-badge">22 sensors live</div>
+        <svg id="map-svg" class="map-svg" viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" style="cursor:default">
+          <!-- Nigeria shape -->
+          <path d="M148,82 L178,71 L228,64 L290,58 L352,53 L422,59 L482,70 L522,86 L546,112 L556,146 L552,182 L542,212 L547,247 L536,282 L512,312 L492,342 L462,362 L432,372 L402,367 L376,352 L350,332 L320,321 L300,336 L276,347 L250,342 L225,326 L205,306 L190,281 L175,256 L160,226 L145,196 L134,166 L129,136 L139,109 Z"
+            fill="rgba(22,163,74,0.06)" stroke="rgba(22,163,74,0.3)" stroke-width="1.5" stroke-linejoin="round"/>
+          <!-- Neighbor countries faint -->
+          <text x="80" y="160" font-family="Inter" font-size="10" fill="rgba(148,163,184,0.2)" font-style="italic">Benin</text>
+          <text x="555" y="200" font-family="Inter" font-size="10" fill="rgba(148,163,184,0.2)" font-style="italic">Cameroon</text>
+          <text x="300" y="40" font-family="Inter" font-size="10" fill="rgba(148,163,184,0.2)" font-style="italic">Niger</text>
+        </svg>
+        <!-- Legend -->
+        <div class="map-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:#16A34A"></div>Good</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#EAB308"></div>Moderate</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#F97316"></div>Sensitive Groups</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#DC2626"></div>Unhealthy</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detail Panel -->
+    <div class="panel">
+      <p class="panel-title">Location Details</p>
+      <p class="panel-sub">Click any sensor marker for readings</p>
+      <div class="detail-empty" id="detail-empty">
+        <div class="detail-empty-icon">🛰️</div>
+        <span>Click any sensor on the map<br>to view its latest readings</span>
+      </div>
+      <div class="detail-location" id="detail-panel">
+        <div class="detail-loc-header">
+          <div>
+            <p class="detail-loc-name" id="d-name">—</p>
+            <p class="detail-loc-state" id="d-state">—</p>
+          </div>
+          <span class="card-badge" id="d-badge" style="font-size:11px;padding:5px 12px">—</span>
+        </div>
+        <div class="metric-grid">
+          <div class="metric-item"><p class="metric-label">PM2.5</p><p class="metric-value" id="d-pm25">—<span class="metric-unit"> µg/m³</span></p></div>
+          <div class="metric-item"><p class="metric-label">Temperature</p><p class="metric-value" id="d-temp">—<span class="metric-unit"> °C</span></p></div>
+          <div class="metric-item"><p class="metric-label">Humidity</p><p class="metric-value" id="d-hum">—<span class="metric-unit"> %</span></p></div>
+          <div class="metric-item"><p class="metric-label">WHO Limit</p><p class="metric-value">15<span class="metric-unit"> µg/m³</span></p></div>
+        </div>
+        <div class="detail-warning" id="d-warning">
+          <p style="font-size:12px;font-weight:600;margin-bottom:4px" id="d-risk-label">—</p>
+          <p style="font-size:13px;color:var(--text-3)" id="d-advice">—</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ESP32 DEVICE SECTION -->
+  <div id="esp-section" class="esp-card">
+    <div class="esp-header">
+      <div class="esp-icon">🔩</div>
+      <div>
+        <p class="esp-title">AirGuard Hardware Device — ESP32 + MQ2 + DHT11</p>
+        <p class="esp-sub">Indoor air quality monitoring · Same WiFi network · Live data feed</p>
+      </div>
+    </div>
+
+    <div class="esp-grid">
+      <div class="esp-metric">
+        <p class="esp-metric-label">Gas Level (PPM)</p>
+        <p class="esp-metric-value" id="esp-ppm">—</p>
+        <p class="esp-metric-unit">MQ2 sensor</p>
+      </div>
+      <div class="esp-metric">
+        <p class="esp-metric-label">Temperature</p>
+        <p class="esp-metric-value" id="esp-temp">—</p>
+        <p class="esp-metric-unit">DHT11 · °C</p>
+      </div>
+      <div class="esp-metric">
+        <p class="esp-metric-label">Humidity</p>
+        <p class="esp-metric-value" id="esp-hum">—</p>
+        <p class="esp-metric-unit">DHT11 · %</p>
+      </div>
+      <div class="esp-metric">
+        <p class="esp-metric-label">Indoor Risk</p>
+        <p class="esp-metric-value" id="esp-risk" style="font-size:14px;color:var(--text-4)">Waiting…</p>
+        <p class="esp-metric-unit">Based on MQ2 reading</p>
+      </div>
+    </div>
+
+    <div class="esp-status-row">
+      <div class="esp-status-dot" id="esp-dot"></div>
+      <span class="esp-status-text" id="esp-status-text">Device not yet connected. Follow setup steps below.</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-4);margin-left:auto" id="esp-last-seen">—</span>
+    </div>
+
+    <div class="setup-steps">
+      <p style="font-size:12px;font-weight:600;color:var(--text-3);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em">Setup Instructions</p>
+      <div class="setup-step">
+        <div class="step-num">1</div>
+        <div class="step-text">Wire your ESP32: MQ2 analog out → GPIO34, DHT11 data → GPIO4, both sensors to 3.3V and GND.</div>
+      </div>
+      <div class="setup-step">
+        <div class="step-num">2</div>
+        <div class="step-text">Run <code>pip install flask</code> then start the receiver: <code>python esp32_receiver.py</code> on your laptop.</div>
+      </div>
+      <div class="setup-step">
+        <div class="step-num">3</div>
+        <div class="step-text">Find your laptop IP: run <code>ipconfig</code> in terminal, look for IPv4 Address (e.g. 192.168.8.101).</div>
+      </div>
+      <div class="setup-step">
+        <div class="step-num">4</div>
+        <div class="step-text">In the Arduino code (<code>airguard_device.ino</code>), paste your WiFi name, password, and laptop IP into the config section at the top.</div>
+      </div>
+      <div class="setup-step">
+        <div class="step-num">5</div>
+        <div class="step-text">Upload the code to your ESP32. Both devices must be on the <strong style="color:var(--text-2)">same WiFi network</strong>. The dashboard auto-refreshes every 30 seconds.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRENDS -->
+  <div id="trends-section" class="panel" style="margin-bottom:32px">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-bottom:4px">
+      <div><p class="panel-title">PM2.5 Trends</p><p class="panel-sub">24-hour rolling average across monitored cities</p></div>
+      <div class="chart-filters">
+        <button class="chip active">24h</button>
+        <button class="chip">7d</button>
+        <button class="chip">30d</button>
+      </div>
+    </div>
+    <div class="chart-area">
+      <svg class="chart-svg" viewBox="0 0 680 180" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="gl" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#F97316" stop-opacity=".22"/><stop offset="100%" stop-color="#F97316" stop-opacity="0"/></linearGradient>
+          <linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#DC2626" stop-opacity=".18"/><stop offset="100%" stop-color="#DC2626" stop-opacity="0"/></linearGradient>
+          <linearGradient id="gc" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0EA5E9" stop-opacity=".18"/><stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/></linearGradient>
+        </defs>
+        <line x1="0" y1="36" x2="680" y2="36" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <line x1="0" y1="72" x2="680" y2="72" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <line x1="0" y1="108" x2="680" y2="108" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+        <line x1="0" y1="130" x2="680" y2="130" stroke="#16A34A" stroke-width="1" stroke-dasharray="5,4" opacity=".55"/>
+        <text x="8" y="126" font-family="JetBrains Mono" font-size="9" fill="#16A34A" opacity=".7">WHO 15</text>
+        <path d="M0,110 L57,108 L113,112 L170,95 L226,88 L283,90 L340,78 L396,80 L453,68 L510,65 L566,68 L623,68 L680,62" fill="url(#gl)" stroke="none" opacity=".4"/>
+        <path d="M0,110 L57,108 L113,112 L170,95 L226,88 L283,90 L340,78 L396,80 L453,68 L510,65 L566,68 L623,68 L680,62" fill="none" stroke="#F97316" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M0,75 L57,72 L113,74 L170,55 L226,50 L283,48 L340,38 L396,35 L453,32 L510,24 L566,25 L623,26 L680,20" fill="url(#ga)" stroke="none" opacity=".3"/>
+        <path d="M0,75 L57,72 L113,74 L170,55 L226,50 L283,48 L340,38 L396,35 L453,32 L510,24 L566,25 L623,26 L680,20" fill="none" stroke="#DC2626" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M0,125 L57,122 L113,124 L170,112 L226,108 L283,110 L340,99 L396,98 L453,96 L510,88 L566,88 L623,86 L680,78" fill="url(#gc)" stroke="none" opacity=".3"/>
+        <path d="M0,125 L57,122 L113,124 L170,112 L226,108 L283,110 L340,99 L396,98 L453,96 L510,88 L566,88 L623,86 L680,78" fill="none" stroke="#0EA5E9" stroke-width="2" stroke-linejoin="round"/>
+        <text x="0" y="175" font-family="JetBrains Mono" font-size="9" fill="rgba(148,163,184,0.6)">00:00</text>
+        <text x="160" y="175" font-family="JetBrains Mono" font-size="9" fill="rgba(148,163,184,0.6)">06:00</text>
+        <text x="325" y="175" font-family="JetBrains Mono" font-size="9" fill="rgba(148,163,184,0.6)">12:00</text>
+        <text x="490" y="175" font-family="JetBrains Mono" font-size="9" fill="rgba(148,163,184,0.6)">18:00</text>
+        <text x="638" y="175" font-family="JetBrains Mono" font-size="9" fill="rgba(148,163,184,0.6)">Now</text>
+      </svg>
+    </div>
+    <div style="display:flex;gap:20px;margin-top:12px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text-3)"><div style="width:24px;height:2px;background:#F97316;border-radius:99px"></div>Lagos</div>
+      <div style="display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text-3)"><div style="width:24px;height:2px;background:#DC2626;border-radius:99px"></div>Abuja</div>
+      <div style="display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text-3)"><div style="width:24px;height:2px;background:#0EA5E9;border-radius:99px"></div>Cross River</div>
+      <div style="display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text-3)"><div style="width:14px;height:0;border-top:1.5px dashed #16A34A"></div>WHO Safe Limit</div>
+    </div>
+  </div>
+
+  <!-- HEALTH -->
+  <div id="health-section" style="margin-bottom:32px">
+    <p class="section-label">Personalised health recommendations</p>
+    <div class="health-grid">
+      <div class="health-card">
+        <div class="health-card-header"><div class="health-icon" style="background:rgba(249,115,22,0.12)">⏰</div><div><p class="health-card-title">Best time to go outside</p><p class="health-card-sub">Based on today's pollution pattern</p></div></div>
+        <p class="health-card-body">The safest outdoor window in Lagos today is <strong style="color:var(--text-2)">before 7:00 AM</strong> or <strong style="color:var(--text-2)">after 7:00 PM</strong> when traffic-related PM2.5 is lowest.</p>
+      </div>
+      <div class="health-card">
+        <div class="health-card-header"><div class="health-icon" style="background:rgba(220,38,38,0.12)">🫁</div><div><p class="health-card-title">Sensitive groups alert</p><p class="health-card-sub">Condition-specific guidance</p></div></div>
+        <p class="health-card-body" id="sensitive-advice">Set your health condition during onboarding to receive condition-specific daily guidance here.</p>
+      </div>
+      <div class="health-card">
+        <div class="health-card-header"><div class="health-icon" style="background:rgba(22,163,74,0.12)">💊</div><div><p class="health-card-title">Medication reminder</p><p class="health-card-sub">Pre-emptive dosing guidance</p></div></div>
+        <p class="health-card-body">If you must go outside in Lagos today, take your prescribed medication <strong style="color:var(--text-2)">30 minutes before</strong> outdoor exposure rather than waiting for symptoms.</p>
+      </div>
+      <div class="health-card">
+        <div class="health-card-header"><div class="health-icon" style="background:rgba(14,165,233,0.12)">🏥</div><div><p class="health-card-title">Weekly exposure summary</p><p class="health-card-sub">For your next doctor visit</p></div></div>
+        <p class="health-card-body">Your weekly average PM2.5 exposure is <strong style="color:#F97316">41.6 µg/m³</strong> — approximately <strong style="color:#F97316">2.8× the WHO safe limit</strong>. Share this with your doctor.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div id="about-section" class="panel">
+    <p class="panel-title">About AirGuard NG</p>
+    <p style="font-size:14px;color:var(--text-3);line-height:1.75;max-width:720px;margin-bottom:20px">Nigeria has one doctor for every 5,000 patients. AirGuard NG gives every one of those patients the environmental health intelligence their doctor never has time to provide. Built on the <strong style="color:var(--text-2)">3MTT NextGen Data Science Track</strong>, <strong style="color:var(--text-2)">Environment Pillar</strong>, aligned with Airtel Nigeria's strategic focus.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <span class="chip active" style="cursor:default">Python 3.14</span>
+      <span class="chip active" style="cursor:default">Streamlit</span>
+      <span class="chip active" style="cursor:default">OpenAQ v3</span>
+      <span class="chip active" style="cursor:default">Pandas</span>
+      <span class="chip active" style="cursor:default">Plotly</span>
+      <span class="chip active" style="cursor:default">Folium</span>
+      <span class="chip active" style="cursor:default">ESP32 + MQ2 + DHT11</span>
+      <span class="chip active" style="cursor:default">WHO 2021 Guidelines</span>
+      <span class="chip active" style="cursor:default">Flask (device receiver)</span>
+    </div>
+  </div>
+</main>
+
+<footer>AirGuard NG · OpenAQ v3 · WHO 2021 Air Quality Guidelines · 3MTT NextGen Data Science · Environment Pillar · Nigeria 2026</footer>
+
+<script>
+// ── ALL 22 SENSOR LOCATIONS WITH REAL COORDINATES ──
+// Nigeria bounds: lat 4.0–14.0, lon 2.5–15.0
+// SVG: x = (lon-2.5)/12.5*660+20,  y = (14.0-lat)/10.0*400+10
+const SENSORS = [
+  {name:"Ogada, Obubra LGA",       state:"Cross River", lat:6.066, lon:8.340, pm25:8.2,   temp:"27.3", hum:"65", risk:"Good"},
+  {name:"Calabar Station",          state:"Cross River", lat:5.025, lon:8.348, pm25:39.4,  temp:"31.0", hum:"72", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Univ. of Lagos / Makoko",  state:"Lagos",       lat:6.518, lon:3.386, pm25:41.6,  temp:"30.2", hum:"68", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Sagamu Road - Ikorodu",    state:"Lagos",       lat:6.635, lon:3.516, pm25:38.9,  temp:"29.8", hum:"70", risk:"Unhealthy for Sensitive Groups"},
+  {name:"M.K.O Abiola Gardens",     state:"Lagos",       lat:6.621, lon:3.362, pm25:44.1,  temp:"31.5", hum:"66", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Shagisha - Magodo",        state:"Lagos",       lat:6.614, lon:3.375, pm25:42.7,  temp:"30.8", hum:"67", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Osborne - Ikoyi",          state:"Lagos",       lat:6.458, lon:3.423, pm25:37.2,  temp:"30.1", hum:"71", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Dolphin Estate",           state:"Lagos",       lat:6.458, lon:3.416, pm25:36.8,  temp:"30.0", hum:"71", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Ketu - Lagos",             state:"Lagos",       lat:6.597, lon:3.389, pm25:43.5,  temp:"31.2", hum:"66", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Arepo - Ogun State",       state:"Ogun",        lat:6.697, lon:3.425, pm25:26.2,  temp:"29.8", hum:"68", risk:"Moderate"},
+  {name:"Ikorodu Bus Terminal",     state:"Lagos",       lat:6.621, lon:3.503, pm25:40.1,  temp:"30.5", hum:"67", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Oshodi Bus Terminal 3",    state:"Lagos",       lat:6.557, lon:3.352, pm25:45.8,  temp:"32.1", hum:"64", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Ifako-Ijaiye Terminal",    state:"Lagos",       lat:6.631, lon:3.325, pm25:41.2,  temp:"30.9", hum:"65", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Agege Redline Station",    state:"Lagos",       lat:6.621, lon:3.326, pm25:43.9,  temp:"31.4", hum:"64", risk:"Unhealthy for Sensitive Groups"},
+  {name:"MMIA Ewu Terminal",        state:"Lagos",       lat:6.556, lon:3.324, pm25:39.7,  temp:"30.3", hum:"66", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Lawanson QBC",             state:"Lagos",       lat:6.512, lon:3.348, pm25:42.3,  temp:"31.0", hum:"65", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Marina Interchange",       state:"Lagos",       lat:6.446, lon:3.395, pm25:38.5,  temp:"30.2", hum:"72", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Mile 2 Interchange",       state:"Lagos",       lat:6.438, lon:3.263, pm25:46.1,  temp:"31.8", hum:"63", risk:"Unhealthy for Sensitive Groups"},
+  {name:"Justrite - Ogolonto",      state:"Ogun",        lat:6.619, lon:3.476, pm25:28.4,  temp:"29.5", hum:"69", risk:"Moderate"},
+  {name:"WEP/DH360, Abuja",         state:"FCT Abuja",   lat:9.076, lon:7.399, pm25:63.4,  temp:"28.5", hum:"55", risk:"Unhealthy"},
+  {name:"Ojuelegba QBC",            state:"Lagos",       lat:6.510, lon:3.363, pm25:41.8,  temp:"31.1", hum:"65", risk:"Unhealthy for Sensitive Groups"},
+  {name:"LAMATA Place",             state:"Lagos",       lat:6.594, lon:3.383, pm25:40.5,  temp:"30.7", hum:"66", risk:"Unhealthy for Sensitive Groups"},
+];
+
+const RISK_COLORS = {
+  "Good":"#16A34A","Moderate":"#EAB308","Unhealthy for Sensitive Groups":"#F97316",
+  "Unhealthy":"#DC2626","Very Unhealthy":"#9333EA","Hazardous":"#7E22CE","No Data":"#64748B"
+};
+const RISK_ADVICE = {
+  "Good":"Air quality is safe. All outdoor activities are appropriate.",
+  "Moderate":"Acceptable for most. Sensitive individuals should consider reducing prolonged outdoor exertion.",
+  "Unhealthy for Sensitive Groups":"Chronic disease patients should avoid outdoor activity. Healthy adults should limit strenuous exercise.",
+  "Unhealthy":"Everyone should reduce outdoor time. Patients must stay indoors with windows closed.",
+  "Very Unhealthy":"Health emergency. Avoid all outdoor activity.",
+  "Hazardous":"Emergency conditions. Do not go outside."
+};
+const CONDITION_ADVICE = {
+  "Asthma":"Asthma patients should avoid outdoor activity between 7–10am and 2–5pm. Always carry your reliever inhaler.",
+  "COPD":"COPD patients should treat any HRS above 30 as dangerous. Stay indoors and keep your nebulizer ready.",
+  "Heart Disease":"Avoid morning traffic hours. Monitor CO exposure from generators in your area.",
+  "Diabetes":"Monitor blood sugar more frequently on high pollution days.",
+  "Hypertension":"High PM2.5 can spike blood pressure. Stay indoors when HRS is above 40.",
+  "Pregnancy":"There is no safe PM2.5 level during pregnancy. Avoid outdoor exposure above WHO limits.",
+  "Child Under 12":"Treat the safe threshold as 50% of the adult WHO limit. Reduce outdoor play on polluted days.",
+  "None":"No specific condition. Exercise general air quality caution.",
+  "":""
+};
+
+function latLonToXY(lat, lon) {
+  const x = (lon - 2.5) / 12.5 * 660 + 20;
+  const y = (14.0 - lat) / 10.0 * 400 + 10;
+  return {x, y};
+}
+
+function buildMap() {
+  const svg = document.getElementById('map-svg');
+  SENSORS.forEach((s, i) => {
+    const {x, y} = latLonToXY(s.lat, s.lon);
+    const color = RISK_COLORS[s.risk] || "#64748B";
+    const g = document.createElementNS("http://www.w3.org/2000/svg","g");
+    g.setAttribute("class","map-marker");
+    g.style.animationDelay = (i * 0.08) + "s";
+
+    // Pulse ring
+    const pulse = document.createElementNS("http://www.w3.org/2000/svg","circle");
+    pulse.setAttribute("cx", x); pulse.setAttribute("cy", y); pulse.setAttribute("r","11");
+    pulse.setAttribute("fill", color + "22"); pulse.setAttribute("class","marker-outer");
+    pulse.style.animationDelay = (i * 0.15) + "s";
+
+    // Main dot
+    const dot = document.createElementNS("http://www.w3.org/2000/svg","circle");
+    dot.setAttribute("cx", x); dot.setAttribute("cy", y); dot.setAttribute("r","6");
+    dot.setAttribute("fill", color); dot.setAttribute("opacity","0.92");
+
+    // Inner white
+    const inner = document.createElementNS("http://www.w3.org/2000/svg","circle");
+    inner.setAttribute("cx", x); inner.setAttribute("cy", y); inner.setAttribute("r","2.5");
+    inner.setAttribute("fill","white"); inner.setAttribute("opacity","0.9");
+
+    g.appendChild(pulse); g.appendChild(dot); g.appendChild(inner);
+
+    // Events
+    g.addEventListener('mouseenter', (e) => showTooltip(e, s));
+    g.addEventListener('mousemove', (e) => moveTooltip(e));
+    g.addEventListener('mouseleave', hideTooltip);
+    g.addEventListener('click', () => showDetail(s));
+
+    svg.appendChild(g);
+  });
+}
+
+function showTooltip(e, s) {
+  const tt = document.getElementById('map-tooltip');
+  document.getElementById('tt-name').textContent = s.name;
+  document.getElementById('tt-state').textContent = s.state;
+  document.getElementById('tt-pm25').textContent = s.pm25 + ' µg/m³';
+  document.getElementById('tt-risk').textContent = s.risk;
+  document.getElementById('tt-risk').style.color = RISK_COLORS[s.risk];
+  tt.classList.add('visible');
+  moveTooltip(e);
+}
+function moveTooltip(e) {
+  const container = document.getElementById('map-container');
+  const rect = container.getBoundingClientRect();
+  const tt = document.getElementById('map-tooltip');
+  let left = e.clientX - rect.left + 14;
+  let top  = e.clientY - rect.top  - 10;
+  if (left + 180 > rect.width) left = e.clientX - rect.left - 180;
+  tt.style.left = left + 'px';
+  tt.style.top  = top  + 'px';
+}
+function hideTooltip() { document.getElementById('map-tooltip').classList.remove('visible'); }
+
+function showDetail(s) {
+  document.getElementById('detail-empty').style.display = 'none';
+  const panel = document.getElementById('detail-panel');
+  panel.classList.add('active');
+  document.getElementById('d-name').textContent = s.name;
+  document.getElementById('d-state').textContent = s.state;
+  document.getElementById('d-pm25').innerHTML = s.pm25 + '<span class="metric-unit"> µg/m³</span>';
+  document.getElementById('d-temp').innerHTML = s.temp + '<span class="metric-unit"> °C</span>';
+  document.getElementById('d-hum').innerHTML  = s.hum  + '<span class="metric-unit"> %</span>';
+  const color = RISK_COLORS[s.risk] || '#64748B';
+  const badge = document.getElementById('d-badge');
+  badge.textContent = s.risk; badge.style.background = color+'22'; badge.style.color = color;
+  document.getElementById('d-risk-label').textContent = s.risk;
+  document.getElementById('d-risk-label').style.color = color;
+  const w = document.getElementById('d-warning');
+  w.style.background = color+'12'; w.style.border = '1px solid '+color+'30';
+  document.getElementById('d-advice').textContent = RISK_ADVICE[s.risk] || '—';
+}
+
+function selectCard(el) {
+  document.querySelectorAll('.state-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+function startDashboard() {
+  const name      = document.getElementById('user-name').value.trim() || 'Friend';
+  const condition = document.getElementById('user-condition').value;
+  const state     = document.getElementById('user-state').value;
+  const city      = document.getElementById('user-city').value.trim();
+
+  document.getElementById('modal-overlay').style.display = 'none';
+  document.getElementById('main-content').style.display = 'block';
+
+  document.getElementById('chip-name').textContent = name.split(' ')[0];
+
+  const hour = new Date().getHours();
+  const greet = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening';
+  document.getElementById('hero-greeting').textContent = greet + ', ' + name.split(' ')[0];
+  document.getElementById('hero-sub').textContent = condition && condition !== 'None' && condition !== ''
+    ? (CONDITION_ADVICE[condition] || '').substring(0, 110) + '…'
+    : 'Monitor real-time air quality across Nigeria and get health-aware guidance for your location.';
+
+  const loc = (state || 'Lagos') + (city ? ' · ' + city : '');
+  document.getElementById('ul-state-city').textContent = loc;
+  document.getElementById('ul-condition').textContent = 'Condition: ' + (condition || 'Not set');
+
+  // Estimate HRS based on state
+  const stateHRS = {
+    "Lagos":46.2,"Ogun":32.1,"Cross River":44.0,"FCT Abuja":61.7
+  };
+  const hrs = stateHRS[state] || stateHRS[state?.split(' ')[0]] || 46.2;
+  const riskLevel = hrs <= 20 ? 'Good' : hrs <= 40 ? 'Moderate' : hrs <= 60 ? 'Unhealthy for Sensitive Groups' : hrs <= 80 ? 'Unhealthy' : 'Very Unhealthy';
+  const c = RISK_COLORS[riskLevel];
+
+  document.getElementById('ul-hrs').textContent = hrs;
+  document.getElementById('ul-hrs').style.color = c;
+  document.getElementById('ul-advice').textContent = CONDITION_ADVICE[condition] || 'Air quality monitoring is active for your area.';
+
+  document.getElementById('hero-hrs').textContent = hrs;
+  document.getElementById('hero-hrs').style.color = c;
+  document.getElementById('hero-city-label').textContent = loc;
+  document.getElementById('hero-updated').textContent = 'Updated ' + new Date().toLocaleTimeString('en-NG',{hour:'2-digit',minute:'2-digit'});
+
+  if (condition && CONDITION_ADVICE[condition]) {
+    document.getElementById('sensitive-advice').textContent = CONDITION_ADVICE[condition];
+  }
+
+  buildMap();
+  startESPPolling();
+}
+
+// ── ESP32 LIVE POLLING ──
+function startESPPolling() {
+  fetchESP();
+  setInterval(fetchESP, 30000); // poll every 30s
+}
+
+async function fetchESP() {
+  try {
+    const res = await fetch('http://localhost:5000/latest', {signal: AbortSignal.timeout(5000)});
+    const data = await res.json();
+    if (data && data.gas_ppm !== undefined) {
+      document.getElementById('esp-ppm').textContent  = data.gas_ppm.toFixed(1);
+      document.getElementById('esp-temp').textContent = data.temperature.toFixed(1);
+      document.getElementById('esp-hum').textContent  = data.humidity.toFixed(1);
+      const rColor = RISK_COLORS[data.risk_level] || '#64748B';
+      document.getElementById('esp-risk').textContent = data.risk_level;
+      document.getElementById('esp-risk').style.color = rColor;
+      document.getElementById('esp-risk').style.fontSize = '13px';
+      document.getElementById('esp-dot').classList.add('connected');
+      document.getElementById('esp-status-text').textContent = 'Device connected — live readings active';
+      document.getElementById('esp-last-seen').textContent = 'Last seen: ' + new Date(data.timestamp).toLocaleTimeString('en-NG');
+    }
+  } catch(e) {
+    // Device not yet connected — silent fail, setup steps remain visible
+  }
+}
+
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  document.getElementById('theme-btn').textContent = isDark ? '🌙' : '☀️';
+}
+
+document.querySelectorAll('.chart-filters .chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    chip.closest('.chart-filters').querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
