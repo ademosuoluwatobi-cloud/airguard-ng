@@ -1,36 +1,6 @@
 {
   "readings": [
     {
-      "gas_raw": 108,
-      "gas_ppm": 0.8,
-      "gas_level": "GOOD",
-      "temperature": 31.8,
-      "humidity": 67.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T22:05:34.215250"
-    },
-    {
-      "gas_raw": 116,
-      "gas_ppm": 0.9,
-      "gas_level": "GOOD",
-      "temperature": 31.8,
-      "humidity": 67.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T22:05:36.217125"
-    },
-    {
-      "gas_raw": 108,
-      "gas_ppm": 0.8,
-      "gas_level": "GOOD",
-      "temperature": 31.8,
-      "humidity": 67.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T22:05:38.219176"
-    },
-    {
       "gas_raw": 107,
       "gas_ppm": 0.8,
       "gas_level": "GOOD",
@@ -4999,6 +4969,36 @@
       "risk_level": "Safe",
       "device_id": "airguard-uno-01",
       "timestamp": "2026-03-23T22:22:13.195622"
+    },
+    {
+      "gas_raw": 155,
+      "gas_ppm": 1.9,
+      "gas_level": "GOOD",
+      "temperature": 31.3,
+      "humidity": 67.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T22:22:15.197420"
+    },
+    {
+      "gas_raw": 145,
+      "gas_ppm": 1.6,
+      "gas_level": "GOOD",
+      "temperature": 31.3,
+      "humidity": 67.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T22:22:17.199210"
+    },
+    {
+      "gas_raw": 142,
+      "gas_ppm": 1.5,
+      "gas_level": "GOOD",
+      "temperature": 31.3,
+      "humidity": 67.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T22:22:19.201156"
     }
   ],
   "latest": {
@@ -5009,6 +5009,6 @@
     "humidity": 67.0,
     "risk_level": "Safe",
     "device_id": "airguard-uno-01",
-    "timestamp": "2026-03-23T22:22:13.195622"
+    "timestamp": "2026-03-23T22:22:19.201156"
   }
 }
