@@ -125,7 +125,6 @@ elif st.session_state.onboarding_done:
 
     # ── DEVICE BAR ───────────────────────────────────────────
     device_status_bar(st, location_label=user_state or "")
-    render_nav_button(st)
 
     # ── GAS DANGER BANNER ────────────────────────────────────
     if device and gas_is_dangerous(int(device.get("gas_raw",0) or 0)):
