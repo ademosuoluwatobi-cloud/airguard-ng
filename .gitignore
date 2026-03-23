@@ -1,16 +1,12 @@
-# Secrets
+# Secrets (STAY IGNORED)
 .env
 key.env
 *.env
-
-# Hardware Data (keep local)
-esp32_data.json
 ngrok.exe
 *.exe
 
 # Python
 __pycache__/
-*.pyc
 
-# Data Snapshots (Optional: ignore if you want them to stay local)
-# raw_data.csv
+# DATA FILES (MAKE SURE THESE ARE NOT IGNORED)
+# Do NOT put esp32_data.json or *.csv here
