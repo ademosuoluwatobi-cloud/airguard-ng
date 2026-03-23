@@ -20,8 +20,11 @@ md(f'<p style="font-size:14px;color:#64748B;margin:0 0 24px">Full sensor breakdo
 
 @st.cache_data(ttl=300)
 def load():
-    df=pd.read_csv("transformed_data.csv"); raw=pd.read_csv("raw_data.csv")
-    raw["timestamp"]=pd.to_datetime(raw["timestamp"]); return df,raw
+    try:
+        df=pd.read_csv("transformed_data.csv"); raw=pd.read_csv("raw_data.csv")
+        raw["timestamp"]=pd.to_datetime(raw["timestamp"]); return df,raw
+    except:
+        return pd.DataFrame(columns=["city","hrs","risk_level","value","lat","lon"]), pd.DataFrame(columns=["city","location_name","parameter","value","timestamp","lat","lon"])
 df,raw=load()
 device,device_hist=load_device_data()
 

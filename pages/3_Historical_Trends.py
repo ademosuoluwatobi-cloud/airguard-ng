@@ -18,7 +18,10 @@ md('<p style="font-size:14px;color:#64748B;margin:0 0 24px">Analyse pollution pa
 
 @st.cache_data(ttl=300)
 def load():
-    raw=pd.read_csv("raw_data.csv"); raw["timestamp"]=pd.to_datetime(raw["timestamp"]); return raw
+    try:
+        raw=pd.read_csv("raw_data.csv"); raw["timestamp"]=pd.to_datetime(raw["timestamp"]); return raw
+    except:
+        return pd.DataFrame(columns=["city","location_name","parameter","value","timestamp","lat","lon"])
 raw=load()
 device,device_hist=load_device_data()
 
