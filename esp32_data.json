@@ -1,36 +1,6 @@
 {
   "readings": [
     {
-      "gas_raw": 142,
-      "gas_ppm": 1.5,
-      "gas_level": "GOOD",
-      "temperature": 31.3,
-      "humidity": 67.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T22:48:03.447938"
-    },
-    {
-      "gas_raw": 143,
-      "gas_ppm": 1.6,
-      "gas_level": "GOOD",
-      "temperature": 31.3,
-      "humidity": 67.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T22:48:05.435340"
-    },
-    {
-      "gas_raw": 149,
-      "gas_ppm": 1.7,
-      "gas_level": "GOOD",
-      "temperature": 31.3,
-      "humidity": 67.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T22:48:07.437472"
-    },
-    {
       "gas_raw": 143,
       "gas_ppm": 1.6,
       "gas_level": "GOOD",
@@ -4999,16 +4969,46 @@
       "risk_level": "Safe",
       "device_id": "airguard-uno-01",
       "timestamp": "2026-03-23T23:04:42.424948"
+    },
+    {
+      "gas_raw": 127,
+      "gas_ppm": 1.2,
+      "gas_level": "GOOD",
+      "temperature": 31.3,
+      "humidity": 67.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T23:04:44.426894"
+    },
+    {
+      "gas_raw": 126,
+      "gas_ppm": 1.1,
+      "gas_level": "GOOD",
+      "temperature": 31.3,
+      "humidity": 67.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T23:04:46.428912"
+    },
+    {
+      "gas_raw": 132,
+      "gas_ppm": 1.3,
+      "gas_level": "GOOD",
+      "temperature": 31.3,
+      "humidity": 67.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T23:04:48.430486"
     }
   ],
   "latest": {
-    "gas_raw": 133,
+    "gas_raw": 132,
     "gas_ppm": 1.3,
     "gas_level": "GOOD",
     "temperature": 31.3,
     "humidity": 67.0,
     "risk_level": "Safe",
     "device_id": "airguard-uno-01",
-    "timestamp": "2026-03-23T23:04:42.424948"
+    "timestamp": "2026-03-23T23:04:48.430486"
   }
 }
