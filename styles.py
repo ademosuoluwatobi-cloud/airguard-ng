@@ -10,9 +10,44 @@ html,body,[class*="css"],.stApp{font-family:'Inter',sans-serif!important;backgro
 .stApp{background:#07110C!important;}
 .block-container{padding:2rem 2.5rem 4rem!important;max-width:1280px!important;}
 #MainMenu,footer{visibility:hidden!important;}
-[data-testid="stHeader"]{background:transparent!important;}
 [data-testid="stToolbar"]{display:none!important;}
 [data-testid="stDecoration"]{display:none!important;}
+
+/* Keep header visible but make it dark so hamburger always shows */
+[data-testid="stHeader"]{
+    background:#07110C!important;
+    border-bottom:1px solid rgba(255,255,255,0.05)!important;
+    height:3.5rem!important;
+}
+
+/* Style the sidebar toggle button — always visible, always green */
+[data-testid="stHeader"] button,
+[data-testid="collapsedControl"],
+button[kind="header"] {
+    background:rgba(22,163,74,0.12)!important;
+    border:1px solid rgba(22,163,74,0.30)!important;
+    border-radius:10px!important;
+    color:#16A34A!important;
+    position:fixed!important;
+    top:10px!important;
+    left:12px!important;
+    z-index:99999!important;
+    width:40px!important;
+    height:40px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    cursor:pointer!important;
+}
+/* Make the hamburger SVG icon green */
+[data-testid="stHeader"] button svg,
+[data-testid="collapsedControl"] svg {
+    fill:#16A34A!important;
+    color:#16A34A!important;
+    stroke:#16A34A!important;
+}
+
+/* Sidebar styles */
 [data-testid="stSidebar"]{background:#0F172A!important;border-right:1px solid rgba(255,255,255,0.07)!important;}
 [data-testid="stSidebarNavLink"]{color:#64748B!important;border-radius:8px!important;font-family:'Inter',sans-serif!important;font-size:14px!important;font-weight:500!important;padding:8px 12px!important;}
 [data-testid="stSidebarNavLink"]:hover{background:rgba(255,255,255,0.05)!important;color:#F8FAFC!important;}
@@ -28,7 +63,9 @@ html,body,[class*="css"],.stApp{font-family:'Inter',sans-serif!important;backgro
 .ag-live{display:inline-block;width:8px;height:8px;border-radius:50%;background:#16A34A;margin-right:6px;vertical-align:middle;animation:ag-pulse 2s infinite;}
 @keyframes ag-danger{0%,100%{opacity:1;}50%{opacity:.5;}}
 .ag-danger-pulse{animation:ag-danger 1.4s infinite;}
-@media (max-width:768px){.block-container{padding:1rem!important;}}
+@media (max-width:768px){
+    .block-container{padding:1rem!important;padding-top:4rem!important;}
+}
 </style>
 """
 

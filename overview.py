@@ -23,17 +23,7 @@ def md(h): st.markdown(h, unsafe_allow_html=True)
 # ── MOBILE + SIDEBAR NAVIGATION ─────────────────────────────
 st.markdown("""
 <style>
-/* Keep the header visible on mobile so hamburger shows */
-[data-testid="stHeader"] {
-    background: #07110C !important;
-    border-bottom: 1px solid rgba(255,255,255,0.06) !important;
-}
-/* Style the mobile hamburger icon green */
-[data-testid="stHeader"] button svg { fill: #16A34A !important; }
-[data-testid="collapsedControl"] {
-    color: #16A34A !important;
-}
-/* Nav styles */
+/* Sidebar nav styles */
 .nav-section {
     font-size:10px;font-weight:600;color:#3a4a6a;text-transform:uppercase;
     letter-spacing:.09em;padding:14px 16px 6px;
