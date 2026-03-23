@@ -10,7 +10,7 @@ from styles import (
     BASE_CSS, RISK_COLORS, RISK_BG, RISK_BORDER, RISK_ADVICE, CONDITION_ADVICE,
     CITY_RENAME, MONITORED_STATES, STATE_COORDS, DEFAULT_LAT, DEFAULT_LON,
     section, badge, plotly_layout, calculate_hrs, load_device_data,
-    classify_gas, gas_is_dangerous, device_status_bar, render_nav_button,
+    classify_gas, gas_is_dangerous, device_status_bar,
     get_user_location, get_temp_hum_for_city,
 )
 
