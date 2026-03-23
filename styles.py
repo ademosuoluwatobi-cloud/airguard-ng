@@ -66,7 +66,121 @@ button[kind="header"] {
 @media (max-width:768px){
     .block-container{padding:1rem!important;padding-top:4rem!important;}
 }
+
+/* ── FLOATING NAV BUTTON (works on ALL pages) ────────────── */
+#ag-nav-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999999;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #16A34A;
+    border: none;
+    box-shadow: 0 4px 20px rgba(22,163,74,0.5);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+#ag-nav-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 28px rgba(22,163,74,0.7);
+}
+
+/* ── NAV DRAWER ──────────────────────────────────────────── */
+#ag-nav-drawer {
+    position: fixed;
+    bottom: 90px;
+    right: 24px;
+    z-index: 999998;
+    width: 230px;
+    background: #0F172A;
+    border: 1px solid rgba(22,163,74,0.30);
+    border-radius: 18px;
+    padding: 12px 0;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+    display: none;
+    flex-direction: column;
+    animation: ag-drawer-in 0.18s ease;
+}
+#ag-nav-drawer.open { display: flex; }
+@keyframes ag-drawer-in {
+    from { opacity:0; transform: translateY(12px) scale(0.97); }
+    to   { opacity:1; transform: translateY(0) scale(1); }
+}
+.ag-drawer-title {
+    font-family: Sora, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #16A34A;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    padding: 4px 16px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    margin-bottom: 6px;
+}
+.ag-drawer-section {
+    font-size: 10px;
+    font-weight: 600;
+    color: #3a4a6a;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    padding: 8px 16px 4px;
+}
+.ag-drawer-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #94A3B8;
+    text-decoration: none;
+    transition: background 0.12s, color 0.12s;
+}
+.ag-drawer-link:hover {
+    background: rgba(22,163,74,0.10);
+    color: #16A34A;
+}
+.ag-drawer-icon { font-size: 14px; width: 20px; text-align: center; }
+
 </style>
+
+<script>
+// Floating nav button logic — runs after DOM is ready
+function initAGNav() {
+    // Create button
+    var btn = document.getElementById("ag-nav-btn");
+    var drawer = document.getElementById("ag-nav-drawer");
+    if (!btn || !drawer) return;
+
+    btn.addEventListener("click", function(e) {
+        e.stopPropagation();
+        drawer.classList.toggle("open");
+        btn.innerHTML = drawer.classList.contains("open") ? "&#x2715;" : "&#x2630;";
+    });
+
+    // Close drawer when clicking outside
+    document.addEventListener("click", function(e) {
+        if (!drawer.contains(e.target) && e.target !== btn) {
+            drawer.classList.remove("open");
+            btn.innerHTML = "&#x2630;";
+        }
+    });
+}
+
+// Retry until Streamlit DOM is ready
+var agNavTimer = setInterval(function() {
+    if (document.getElementById("ag-nav-btn")) {
+        clearInterval(agNavTimer);
+        initAGNav();
+    }
+}, 200);
+</script>
 """
 
 # ── RISK TABLES ──────────────────────────────────────────────
@@ -275,3 +389,27 @@ def device_status_bar(st, location_label=""):
         f'<span style="font-family:JetBrains Mono,monospace;font-size:10px;color:#3a4a6a">Updated {ts_fmt}</span>'
         f'</div>',
         unsafe_allow_html=True)
+
+
+def render_nav_button(st):
+    """Call this once per page to inject the permanent floating nav button."""
+    st.markdown("""
+<div id="ag-nav-drawer">
+    <div class="ag-drawer-title">&#x1F6E1;&#xFE0F; AirGuard NG</div>
+    <div class="ag-drawer-section">Dashboard</div>
+    <a class="ag-drawer-link" href="/" target="_self"><span class="ag-drawer-icon">&#x1F3E0;</span>Overview</a>
+    <div class="ag-drawer-section">Air Quality</div>
+    <a class="ag-drawer-link" href="/1_City_Deep_Dive" target="_self"><span class="ag-drawer-icon">&#x1F50D;</span>City Deep Dive</a>
+    <a class="ag-drawer-link" href="/2_Compare_Cities" target="_self"><span class="ag-drawer-icon">&#x2696;&#xFE0F;</span>Compare Cities</a>
+    <a class="ag-drawer-link" href="/3_Historical_Trends" target="_self"><span class="ag-drawer-icon">&#x1F4C8;</span>Historical Trends</a>
+    <a class="ag-drawer-link" href="/4_Alerts_Log" target="_self"><span class="ag-drawer-icon">&#x1F6A8;</span>Alerts Log</a>
+    <div class="ag-drawer-section">Health &amp; Safety</div>
+    <a class="ag-drawer-link" href="/5_Health_Guide" target="_self"><span class="ag-drawer-icon">&#x1F3E5;</span>Health Guide</a>
+    <a class="ag-drawer-link" href="/6_Best_Practices" target="_self"><span class="ag-drawer-icon">&#x2705;</span>Best Practices</a>
+    <div class="ag-drawer-section">Hardware</div>
+    <a class="ag-drawer-link" href="/8_Device" target="_self"><span class="ag-drawer-icon">&#x1F529;</span>AirGuard Device</a>
+    <div class="ag-drawer-section">Info</div>
+    <a class="ag-drawer-link" href="/7_About" target="_self"><span class="ag-drawer-icon">&#x2139;&#xFE0F;</span>About</a>
+</div>
+<button id="ag-nav-btn" title="Navigate pages">&#x2630;</button>
+""", unsafe_allow_html=True)

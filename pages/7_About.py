@@ -1,6 +1,7 @@
 import streamlit as st, os
 from streamlit_autorefresh import st_autorefresh
 import sys; sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from styles import render_nav_button
 from styles import *
 
 st.set_page_config(page_title="About — AirGuard NG",page_icon="ℹ️",layout="wide")
@@ -10,6 +11,7 @@ def md(h): st.markdown(h,unsafe_allow_html=True)
 
 user_state=st.session_state.get("user_state","")
 device_status_bar(st,location_label=user_state)
+render_nav_button(st)
 md('<p style="font-family:Sora,sans-serif;font-size:26px;font-weight:800;color:#F8FAFC;letter-spacing:-.02em;margin:0 0 4px">ℹ️ About AirGuard NG</p>')
 md('<p style="font-size:14px;color:#64748B;margin:0 0 24px">Project documentation, data methodology, hardware details, and scale-up roadmap</p>')
 

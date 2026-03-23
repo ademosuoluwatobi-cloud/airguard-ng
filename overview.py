@@ -10,7 +10,7 @@ from styles import (
     BASE_CSS, RISK_COLORS, RISK_BG, RISK_BORDER, RISK_ADVICE, CONDITION_ADVICE,
     CITY_RENAME, MONITORED_STATES, STATE_COORDS, DEFAULT_LAT, DEFAULT_LON,
     section, badge, plotly_layout, calculate_hrs, load_device_data,
-    classify_gas, gas_is_dangerous, device_status_bar,
+    classify_gas, gas_is_dangerous, device_status_bar, render_nav_button,
     get_user_location, get_temp_hum_for_city,
 )
 
@@ -19,90 +19,6 @@ st.markdown(BASE_CSS, unsafe_allow_html=True)
 st_autorefresh(interval=10000, key="ov_refresh")
 
 def md(h): st.markdown(h, unsafe_allow_html=True)
-
-# ── MOBILE + SIDEBAR NAVIGATION ─────────────────────────────
-st.markdown("""
-<style>
-/* Sidebar nav styles */
-.nav-section {
-    font-size:10px;font-weight:600;color:#3a4a6a;text-transform:uppercase;
-    letter-spacing:.09em;padding:14px 16px 6px;
-}
-.nav-link {
-    display:flex;align-items:center;gap:10px;padding:9px 16px;
-    border-radius:10px;margin:2px 8px;font-size:13px;font-weight:500;
-    color:#64748B;text-decoration:none;
-}
-.nav-link:hover{background:rgba(255,255,255,0.05);color:#F8FAFC;}
-.nav-link.active{background:rgba(22,163,74,0.12);color:#16A34A;font-weight:600;}
-.nav-icon{font-size:15px;width:22px;text-align:center;}
-.nav-divider{height:1px;background:rgba(255,255,255,0.06);margin:8px 16px;}
-</style>
-""", unsafe_allow_html=True)
-
-with st.sidebar:
-    # Logo
-    st.markdown(
-        '<div style="display:flex;align-items:center;gap:10px;padding:18px 16px 12px;'
-        'border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:8px">'
-        '<div style="width:32px;height:32px;background:rgba(22,163,74,0.12);'
-        'border:1px solid rgba(22,163,74,0.28);border-radius:9px;display:flex;'
-        'align-items:center;justify-content:center;font-size:16px">&#x1F6E1;&#xFE0F;</div>'
-        '<span style="font-family:Sora,sans-serif;font-size:17px;font-weight:800;color:#F8FAFC">'
-        'AirGuard <span style="color:#16A34A">NG</span></span></div>',
-        unsafe_allow_html=True
-    )
-    # Nav links
-    st.markdown(
-        '<div class="nav-section">Dashboard</div>'
-        '<a class="nav-link active" href="/" target="_self">'
-        '<span class="nav-icon">&#x1F3E0;</span> Overview</a>'
-        '<div class="nav-section">Air Quality</div>'
-        '<a class="nav-link" href="/1_City_Deep_Dive" target="_self">'
-        '<span class="nav-icon">&#x1F50D;</span> City Deep Dive</a>'
-        '<a class="nav-link" href="/2_Compare_Cities" target="_self">'
-        '<span class="nav-icon">&#x2696;&#xFE0F;</span> Compare Cities</a>'
-        '<a class="nav-link" href="/3_Historical_Trends" target="_self">'
-        '<span class="nav-icon">&#x1F4C8;</span> Historical Trends</a>'
-        '<a class="nav-link" href="/4_Alerts_Log" target="_self">'
-        '<span class="nav-icon">&#x1F6A8;</span> Alerts Log</a>'
-        '<div class="nav-section">Health &amp; Safety</div>'
-        '<a class="nav-link" href="/5_Health_Guide" target="_self">'
-        '<span class="nav-icon">&#x1F3E5;</span> Health Guide</a>'
-        '<a class="nav-link" href="/6_Best_Practices" target="_self">'
-        '<span class="nav-icon">&#x2705;</span> Best Practices</a>'
-        '<div class="nav-section">Hardware</div>'
-        '<a class="nav-link" href="/8_Device" target="_self">'
-        '<span class="nav-icon">&#x1F529;</span> AirGuard Device</a>'
-        '<div class="nav-divider"></div>'
-        '<div class="nav-section">Info</div>'
-        '<a class="nav-link" href="/7_About" target="_self">'
-        '<span class="nav-icon">&#x2139;&#xFE0F;</span> About</a>',
-        unsafe_allow_html=True
-    )
-    # Device mini-badge
-    st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
-    _dev, _ = load_device_data()
-    if _dev:
-        _ppm  = _dev.get("gas_ppm","—")
-        _temp = _dev.get("temperature","—")
-        st.markdown(
-            f'<div style="margin:0 8px;background:rgba(22,163,74,0.08);'
-            f'border:1px solid rgba(22,163,74,0.2);border-radius:10px;padding:10px 14px;font-size:12px">'
-            f'<div style="display:flex;align-items:center;gap:6px;margin-bottom:5px">'
-            f'<span style="width:7px;height:7px;border-radius:50%;background:#16A34A;display:inline-block"></span>'
-            f'<span style="color:#16A34A;font-weight:600;font-size:11px">DEVICE LIVE</span></div>'
-            f'<span style="color:#94A3B8">Gas {_ppm} ppm &nbsp;&#x1F321; {_temp}&#xB0;C</span></div>',
-            unsafe_allow_html=True
-        )
-    else:
-        st.markdown(
-            '<div style="margin:0 8px;background:#111827;border:1px solid rgba(255,255,255,0.06);'
-            'border-radius:10px;padding:10px 14px;font-size:11px;color:#3a4a6a">'
-            '&#x1F4E1; Device not connected</div>',
-            unsafe_allow_html=True
-        )
-
 
 # ── SESSION DEFAULTS ─────────────────────────────────────────
 for k,v in [("onboarding_done",False),("user_name",""),("user_condition",""),("user_state",""),("user_city","")]:
@@ -209,6 +125,7 @@ elif st.session_state.onboarding_done:
 
     # ── DEVICE BAR ───────────────────────────────────────────
     device_status_bar(st, location_label=user_state or "")
+    render_nav_button(st)
 
     # ── GAS DANGER BANNER ────────────────────────────────────
     if device and gas_is_dangerous(int(device.get("gas_raw",0) or 0)):

@@ -2,6 +2,7 @@ import streamlit as st, pandas as pd, plotly.graph_objects as go, os
 from datetime import datetime
 from streamlit_autorefresh import st_autorefresh
 import sys; sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from styles import render_nav_button
 from styles import *
 
 st.set_page_config(page_title="City Deep Dive — AirGuard NG",page_icon="🔍",layout="wide")
@@ -13,6 +14,7 @@ user_state=st.session_state.get("user_state","")
 user_city=st.session_state.get("user_city","")
 user_condition=st.session_state.get("user_condition","")
 device_status_bar(st,location_label=user_state)
+render_nav_button(st)
 md('<p style="font-family:Sora,sans-serif;font-size:26px;font-weight:800;color:#F8FAFC;letter-spacing:-.02em;margin:0 0 4px">🔍 City Deep Dive</p>')
 md(f'<p style="font-size:14px;color:#64748B;margin:0 0 24px">Full sensor breakdown and 24-hour PM2.5 trend · Monitoring {user_city+", " if user_city else ""}{user_state or "Nigeria"}</p>')
 

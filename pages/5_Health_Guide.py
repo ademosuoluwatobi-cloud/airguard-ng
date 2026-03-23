@@ -1,6 +1,7 @@
 import streamlit as st, pandas as pd, os
 from streamlit_autorefresh import st_autorefresh
 import sys; sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from styles import render_nav_button
 from styles import *
 
 st.set_page_config(page_title="Health Guide — AirGuard NG",page_icon="🏥",layout="wide")
@@ -12,6 +13,7 @@ user_state=st.session_state.get("user_state","")
 user_condition=st.session_state.get("user_condition","")
 user_name=st.session_state.get("user_name","")
 device_status_bar(st,location_label=user_state)
+render_nav_button(st)
 
 md('<p style="font-family:Sora,sans-serif;font-size:26px;font-weight:800;color:#F8FAFC;letter-spacing:-.02em;margin:0 0 4px">🏥 Health Guide</p>')
 md(f'<p style="font-size:14px;color:#64748B;margin:0 0 24px">Personalised air quality health guidance{" for "+user_condition if user_condition and user_condition not in ["","None"] else ""}{" · "+user_state if user_state else ""}</p>')
