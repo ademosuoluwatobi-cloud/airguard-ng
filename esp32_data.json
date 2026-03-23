@@ -1,36 +1,6 @@
 {
   "readings": [
     {
-      "gas_raw": 187,
-      "gas_ppm": 3.1,
-      "gas_level": "GOOD",
-      "temperature": 31.9,
-      "humidity": 67.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T21:42:10.720706"
-    },
-    {
-      "gas_raw": 173,
-      "gas_ppm": 2.5,
-      "gas_level": "GOOD",
-      "temperature": 31.8,
-      "humidity": 67.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T21:42:12.720449"
-    },
-    {
-      "gas_raw": 172,
-      "gas_ppm": 2.5,
-      "gas_level": "GOOD",
-      "temperature": 31.8,
-      "humidity": 67.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T21:42:14.722716"
-    },
-    {
       "gas_raw": 175,
       "gas_ppm": 2.6,
       "gas_level": "GOOD",
@@ -4999,16 +4969,46 @@
       "risk_level": "Danger",
       "device_id": "airguard-uno-01",
       "timestamp": "2026-03-23T22:00:01.882993"
+    },
+    {
+      "gas_raw": 497,
+      "gas_ppm": 66.0,
+      "gas_level": "BAD",
+      "temperature": 31.8,
+      "humidity": 67.0,
+      "risk_level": "Danger",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T22:00:03.884902"
+    },
+    {
+      "gas_raw": 504,
+      "gas_ppm": 69.9,
+      "gas_level": "DANGER",
+      "temperature": 31.8,
+      "humidity": 67.0,
+      "risk_level": "Critical",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T22:00:05.888268"
+    },
+    {
+      "gas_raw": 524,
+      "gas_ppm": 82.6,
+      "gas_level": "DANGER",
+      "temperature": 31.8,
+      "humidity": 67.0,
+      "risk_level": "Critical",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T22:00:07.890000"
     }
   ],
   "latest": {
-    "gas_raw": 471,
-    "gas_ppm": 53.1,
-    "gas_level": "BAD",
+    "gas_raw": 524,
+    "gas_ppm": 82.6,
+    "gas_level": "DANGER",
     "temperature": 31.8,
     "humidity": 67.0,
-    "risk_level": "Danger",
+    "risk_level": "Critical",
     "device_id": "airguard-uno-01",
-    "timestamp": "2026-03-23T22:00:01.882993"
+    "timestamp": "2026-03-23T22:00:07.890000"
   }
 }
