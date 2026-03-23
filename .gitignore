@@ -1,16 +1,16 @@
-# Secrets — NEVER upload
+# Secrets
 .env
 key.env
 *.env
 
-# Python cache
+# Hardware Data (keep local)
+esp32_data.json
+ngrok.exe
+*.exe
+
+# Python
 __pycache__/
 *.pyc
-*.pyo
 
-# VS Code
-.vscode/
-
-# Windows
-Thumbs.db
-desktop.ini
+# Data Snapshots (Optional: ignore if you want them to stay local)
+# raw_data.csv
