@@ -28,4 +28,4 @@ if __name__ == "__main__":
     print("🚀 AirGuard NG Cloud Sync Active...")
     while True:
         sync_data()
-        time.sleep(30) # Syncs every 30 Seconds
+        time.sleep(3) # Syncs every 30 Seconds

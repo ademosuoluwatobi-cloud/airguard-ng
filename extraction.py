@@ -11,10 +11,20 @@ import time
 from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
 
-load_dotenv()
-API_KEY  = os.getenv("OPENAQ_API_KEY")
+# Load key from key.env
+load_dotenv(dotenv_path="key.env")
+
+API_KEY = os.getenv("OPENAQ_API_KEY")
+
+if not API_KEY:
+    print("ERROR: OPENAQ_API_KEY not found in key.env")
+    raise SystemExit(1)
+
+# Key is now pulled from environment, not typed out
 HEADERS  = {"X-API-Key": API_KEY}
 BASE_URL = "https://api.openaq.org/v3"
+
+# ... (rest of your logic remains the same)
 
 
 def assign_city(location_name):
