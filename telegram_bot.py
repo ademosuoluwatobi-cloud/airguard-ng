@@ -16,19 +16,21 @@ Run: python telegram_bot.py
 import os, json, time, requests, pandas as pd
 from datetime import datetime
 from styles import load_device_data, classify_gas, gas_is_dangerous, RISK_ADVICE
-
 from dotenv import load_dotenv
-load_dotenv(dotenv_path=".env")
+
+# Load keys
 load_dotenv(dotenv_path="key.env")
 
-BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
-CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID", "")
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
+CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID")
 
 if not BOT_TOKEN or not CHAT_ID:
-    print("ERROR: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not found in key.env")
+    print("ERROR: Telegram credentials missing in key.env")
     raise SystemExit(1)
+
 USER_NAME = "Oluwatobi"
 BASE_URL  = f"https://api.telegram.org/bot{BOT_TOKEN}"
+# ... (rest of your logic remains the same)
 
 POLL_EVERY  = 30   # seconds between threshold checks
 CMD_EVERY   =  3   # seconds between command polls

@@ -18,21 +18,21 @@ import time
 from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
 
-# ── Load API key — tries both .env and key.env ───────────────────────────────
-load_dotenv(dotenv_path=".env")
-load_dotenv(dotenv_path="key.env")   # your file is called key.env
+# Load API key from key.env
+load_dotenv(dotenv_path="key.env")
 
+# Correctly fetch by variable name
 API_KEY = os.getenv("OPENAQ_API_KEY")
 
 if not API_KEY:
-    print("ERROR: OPENAQ_API_KEY not found in .env or key.env")
-    print("Open your key.env file and make sure it contains exactly:")
-    print("  OPENAQ_API_KEY=your_actual_key_here")
-    print("(no spaces, no quotes around the key)")
+    print("ERROR: OPENAQ_API_KEY not found in key.env")
     raise SystemExit(1)
 
-HEADERS  = {"X-API-Key": API_KEY}
+# API headers now use the variable
+HEADERS = {"X-API-Key": API_KEY}
 BASE_URL = "https://api.openaq.org/v3"
+
+# ... (rest of your logic remains the same)
 
 # Parameters we care about — PM2.5, PM10, NO2, Temperature, Humidity
 WANTED_PARAMS = {"pm25", "pm10", "no2", "temperature", "relativehumidity"}
