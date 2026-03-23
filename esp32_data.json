@@ -1,36 +1,6 @@
 {
   "readings": [
     {
-      "gas_raw": 163,
-      "gas_ppm": 2.2,
-      "gas_level": "GOOD",
-      "temperature": 32.3,
-      "humidity": 67.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T21:16:27.150034"
-    },
-    {
-      "gas_raw": 157,
-      "gas_ppm": 2.0,
-      "gas_level": "GOOD",
-      "temperature": 32.3,
-      "humidity": 67.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T21:16:29.151796"
-    },
-    {
-      "gas_raw": 160,
-      "gas_ppm": 2.1,
-      "gas_level": "GOOD",
-      "temperature": 32.3,
-      "humidity": 67.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T21:16:31.153612"
-    },
-    {
       "gas_raw": 160,
       "gas_ppm": 2.1,
       "gas_level": "GOOD",
@@ -4999,16 +4969,46 @@
       "risk_level": "Safe",
       "device_id": "airguard-uno-01",
       "timestamp": "2026-03-23T21:34:10.199266"
+    },
+    {
+      "gas_raw": 166,
+      "gas_ppm": 2.3,
+      "gas_level": "GOOD",
+      "temperature": 32.3,
+      "humidity": 67.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T21:34:12.201939"
+    },
+    {
+      "gas_raw": 171,
+      "gas_ppm": 2.4,
+      "gas_level": "GOOD",
+      "temperature": 32.3,
+      "humidity": 67.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T21:34:14.203639"
+    },
+    {
+      "gas_raw": 170,
+      "gas_ppm": 2.4,
+      "gas_level": "GOOD",
+      "temperature": 32.3,
+      "humidity": 67.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T21:34:16.205551"
     }
   ],
   "latest": {
-    "gas_raw": 166,
-    "gas_ppm": 2.3,
+    "gas_raw": 170,
+    "gas_ppm": 2.4,
     "gas_level": "GOOD",
     "temperature": 32.3,
     "humidity": 67.0,
     "risk_level": "Safe",
     "device_id": "airguard-uno-01",
-    "timestamp": "2026-03-23T21:34:10.199266"
+    "timestamp": "2026-03-23T21:34:16.205551"
   }
 }
