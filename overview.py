@@ -7,12 +7,82 @@ from streamlit_folium import st_folium
 from streamlit_autorefresh import st_autorefresh
 from datetime import datetime
 from styles import (
-    BASE_CSS, RISK_COLORS, RISK_BG, RISK_BORDER, RISK_ADVICE, CONDITION_ADVICE,
-    CITY_RENAME, MONITORED_STATES, STATE_COORDS, DEFAULT_LAT, DEFAULT_LON,
-    section, badge, plotly_layout, calculate_hrs, load_device_data,
-    classify_gas, gas_is_dangerous, device_status_bar,
-    get_user_location, get_temp_hum_for_city,
+    BASE_CSS, RISK_COLORS, RISK_BG, RISK_BORDER,
+    MONITORED_STATES, section, stat_html,
+    calculate_hrs, load_device_data, classify_gas,
+    device_status_bar, get_all_city_options,
 )
+
+# ── CONSTANTS NOT IN NEW STYLES — DEFINED LOCALLY ────────────
+RISK_ADVICE = {
+    "Good":"Air quality is safe. All outdoor activities are appropriate today.",
+    "Moderate":"Acceptable for most people. Sensitive individuals should reduce prolonged outdoor exertion.",
+    "Unhealthy for Sensitive Groups":"People with asthma, COPD, heart disease, or diabetes should avoid outdoor activity.",
+    "Unhealthy":"Everyone should reduce outdoor time. Patients must stay indoors with windows closed.",
+    "Very Unhealthy":"Health emergency. Avoid all outdoor activity. Keep all windows and doors closed.",
+    "Hazardous":"Emergency conditions. Do not go outside. Seek medical attention if breathing is difficult.",
+    "No Data":"No recent sensor data available.",
+}
+CONDITION_ADVICE = {
+    "Asthma":"Avoid outdoor activity between 7-10am (NO2 peak) and 2-5pm (ozone peak). Always carry your reliever inhaler when HRS is above 40.",
+    "COPD":"During harmattan season, treat any HRS above 30 as your personal danger threshold.",
+    "Heart Disease":"Avoid outdoor activity during morning traffic (7-10am). Be especially cautious in evenings when generator CO emissions rise.",
+    "Diabetes":"Long-term PM2.5 exposure worsens insulin resistance. Monitor blood sugar more frequently on high pollution days.",
+    "Hypertension":"PM2.5 causes measurable blood pressure spikes within hours. Avoid prolonged outdoor time when HRS is above 40.",
+    "Pregnancy":"There is no safe level of PM2.5 exposure during pregnancy. Avoid outdoor exposure on any day above WHO limits.",
+    "Child Under 12":"Children's lungs are still developing. Treat the safe threshold as 50% of the adult WHO limit.",
+    "None":"No specific condition. Exercise general air quality caution on days above Moderate.",
+    "":"",
+}
+CITY_RENAME = {"Other":"Lagos State","Lagos":"Lagos State","Abuja":"FCT Abuja","Cross River":"Cross River State","Ogun":"Ogun State"}
+STATE_COORDS = {"Lagos State":(6.52,3.38),"Ogun State":(6.90,3.35),"Cross River State":(5.03,8.35),"FCT Abuja":(9.07,7.40)}
+DEFAULT_LAT = 7.4381
+DEFAULT_LON = 3.8966
+
+def badge(risk):
+    c=RISK_COLORS.get(risk,"#64748B");bg=RISK_BG.get(risk,"rgba(100,116,139,0.10)");b=RISK_BORDER.get(risk,"rgba(100,116,139,0.30)")
+    return f'<span style="display:inline-block;padding:3px 12px;border-radius:999px;font-size:11px;font-weight:600;background:{bg};color:{c};border:1px solid {b}">{risk}</span>'
+
+def metric_html(label, value, unit, color="#CBD5E1"):
+    return (f'<div style="background:#111827;border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:14px 16px">'
+            f'<p style="font-size:10px;font-weight:600;color:#64748B;text-transform:uppercase;letter-spacing:.06em;margin:0 0 6px">{label}</p>'
+            f'<p style="font-family:JetBrains Mono,monospace;font-size:20px;font-weight:600;color:{color};margin:0">'
+            f'{value} <span style="font-size:11px;color:#64748B">{unit}</span></p></div>')
+
+def plotly_layout(height=300, legend=True):
+    d = dict(paper_bgcolor="rgba(0,0,0,0)",plot_bgcolor="rgba(17,24,39,0.9)",
+        font=dict(family="Inter",color="#64748B",size=11),
+        margin=dict(l=10,r=10,t=20,b=10),height=height,
+        xaxis=dict(gridcolor="rgba(255,255,255,0.04)",linecolor="rgba(255,255,255,0.05)"),
+        yaxis=dict(gridcolor="rgba(255,255,255,0.04)",linecolor="rgba(255,255,255,0.05)"),)
+    if legend:
+        d["legend"]=dict(bgcolor="rgba(0,0,0,0)",font=dict(size=10),orientation="h",yanchor="bottom",y=1.02,xanchor="left",x=0)
+    return d
+
+def gas_is_dangerous(raw):
+    return raw is not None and int(raw) >= 250
+
+def get_user_location(st_session):
+    state = st_session.get("user_state","")
+    city  = st_session.get("user_city","")
+    coords = STATE_COORDS.get(state)
+    if coords:
+        lat, lon = coords
+    else:
+        lat, lon = DEFAULT_LAT, DEFAULT_LON
+    location_label = city if city else (state if state else "University of Ibadan, First Gate")
+    return state, city, lat, lon, location_label
+
+def get_temp_hum_for_city(raw_df, city_key):
+    try:
+        city_data = raw_df[raw_df["city"]==city_key]
+        temp_r = city_data[city_data["parameter"]=="temperature"]
+        hum_r  = city_data[city_data["parameter"]=="relativehumidity"]
+        temp = round(temp_r.sort_values("timestamp").iloc[-1]["value"],1) if not temp_r.empty else None
+        hum  = round(hum_r.sort_values("timestamp").iloc[-1]["value"],1)  if not hum_r.empty else None
+        return temp, hum
+    except Exception:
+        return None, None
 
 st.set_page_config(page_title="AirGuard NG",page_icon="🛡️",layout="wide",initial_sidebar_state="expanded")
 st.markdown(BASE_CSS, unsafe_allow_html=True)
@@ -302,7 +372,7 @@ Your registered location</div>""",max_width=220),
 
             if sel_key is None:
                 # User's own state — show device data if available
-                if device and len(_:=[]) == 0:
+                if device:
                     _, hist = load_device_data()
                     if hist:
                         hdf=pd.DataFrame(hist); hdf["timestamp"]=pd.to_datetime(hdf["timestamp"]); hdf=hdf.sort_values("timestamp")
@@ -367,6 +437,3 @@ Your registered location</div>""",max_width=220),
     md(f"""<div style="text-align:center;padding:24px 0;margin-top:32px;border-top:1px solid rgba(255,255,255,0.05)">
 <p style="font-family:JetBrains Mono,monospace;font-size:11px;color:#3a4a6a;margin:0">
 AirGuard NG · OpenAQ v3 · WHO 2021 · 3MTT NextGen · Environment Pillar · Nigeria 2026 · {now_str} · Auto-refreshes every 10s</p></div>""")
-
-# Fix the walrus operator issue
-_ = []
