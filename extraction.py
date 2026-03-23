@@ -12,8 +12,8 @@ from datetime import datetime, timedelta, timezone
 from dotenv import load_dotenv
 
 load_dotenv()
-API_KEY  = os.getenv("e115598c847ef0afd78c88dfb347d1f6776d42c0def6a9c13e3c83fc16373d2a")   # reads from your .env file
-HEADERS  = {"X-API-Key": "e115598c847ef0afd78c88dfb347d1f6776d42c0def6a9c13e3c83fc16373d2a"}
+API_KEY  = os.getenv("OPENAQ_API_KEY")
+HEADERS  = {"X-API-Key": API_KEY}
 BASE_URL = "https://api.openaq.org/v3"
 
 
