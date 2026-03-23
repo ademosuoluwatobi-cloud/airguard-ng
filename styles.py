@@ -1,6 +1,29 @@
 """AirGuard NG — Shared Design System"""
 import json, os, pandas as pd
 from datetime import datetime
+import streamlit as st
+import json
+import os
+import pandas as pd
+
+# --- ADD THIS FOR HARDWARE DATA ---
+@st.cache_data(ttl=5) # Forces a refresh every 5 seconds
+def load_device_data():
+    DATA_FILE = "esp32_data.json"
+    if os.path.exists(DATA_FILE):
+        try:
+            with open(DATA_FILE, "r") as f:
+                return json.load(f)
+        except:
+            return None
+    return None
+
+# --- ADD THIS FOR CITY CSV DATA ---
+@st.cache_data(ttl=60) # Refreshes city data every 1 minute
+def load_csv_data(file_path):
+    if os.path.exists(file_path):
+        return pd.read_csv(file_path)
+    return pd.DataFrame()
 
 BASE_CSS = """
 <style>
