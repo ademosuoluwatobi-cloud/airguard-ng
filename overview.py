@@ -20,80 +20,6 @@ st_autorefresh(interval=10000, key="ov_refresh")
 
 def md(h): st.markdown(h, unsafe_allow_html=True)
 
-# ── SIDEBAR NAVIGATION ───────────────────────────────────────
-st.markdown("""
-<style>
-@media (max-width: 768px) {
-    [data-testid="collapsedControl"] {
-        display: flex !important; position: fixed !important;
-        top: 12px !important; left: 12px !important;
-        z-index: 9999 !important;
-        background: rgba(22,163,74,0.15) !important;
-        border: 1px solid rgba(22,163,74,0.35) !important;
-        border-radius: 10px !important; padding: 6px 10px !important;
-    }
-}
-.nav-logo { display:flex;align-items:center;gap:10px;padding:18px 16px 12px;
-    border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:8px; }
-.nav-logo span { font-family:Sora,sans-serif;font-size:17px;font-weight:800;color:#F8FAFC; }
-.nav-logo b { color:#16A34A; }
-.nav-section { font-size:10px;font-weight:600;color:#3a4a6a;text-transform:uppercase;
-    letter-spacing:.09em;padding:14px 16px 6px; }
-.nav-link { display:flex;align-items:center;gap:10px;padding:9px 16px;border-radius:10px;
-    margin:2px 8px;font-size:13px;font-weight:500;color:#64748B;text-decoration:none; }
-.nav-link:hover { background:rgba(255,255,255,0.05);color:#F8FAFC; }
-.nav-link.active { background:rgba(22,163,74,0.12);color:#16A34A;font-weight:600; }
-.nav-icon { font-size:15px;width:22px;text-align:center; }
-.nav-divider { height:1px;background:rgba(255,255,255,0.06);margin:8px 16px; }
-</style>
-""", unsafe_allow_html=True)
-
-with st.sidebar:
-    st.markdown(
-        '<div class="nav-logo">'
-        '<div style="width:32px;height:32px;background:rgba(22,163,74,0.12);border:1px solid rgba(22,163,74,0.28);'
-        'border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:16px">&#x1F6E1;&#xFE0F;</div>'
-        '<span>AirGuard <b>NG</b></span></div>'
-        '<div class="nav-section">Dashboard</div>'
-        '<a class="nav-link active" href="/" target="_self"><span class="nav-icon">&#x1F3E0;</span> Overview</a>'
-        '<div class="nav-section">Air Quality</div>'
-        '<a class="nav-link" href="/1_City_Deep_Dive" target="_self"><span class="nav-icon">&#x1F50D;</span> City Deep Dive</a>'
-        '<a class="nav-link" href="/2_Compare_Cities" target="_self"><span class="nav-icon">&#x2696;&#xFE0F;</span> Compare Cities</a>'
-        '<a class="nav-link" href="/3_Historical_Trends" target="_self"><span class="nav-icon">&#x1F4C8;</span> Historical Trends</a>'
-        '<a class="nav-link" href="/4_Alerts_Log" target="_self"><span class="nav-icon">&#x1F6A8;</span> Alerts Log</a>'
-        '<div class="nav-section">Health &amp; Safety</div>'
-        '<a class="nav-link" href="/5_Health_Guide" target="_self"><span class="nav-icon">&#x1F3E5;</span> Health Guide</a>'
-        '<a class="nav-link" href="/6_Best_Practices" target="_self"><span class="nav-icon">&#x2705;</span> Best Practices</a>'
-        '<div class="nav-section">Hardware</div>'
-        '<a class="nav-link" href="/8_Device" target="_self"><span class="nav-icon">&#x1F529;</span> AirGuard Device</a>'
-        '<div class="nav-divider"></div>'
-        '<div class="nav-section">Info</div>'
-        '<a class="nav-link" href="/7_About" target="_self"><span class="nav-icon">&#x2139;&#xFE0F;</span> About</a>',
-        unsafe_allow_html=True
-    )
-    st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
-    _dev, _ = load_device_data()
-    if _dev:
-        _ppm = _dev.get("gas_ppm", "—")
-        _temp = _dev.get("temperature", "—")
-        st.markdown(
-            f'<div style="margin:0 8px;background:rgba(22,163,74,0.08);border:1px solid rgba(22,163,74,0.2);'
-            f'border-radius:10px;padding:10px 14px;font-size:12px">'
-            f'<div style="display:flex;align-items:center;gap:6px;margin-bottom:6px">'
-            f'<span style="width:7px;height:7px;border-radius:50%;background:#16A34A;display:inline-block"></span>'
-            f'<span style="color:#16A34A;font-weight:600;font-size:11px">DEVICE LIVE</span></div>'
-            f'<span style="color:#94A3B8">&#x26FD; {_ppm} ppm &nbsp; &#x1F321; {_temp}&#xB0;C</span></div>',
-            unsafe_allow_html=True
-        )
-    else:
-        st.markdown(
-            '<div style="margin:0 8px;background:#111827;border:1px solid rgba(255,255,255,0.06);'
-            'border-radius:10px;padding:10px 14px;font-size:11px;color:#3a4a6a">'
-            '&#x1F4E1; Device not connected</div>',
-            unsafe_allow_html=True
-        )
-
-
 # ── SESSION DEFAULTS ─────────────────────────────────────────
 for k,v in [("onboarding_done",False),("user_name",""),("user_condition",""),("user_state",""),("user_city","")]:
     if k not in st.session_state: st.session_state[k] = v
@@ -376,7 +302,7 @@ Your registered location</div>""",max_width=220),
 
             if sel_key is None:
                 # User's own state — show device data if available
-                if device:
+                if device and len(_:=[]) == 0:
                     _, hist = load_device_data()
                     if hist:
                         hdf=pd.DataFrame(hist); hdf["timestamp"]=pd.to_datetime(hdf["timestamp"]); hdf=hdf.sort_values("timestamp")
@@ -441,3 +367,6 @@ Your registered location</div>""",max_width=220),
     md(f"""<div style="text-align:center;padding:24px 0;margin-top:32px;border-top:1px solid rgba(255,255,255,0.05)">
 <p style="font-family:JetBrains Mono,monospace;font-size:11px;color:#3a4a6a;margin:0">
 AirGuard NG · OpenAQ v3 · WHO 2021 · 3MTT NextGen · Environment Pillar · Nigeria 2026 · {now_str} · Auto-refreshes every 10s</p></div>""")
+
+# Fix the walrus operator issue
+_ = []
