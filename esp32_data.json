@@ -1,36 +1,6 @@
 {
   "readings": [
     {
-      "gas_raw": 226,
-      "gas_ppm": 5.1,
-      "gas_level": "MODERATE",
-      "temperature": 32.3,
-      "humidity": 67.0,
-      "risk_level": "Caution",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T21:20:17.385223"
-    },
-    {
-      "gas_raw": 221,
-      "gas_ppm": 4.8,
-      "gas_level": "MODERATE",
-      "temperature": 32.3,
-      "humidity": 67.0,
-      "risk_level": "Caution",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T21:20:19.388329"
-    },
-    {
-      "gas_raw": 221,
-      "gas_ppm": 4.8,
-      "gas_level": "MODERATE",
-      "temperature": 32.3,
-      "humidity": 67.0,
-      "risk_level": "Caution",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-23T21:20:21.389997"
-    },
-    {
       "gas_raw": 225,
       "gas_ppm": 5.0,
       "gas_level": "MODERATE",
@@ -4999,16 +4969,46 @@
       "risk_level": "Safe",
       "device_id": "airguard-uno-01",
       "timestamp": "2026-03-23T21:36:56.362484"
+    },
+    {
+      "gas_raw": 166,
+      "gas_ppm": 2.3,
+      "gas_level": "GOOD",
+      "temperature": 32.3,
+      "humidity": 67.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T21:36:58.364103"
+    },
+    {
+      "gas_raw": 169,
+      "gas_ppm": 2.4,
+      "gas_level": "GOOD",
+      "temperature": 32.3,
+      "humidity": 67.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T21:37:00.366115"
+    },
+    {
+      "gas_raw": 176,
+      "gas_ppm": 2.6,
+      "gas_level": "GOOD",
+      "temperature": 32.3,
+      "humidity": 67.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-23T21:37:02.367852"
     }
   ],
   "latest": {
-    "gas_raw": 177,
-    "gas_ppm": 2.7,
+    "gas_raw": 176,
+    "gas_ppm": 2.6,
     "gas_level": "GOOD",
     "temperature": 32.3,
     "humidity": 67.0,
     "risk_level": "Safe",
     "device_id": "airguard-uno-01",
-    "timestamp": "2026-03-23T21:36:56.362484"
+    "timestamp": "2026-03-23T21:37:02.367852"
   }
 }
