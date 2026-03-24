@@ -1,11 +1,31 @@
 """AirGuard NG — Main Dashboard"""
+import sys
+import os
+
+# Ensure project root is always on the path (works locally AND on Streamlit Cloud)
+_ROOT = os.path.dirname(os.path.abspath(__file__))
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
+
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
-import folium, json, os
-from streamlit_folium import st_folium
-from streamlit_autorefresh import st_autorefresh
+import json
 from datetime import datetime
+
+try:
+    import folium
+    from streamlit_folium import st_folium
+    _HAS_FOLIUM = True
+except ImportError:
+    _HAS_FOLIUM = False
+
+try:
+    from streamlit_autorefresh import st_autorefresh
+    _HAS_AUTOREFRESH = True
+except ImportError:
+    _HAS_AUTOREFRESH = False
+
 from styles import (
     BASE_CSS, RISK_COLORS, RISK_BG, RISK_BORDER, RISK_ADVICE, CONDITION_ADVICE,
     CITY_RENAME, MONITORED_STATES, STATE_COORDS, DEFAULT_LAT, DEFAULT_LON,
@@ -16,7 +36,8 @@ from styles import (
 
 st.set_page_config(page_title="AirGuard NG",page_icon="🛡️",layout="wide",initial_sidebar_state="expanded")
 st.markdown(BASE_CSS, unsafe_allow_html=True)
-st_autorefresh(interval=10000, key="ov_refresh")
+if _HAS_AUTOREFRESH:
+    st_autorefresh(interval=10000, key="ov_refresh")
 
 def md(h): st.markdown(h, unsafe_allow_html=True)
 
@@ -39,17 +60,29 @@ FIXED_CARDS=[
 
 @st.cache_data(ttl=300)
 def load_state():
-    try: return pd.read_csv("transformed_data.csv")
-    except: return pd.DataFrame(columns=["city","hrs","risk_level","value","lat","lon"])
+    try:
+        df = pd.read_csv("transformed_data.csv")
+        if df.empty:
+            raise ValueError("empty")
+        return df
+    except Exception:
+        return pd.DataFrame(columns=["city","hrs","risk_level","value","lat","lon"])
+
 @st.cache_data(ttl=300)
 def load_raw():
     try:
-        raw=pd.read_csv("raw_data.csv"); raw["timestamp"]=pd.to_datetime(raw["timestamp"]); return raw
-    except: return pd.DataFrame(columns=["city","location_name","parameter","value","timestamp","lat","lon"])
+        raw=pd.read_csv("raw_data.csv")
+        raw["timestamp"]=pd.to_datetime(raw["timestamp"])
+        return raw
+    except Exception:
+        return pd.DataFrame(columns=["city","location_name","parameter","value","timestamp","lat","lon"])
+
 @st.cache_data(ttl=300)
 def load_sensors():
-    try: return pd.read_csv("sensor_locations.csv")
-    except: return pd.DataFrame()
+    try:
+        return pd.read_csv("sensor_locations.csv")
+    except Exception:
+        return pd.DataFrame()
 
 # ── ONBOARDING ───────────────────────────────────────────────
 if not st.session_state.onboarding_done:
@@ -96,6 +129,13 @@ elif st.session_state.onboarding_done:
     raw  = load_raw()
     slocs= load_sensors()
     device, _ = load_device_data()
+
+    if df.empty:
+        md("""<div style="background:rgba(234,179,8,0.10);border:1px solid rgba(234,179,8,0.28);border-radius:14px;padding:20px;margin:20px 0;text-align:center;color:#EAB308;font-size:14px">
+⚠️ No air quality data yet. Run <code>python data_pipeline.py</code> → <code>python extraction.py</code> → <code>python transformation.py</code> to load sensor data.</div>""")
+        device_status_bar(st, location_label=user_state or "")
+        render_nav_button(st)
+        st.stop()
 
     worst     = df.loc[df["hrs"].idxmax()]
     worst_col = RISK_COLORS.get(worst["risk_level"],"#64748B")
@@ -232,46 +272,53 @@ elif st.session_state.onboarding_done:
         map_data=slocs.copy() if not slocs.empty else pd.DataFrame()
         if map_data.empty:
             pm25m=raw[raw["parameter"]=="pm25"].copy()
-            map_data=(pm25m.sort_values("timestamp",ascending=False).groupby("location_name").first().reset_index()[["location_name","city","value","lat","lon","timestamp"]])
-            map_data[["hrs","risk_level"]]=map_data["value"].apply(lambda v: pd.Series(calculate_hrs(float(v))))
+            if not pm25m.empty:
+                map_data=(pm25m.sort_values("timestamp",ascending=False).groupby("location_name").first().reset_index()[["location_name","city","value","lat","lon","timestamp"]])
+                map_data[["hrs","risk_level"]]=map_data["value"].apply(lambda v: pd.Series(calculate_hrs(float(v))))
 
         # Centre map on user's location
         map_center_lat = user_lat
         map_center_lon = user_lon
-        m=folium.Map(location=[map_center_lat,map_center_lon],zoom_start=6,tiles="CartoDB dark_matter")
 
-        for _,sr in map_data.iterrows():
-            color=RISK_COLORS.get(sr.get("risk_level","No Data"),"#64748B")
-            pv=round(float(sr["value"]),1) if pd.notna(sr["value"]) else "—"
-            hv=sr.get("hrs","—"); rv=sr.get("risk_level","—")
-            tv=f'{round(float(sr["temperature"]),1)} °C' if "temperature" in sr and pd.notna(sr.get("temperature")) else "—"
-            huv=f'{round(float(sr["relativehumidity"]),1)} %' if "relativehumidity" in sr and pd.notna(sr.get("relativehumidity")) else "—"
-            popup=f"""<div style='font-family:sans-serif;background:#111827;color:#F8FAFC;border-radius:10px;padding:12px;min-width:190px;font-size:13px'>
+        if not _HAS_FOLIUM:
+            md('<div style="background:#111827;border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:24px;text-align:center;color:#64748B">Map requires <code>folium</code> and <code>streamlit-folium</code>. Add them to requirements.txt.</div>')
+        else:
+            m=folium.Map(location=[map_center_lat,map_center_lon],zoom_start=6,tiles="CartoDB dark_matter")
+
+            if not map_data.empty:
+                for _,sr in map_data.iterrows():
+                    color=RISK_COLORS.get(sr.get("risk_level","No Data"),"#64748B")
+                    pv=round(float(sr["value"]),1) if pd.notna(sr["value"]) else "—"
+                    hv=sr.get("hrs","—"); rv=sr.get("risk_level","—")
+                    tv=f'{round(float(sr["temperature"]),1)} °C' if "temperature" in sr and pd.notna(sr.get("temperature")) else "—"
+                    huv=f'{round(float(sr["relativehumidity"]),1)} %' if "relativehumidity" in sr and pd.notna(sr.get("relativehumidity")) else "—"
+                    popup=f"""<div style='font-family:sans-serif;background:#111827;color:#F8FAFC;border-radius:10px;padding:12px;min-width:190px;font-size:13px'>
 <b style='color:{color}'>{sr['location_name']}</b><br><span style='font-size:11px;color:#64748B'>{sr.get('city','')}</span><br>
 <span style='font-size:18px;font-weight:700;color:{color}'>HRS: {hv}</span><br>PM2.5: {pv} µg/m³<br>Temp: {tv} · Hum: {huv}<br><span style='color:{color}'>{rv}</span></div>"""
-            folium.CircleMarker(location=[float(sr["lat"]),float(sr["lon"])],radius=9,color=color,fill=True,fill_color=color,fill_opacity=0.85,weight=2,popup=folium.Popup(popup,max_width=240),tooltip=f"{sr['location_name']} · PM2.5 {pv} µg/m³ · {rv}").add_to(m)
+                    folium.CircleMarker(location=[float(sr["lat"]),float(sr["lon"])],radius=9,color=color,fill=True,fill_color=color,fill_opacity=0.85,weight=2,popup=folium.Popup(popup,max_width=240),tooltip=f"{sr['location_name']} · PM2.5 {pv} µg/m³ · {rv}").add_to(m)
 
-        # User's location marker
-        city_display = user_city if user_city else (user_state if user_state else "Your Location")
-        folium.Marker(
-            location=[user_lat, user_lon],
-            popup=folium.Popup(f"""<div style='font-family:sans-serif;background:#111827;color:#F8FAFC;border-radius:10px;padding:12px;min-width:180px'>
+            # User's location marker
+            city_display = user_city if user_city else (user_state if user_state else "Your Location")
+            folium.Marker(
+                location=[user_lat, user_lon],
+                popup=folium.Popup(f"""<div style='font-family:sans-serif;background:#111827;color:#F8FAFC;border-radius:10px;padding:12px;min-width:180px'>
 <b style='color:#16A34A'>📍 {city_display}</b><br>
 <span style='font-size:11px;color:#64748B'>{user_state}</span><br>
 Your registered location</div>""",max_width=220),
-            tooltip=f"📍 {city_display} — Your Location",
-            icon=folium.Icon(color="green",icon="home"),
-        ).add_to(m)
+                tooltip=f"📍 {city_display} — Your Location",
+                icon=folium.Icon(color="green",icon="home"),
+            ).add_to(m)
 
-        # Device marker
-        if device:
-            gp=float(device.get("gas_ppm",0) or 0); gl2,gc2,_,_,gi2,_=classify_gas(int(device.get("gas_raw",0) or 0))
-            folium.Marker(location=[user_lat+0.02,user_lon+0.02],
-                popup=folium.Popup(f"""<div style='font-family:sans-serif;background:#111827;color:#F8FAFC;border-radius:10px;padding:12px;min-width:180px'><b style='color:{gc2}'>🔩 AirGuard Device</b><br>{city_display}<br>Gas: {gp} ppm · {gl2}<br>Temp: {device.get('temperature','—')} °C<br>Hum: {device.get('humidity','—')} %</div>""",max_width=220),
-                tooltip=f"AirGuard Device · {gp} ppm · {gl2}",icon=folium.Icon(color="orange",icon="star")).add_to(m)
+            # Device marker
+            if device:
+                gp=float(device.get("gas_ppm",0) or 0); gl2,gc2,_,_,gi2,_=classify_gas(int(device.get("gas_raw",0) or 0))
+                folium.Marker(location=[user_lat+0.02,user_lon+0.02],
+                    popup=folium.Popup(f"""<div style='font-family:sans-serif;background:#111827;color:#F8FAFC;border-radius:10px;padding:12px;min-width:180px'><b style='color:{gc2}'>🔩 AirGuard Device</b><br>{city_display}<br>Gas: {gp} ppm · {gl2}<br>Temp: {device.get('temperature','—')} °C<br>Hum: {device.get('humidity','—')} %</div>""",max_width=220),
+                    tooltip=f"AirGuard Device · {gp} ppm · {gl2}",icon=folium.Icon(color="orange",icon="star")).add_to(m)
 
-        md(f'<p style="font-family:JetBrains Mono,monospace;font-size:11px;color:#64748B;margin:0 0 8px"><span class="ag-live"></span>{len(map_data)} sensors live · 📍 Map centred on {city_display}</p>')
-        st_folium(m,height=440,use_container_width=True)
+            city_display2 = user_city if user_city else (user_state if user_state else "Your Location")
+            md(f'<p style="font-family:JetBrains Mono,monospace;font-size:11px;color:#64748B;margin:0 0 8px"><span class="ag-live"></span>{len(map_data)} sensors live · 📍 Map centred on {city_display2}</p>')
+            st_folium(m,height=440,use_container_width=True)
 
     # ── TREND ────────────────────────────────────────────────
     with col_trend:

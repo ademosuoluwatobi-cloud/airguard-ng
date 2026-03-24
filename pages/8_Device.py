@@ -2,15 +2,26 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 from datetime import datetime
-from streamlit_autorefresh import st_autorefresh
 import sys, os
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+_PAGE_DIR = os.path.dirname(os.path.abspath(__file__))
+_ROOT = os.path.dirname(_PAGE_DIR)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
+
+try:
+    from streamlit_autorefresh import st_autorefresh
+    _HAS_AUTOREFRESH = True
+except ImportError:
+    _HAS_AUTOREFRESH = False
+
 from styles import render_nav_button
 from styles import *
 
 st.set_page_config(page_title="AirGuard Device — AirGuard NG", page_icon="🔩", layout="wide")
 st.markdown(BASE_CSS, unsafe_allow_html=True)
-st_autorefresh(interval=5000, key="device_refresh")   # refresh every 5 seconds on device page
+if _HAS_AUTOREFRESH:
+    st_autorefresh(interval=5000, key="device_refresh")   # refresh every 5 seconds on device page
 
 def md(h): st.markdown(h, unsafe_allow_html=True)
 

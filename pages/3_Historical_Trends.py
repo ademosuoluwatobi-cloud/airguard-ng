@@ -1,12 +1,21 @@
 import streamlit as st, pandas as pd, plotly.graph_objects as go, os
-from streamlit_autorefresh import st_autorefresh
-import sys; sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+try:
+    from streamlit_autorefresh import st_autorefresh
+    _HAS_AUTOREFRESH = True
+except ImportError:
+    _HAS_AUTOREFRESH = False
+import sys, os
+_PAGE_DIR = os.path.dirname(os.path.abspath(__file__))
+_ROOT = os.path.dirname(_PAGE_DIR)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 from styles import render_nav_button
 from styles import *
 
 st.set_page_config(page_title="Historical Trends — AirGuard NG",page_icon="📈",layout="wide")
 st.markdown(BASE_CSS,unsafe_allow_html=True)
-st_autorefresh(interval=10000,key="hist_r")
+if _HAS_AUTOREFRESH:
+    st_autorefresh(interval=10000,key="hist_r")
 def md(h): st.markdown(h,unsafe_allow_html=True)
 
 user_state=st.session_state.get("user_state","")
@@ -20,7 +29,7 @@ md('<p style="font-size:14px;color:#64748B;margin:0 0 24px">Analyse pollution pa
 def load():
     try:
         raw=pd.read_csv("raw_data.csv"); raw["timestamp"]=pd.to_datetime(raw["timestamp"]); return raw
-    except:
+    except Exception:
         return pd.DataFrame(columns=["city","location_name","parameter","value","timestamp","lat","lon"])
 raw=load()
 device,device_hist=load_device_data()

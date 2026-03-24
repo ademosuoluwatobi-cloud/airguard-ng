@@ -1,12 +1,21 @@
 import streamlit as st, pandas as pd, os
-from streamlit_autorefresh import st_autorefresh
-import sys; sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+try:
+    from streamlit_autorefresh import st_autorefresh
+    _HAS_AUTOREFRESH = True
+except ImportError:
+    _HAS_AUTOREFRESH = False
+import sys, os
+_PAGE_DIR = os.path.dirname(os.path.abspath(__file__))
+_ROOT = os.path.dirname(_PAGE_DIR)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
 from styles import render_nav_button
 from styles import *
 
 st.set_page_config(page_title="Health Guide — AirGuard NG",page_icon="🏥",layout="wide")
 st.markdown(BASE_CSS,unsafe_allow_html=True)
-st_autorefresh(interval=30000,key="hg_r")
+if _HAS_AUTOREFRESH:
+    st_autorefresh(interval=30000,key="hg_r")
 def md(h): st.markdown(h,unsafe_allow_html=True)
 
 user_state=st.session_state.get("user_state","")
@@ -20,12 +29,20 @@ md(f'<p style="font-size:14px;color:#64748B;margin:0 0 24px">Personalised air qu
 
 @st.cache_data(ttl=300)
 def load():
-    df=pd.read_csv("transformed_data.csv"); return df
-df=load()
+    try:
+        df = pd.read_csv("transformed_data.csv")
+        if df.empty:
+            raise ValueError("empty")
+        return df
+    except Exception:
+        return pd.DataFrame(columns=["city","hrs","risk_level","value","lat","lon"])
+df = load()
 device,_=load_device_data()
 
 # ── PERSONALISED BANNER ──────────────────────────────────────
-if user_condition and user_condition not in ["","None"]:
+if df.empty:
+    md('<div style="background:rgba(234,179,8,0.10);border:1px solid rgba(234,179,8,0.28);border-radius:12px;padding:16px;color:#EAB308;font-size:13px">⚠️ No air quality data yet. Run the data pipeline first.</div>')
+elif user_condition and user_condition not in ["","None"]:
     worst=df.loc[df["hrs"].idxmax()]
     wc=RISK_COLORS.get(worst["risk_level"],"#64748B"); wb=RISK_BG.get(worst["risk_level"],"rgba(100,116,139,0.10)"); wbrd=RISK_BORDER.get(worst["risk_level"],"rgba(100,116,139,0.30)")
     md(f"""<div style="background:linear-gradient(135deg,rgba(14,165,233,0.12) 0%,rgba(22,163,74,0.08) 100%);border:1px solid rgba(14,165,233,0.28);border-radius:18px;padding:22px 26px;margin-bottom:24px">

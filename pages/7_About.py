@@ -1,12 +1,21 @@
-import streamlit as st, os
-from streamlit_autorefresh import st_autorefresh
-import sys; sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import streamlit as st
+import sys, os
+_PAGE_DIR = os.path.dirname(os.path.abspath(__file__))
+_ROOT = os.path.dirname(_PAGE_DIR)
+if _ROOT not in sys.path:
+    sys.path.insert(0, _ROOT)
+try:
+    from streamlit_autorefresh import st_autorefresh
+    _HAS_AUTOREFRESH = True
+except ImportError:
+    _HAS_AUTOREFRESH = False
 from styles import render_nav_button
 from styles import *
 
 st.set_page_config(page_title="About — AirGuard NG",page_icon="ℹ️",layout="wide")
 st.markdown(BASE_CSS,unsafe_allow_html=True)
-st_autorefresh(interval=60000,key="ab_r")
+if _HAS_AUTOREFRESH:
+    st_autorefresh(interval=60000,key="ab_r")
 def md(h): st.markdown(h,unsafe_allow_html=True)
 
 user_state=st.session_state.get("user_state","")
