@@ -340,9 +340,7 @@ def plotly_layout(height=300, legend=True):
 
 def device_status_bar(st, location_label=""):
     device, _ = load_device_data()
-    from datetime import datetime, timezone, timedelta
-    WAT = timezone(timedelta(hours=1))
-    now_str = datetime.now(WAT).strftime("%d %b %Y, %H:%M")
+    now_str = datetime.now().strftime("%H:%M:%S")
     if device is None:
         st.markdown(
             f'<div style="background:#111827;border:1px solid rgba(255,255,255,0.07);'
