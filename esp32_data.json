@@ -1,36 +1,6 @@
 {
   "readings": [
     {
-      "gas_raw": 63,
-      "gas_ppm": 0.2,
-      "gas_level": "GOOD",
-      "temperature": 29.8,
-      "humidity": 74.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-24T01:34:23.583312"
-    },
-    {
-      "gas_raw": 55,
-      "gas_ppm": 0.2,
-      "gas_level": "GOOD",
-      "temperature": 29.8,
-      "humidity": 74.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-24T01:34:25.585371"
-    },
-    {
-      "gas_raw": 54,
-      "gas_ppm": 0.2,
-      "gas_level": "GOOD",
-      "temperature": 29.8,
-      "humidity": 74.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-24T01:34:27.587127"
-    },
-    {
       "gas_raw": 58,
       "gas_ppm": 0.2,
       "gas_level": "GOOD",
@@ -4999,16 +4969,46 @@
       "risk_level": "Safe",
       "device_id": "airguard-uno-01",
       "timestamp": "2026-03-24T01:51:02.562331"
+    },
+    {
+      "gas_raw": 52,
+      "gas_ppm": 0.1,
+      "gas_level": "GOOD",
+      "temperature": 29.8,
+      "humidity": 75.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-24T01:51:04.564109"
+    },
+    {
+      "gas_raw": 51,
+      "gas_ppm": 0.1,
+      "gas_level": "GOOD",
+      "temperature": 29.8,
+      "humidity": 75.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-24T01:51:06.566167"
+    },
+    {
+      "gas_raw": 60,
+      "gas_ppm": 0.2,
+      "gas_level": "GOOD",
+      "temperature": 29.8,
+      "humidity": 75.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-24T01:51:08.567859"
     }
   ],
   "latest": {
-    "gas_raw": 52,
-    "gas_ppm": 0.1,
+    "gas_raw": 60,
+    "gas_ppm": 0.2,
     "gas_level": "GOOD",
     "temperature": 29.8,
     "humidity": 75.0,
     "risk_level": "Safe",
     "device_id": "airguard-uno-01",
-    "timestamp": "2026-03-24T01:51:02.562331"
+    "timestamp": "2026-03-24T01:51:08.567859"
   }
 }
