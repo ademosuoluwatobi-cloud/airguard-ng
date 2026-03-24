@@ -1,26 +1,6 @@
 {
   "readings": [
     {
-      "gas_raw": 54,
-      "gas_ppm": 0.2,
-      "gas_level": "GOOD",
-      "temperature": 29.8,
-      "humidity": 75.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-24T01:48:36.419830"
-    },
-    {
-      "gas_raw": 67,
-      "gas_ppm": 0.3,
-      "gas_level": "GOOD",
-      "temperature": 29.8,
-      "humidity": 75.0,
-      "risk_level": "Safe",
-      "device_id": "airguard-uno-01",
-      "timestamp": "2026-03-24T01:48:38.421550"
-    },
-    {
       "gas_raw": 56,
       "gas_ppm": 0.2,
       "gas_level": "GOOD",
@@ -4999,16 +4979,36 @@
       "risk_level": "Safe",
       "device_id": "airguard-uno-01",
       "timestamp": "2026-03-24T02:05:58.126376"
+    },
+    {
+      "gas_raw": 29,
+      "gas_ppm": 0.0,
+      "gas_level": "GOOD",
+      "temperature": 29.8,
+      "humidity": 76.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-24T02:06:00.128151"
+    },
+    {
+      "gas_raw": 24,
+      "gas_ppm": 0.0,
+      "gas_level": "GOOD",
+      "temperature": 29.8,
+      "humidity": 76.0,
+      "risk_level": "Safe",
+      "device_id": "airguard-uno-01",
+      "timestamp": "2026-03-24T02:06:02.129896"
     }
   ],
   "latest": {
-    "gas_raw": 26,
+    "gas_raw": 24,
     "gas_ppm": 0.0,
     "gas_level": "GOOD",
     "temperature": 29.8,
     "humidity": 76.0,
     "risk_level": "Safe",
     "device_id": "airguard-uno-01",
-    "timestamp": "2026-03-24T02:05:58.126376"
+    "timestamp": "2026-03-24T02:06:02.129896"
   }
 }
