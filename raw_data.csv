@@ -1,35 +1,4 @@
 city,location_name,sensor_id,parameter,value,timestamp,lat,lon
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T02:02:05Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T02:19:11Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T02:36:16Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T02:53:21Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T04:01:43Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T04:18:48Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T04:35:53Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T04:52:59Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T06:01:20Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T06:19:24Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T06:36:32Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T06:53:41Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T07:10:49Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T07:27:54Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T07:45:02Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T08:02:07Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T08:19:11Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T08:36:16Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T08:53:29Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T09:10:33Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T09:27:38Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T09:44:45Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T10:01:52Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T11:10:11Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T11:27:14Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T11:44:18Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T12:01:24Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T12:18:28Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T12:35:30Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T12:52:36Z,6.066,8.34
-Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T13:09:42Z,6.066,8.34
 Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T13:26:48Z,6.066,8.34
 Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T13:43:51Z,6.066,8.34
 Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T14:00:54Z,6.066,8.34
@@ -51,36 +20,34 @@ Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2
 Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T21:10:47Z,6.066,8.34
 Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T21:28:04Z,6.066,8.34
 Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-23T21:45:12Z,6.066,8.34
-Cross River State,Calabar,7466400,pm25,16.28,2026-03-23T02:08:15Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,14.97,2026-03-23T02:25:52Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,16.38,2026-03-23T02:43:26Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,16.72,2026-03-23T03:00:59Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,24.73,2026-03-23T04:11:33Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,18.58,2026-03-23T04:29:16Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,23.33,2026-03-23T04:47:49Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,13.94,2026-03-23T05:58:10Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,17.72,2026-03-23T06:15:46Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,15.71,2026-03-23T06:33:20Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,12.11,2026-03-23T06:50:51Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,14.97,2026-03-23T07:08:31Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,16.01,2026-03-23T07:26:04Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,11.57,2026-03-23T07:43:38Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,12.1,2026-03-23T08:01:14Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,15.74,2026-03-23T08:18:51Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,12.0,2026-03-23T08:36:29Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,12.92,2026-03-23T08:54:07Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,10.74,2026-03-23T09:11:43Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,17.88,2026-03-23T09:29:19Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,19.53,2026-03-23T09:46:58Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,12.45,2026-03-23T10:57:19Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,11.06,2026-03-23T11:14:55Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,11.2,2026-03-23T11:33:12Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,10.48,2026-03-23T11:50:43Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,10.29,2026-03-23T12:08:07Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,11.39,2026-03-23T12:25:30Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,11.29,2026-03-23T12:42:54Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,9.98,2026-03-23T13:00:18Z,5.02529,8.34843
-Cross River State,Calabar,7466400,pm25,14.87,2026-03-23T13:17:51Z,5.02529,8.34843
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T01:10:19Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T01:27:24Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T01:44:29Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T02:01:35Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T02:18:40Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T02:35:46Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T02:52:54Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T03:10:02Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T03:27:08Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T03:44:14Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T04:01:19Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T04:18:25Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T04:35:30Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T04:52:35Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T05:09:41Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T05:26:46Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T05:43:52Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T06:00:57Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T06:18:06Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T06:35:11Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T06:52:16Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T09:09:00Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T09:26:04Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T09:43:08Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T10:00:12Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T10:17:16Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T10:34:20Z,6.066,8.34
+Cross River State,"Ogada, Obubra Local Government Area (LGA)",7466350,pm25,0.0,2026-03-24T10:51:24Z,6.066,8.34
 Cross River State,Calabar,7466400,pm25,15.15,2026-03-23T13:35:15Z,5.02529,8.34843
 Cross River State,Calabar,7466400,pm25,14.74,2026-03-23T13:52:39Z,5.02529,8.34843
 Cross River State,Calabar,7466400,pm25,10.61,2026-03-23T15:02:16Z,5.02529,8.34843
@@ -101,18 +68,34 @@ Cross River State,Calabar,7466400,pm25,25.0,2026-03-23T19:59:34Z,5.02529,8.34843
 Cross River State,Calabar,7466400,pm25,36.0,2026-03-23T21:09:40Z,5.02529,8.34843
 Cross River State,Calabar,7466400,pm25,34.65,2026-03-23T21:27:09Z,5.02529,8.34843
 Cross River State,Calabar,7466400,pm25,34.07,2026-03-23T21:44:37Z,5.02529,8.34843
-Lagos State,University of Lagos/Makoko,12178112,pm25,3.2,2026-03-23T01:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178112,pm25,5.8,2026-03-23T02:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178112,pm25,5.4,2026-03-23T03:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178112,pm25,9.5,2026-03-23T04:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178112,pm25,14.7,2026-03-23T05:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178112,pm25,16.8,2026-03-23T06:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178112,pm25,12.6,2026-03-23T07:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178112,pm25,4.4,2026-03-23T08:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178112,pm25,2.8,2026-03-23T09:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178112,pm25,1.9,2026-03-23T10:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178112,pm25,3.2,2026-03-23T11:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178112,pm25,3.2,2026-03-23T12:00:00Z,6.517912,3.385983
+Cross River State,Calabar,7466400,pm25,12.4,2026-03-24T00:56:40Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,11.38,2026-03-24T01:14:05Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,10.01,2026-03-24T01:31:39Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,8.15,2026-03-24T01:49:04Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,7.63,2026-03-24T02:06:28Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,7.49,2026-03-24T02:24:05Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,7.6,2026-03-24T02:41:30Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,8.2,2026-03-24T02:58:55Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,8.21,2026-03-24T03:16:19Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,9.26,2026-03-24T03:33:44Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,10.72,2026-03-24T03:51:09Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,11.92,2026-03-24T04:08:34Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,14.34,2026-03-24T04:26:14Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,14.31,2026-03-24T04:43:39Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,16.99,2026-03-24T05:01:04Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,32.27,2026-03-24T05:18:29Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,36.5,2026-03-24T05:35:54Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,32.37,2026-03-24T05:53:18Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,40.8,2026-03-24T06:10:43Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,38.36,2026-03-24T06:28:08Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,25.22,2026-03-24T06:45:32Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,10.97,2026-03-24T09:05:13Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,9.35,2026-03-24T09:22:37Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,11.75,2026-03-24T09:40:01Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,11.14,2026-03-24T09:57:28Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,11.74,2026-03-24T10:14:58Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,9.83,2026-03-24T10:32:29Z,5.02529,8.34843
+Cross River State,Calabar,7466400,pm25,10.6,2026-03-24T10:49:53Z,5.02529,8.34843
 Lagos State,University of Lagos/Makoko,12178112,pm25,3.7,2026-03-23T13:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178112,pm25,4.7,2026-03-23T14:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178112,pm25,6.7,2026-03-23T15:00:00Z,6.517912,3.385983
@@ -125,18 +108,18 @@ Lagos State,University of Lagos/Makoko,12178112,pm25,4.0,2026-03-23T21:00:00Z,6.
 Lagos State,University of Lagos/Makoko,12178112,pm25,1.5,2026-03-23T22:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178112,pm25,1.1,2026-03-23T23:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178112,pm25,2.5,2026-03-24T00:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178113,relativehumidity,60.0,2026-03-23T01:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178113,relativehumidity,60.0,2026-03-23T02:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178113,relativehumidity,61.0,2026-03-23T03:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178113,relativehumidity,61.0,2026-03-23T04:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178113,relativehumidity,62.0,2026-03-23T05:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178113,relativehumidity,61.0,2026-03-23T06:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178113,relativehumidity,55.0,2026-03-23T07:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178113,relativehumidity,48.0,2026-03-23T08:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178113,relativehumidity,43.0,2026-03-23T09:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178113,relativehumidity,40.0,2026-03-23T10:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178113,relativehumidity,40.0,2026-03-23T11:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178113,relativehumidity,41.0,2026-03-23T12:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178112,pm25,1.8,2026-03-24T01:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178112,pm25,2.4,2026-03-24T02:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178112,pm25,2.1,2026-03-24T03:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178112,pm25,2.5,2026-03-24T04:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178112,pm25,4.7,2026-03-24T05:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178112,pm25,7.9,2026-03-24T06:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178112,pm25,5.4,2026-03-24T07:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178112,pm25,2.1,2026-03-24T08:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178112,pm25,2.0,2026-03-24T09:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178112,pm25,2.0,2026-03-24T10:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178112,pm25,2.5,2026-03-24T11:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178112,pm25,2.5,2026-03-24T12:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178113,relativehumidity,43.0,2026-03-23T13:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178113,relativehumidity,44.0,2026-03-23T14:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178113,relativehumidity,46.0,2026-03-23T15:00:00Z,6.517912,3.385983
@@ -149,18 +132,18 @@ Lagos State,University of Lagos/Makoko,12178113,relativehumidity,58.0,2026-03-23
 Lagos State,University of Lagos/Makoko,12178113,relativehumidity,58.0,2026-03-23T22:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178113,relativehumidity,59.0,2026-03-23T23:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178113,relativehumidity,60.0,2026-03-24T00:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178114,temperature,30.1,2026-03-23T01:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178114,temperature,30.1,2026-03-23T02:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178114,temperature,29.7,2026-03-23T03:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178114,temperature,29.5,2026-03-23T04:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178114,temperature,29.4,2026-03-23T05:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178114,temperature,29.9,2026-03-23T06:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178114,temperature,31.7,2026-03-23T07:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178114,temperature,34.3,2026-03-23T08:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178114,temperature,36.2,2026-03-23T09:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178114,temperature,37.1,2026-03-23T10:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178114,temperature,37.0,2026-03-23T11:00:00Z,6.517912,3.385983
-Lagos State,University of Lagos/Makoko,12178114,temperature,36.9,2026-03-23T12:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178113,relativehumidity,62.0,2026-03-24T01:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178113,relativehumidity,62.0,2026-03-24T02:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178113,relativehumidity,63.0,2026-03-24T03:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178113,relativehumidity,63.0,2026-03-24T04:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178113,relativehumidity,62.0,2026-03-24T05:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178113,relativehumidity,59.0,2026-03-24T06:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178113,relativehumidity,56.0,2026-03-24T07:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178113,relativehumidity,51.0,2026-03-24T08:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178113,relativehumidity,50.0,2026-03-24T09:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178113,relativehumidity,42.0,2026-03-24T10:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178113,relativehumidity,42.0,2026-03-24T11:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178113,relativehumidity,42.0,2026-03-24T12:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178114,temperature,36.0,2026-03-23T13:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178114,temperature,35.2,2026-03-23T14:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178114,temperature,34.5,2026-03-23T15:00:00Z,6.517912,3.385983
@@ -173,18 +156,18 @@ Lagos State,University of Lagos/Makoko,12178114,temperature,30.8,2026-03-23T21:0
 Lagos State,University of Lagos/Makoko,12178114,temperature,30.8,2026-03-23T22:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178114,temperature,30.6,2026-03-23T23:00:00Z,6.517912,3.385983
 Lagos State,University of Lagos/Makoko,12178114,temperature,30.2,2026-03-24T00:00:00Z,6.517912,3.385983
-Lagos State,Sagamu Road - Ikorodu,13844885,pm25,24.1,2026-03-23T01:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844885,pm25,23.3,2026-03-23T02:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844885,pm25,21.0,2026-03-23T03:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844885,pm25,27.3,2026-03-23T04:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844885,pm25,38.7,2026-03-23T05:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844885,pm25,38.8,2026-03-23T06:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844885,pm25,34.9,2026-03-23T07:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844885,pm25,28.5,2026-03-23T08:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844885,pm25,23.1,2026-03-23T09:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844885,pm25,19.4,2026-03-23T10:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844885,pm25,18.5,2026-03-23T11:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844885,pm25,20.5,2026-03-23T12:00:00Z,6.63512,3.51558
+Lagos State,University of Lagos/Makoko,12178114,temperature,29.3,2026-03-24T01:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178114,temperature,29.2,2026-03-24T02:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178114,temperature,29.1,2026-03-24T03:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178114,temperature,29.0,2026-03-24T04:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178114,temperature,29.1,2026-03-24T05:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178114,temperature,30.3,2026-03-24T06:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178114,temperature,31.5,2026-03-24T07:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178114,temperature,32.9,2026-03-24T08:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178114,temperature,33.7,2026-03-24T09:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178114,temperature,36.5,2026-03-24T10:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178114,temperature,35.9,2026-03-24T11:00:00Z,6.517912,3.385983
+Lagos State,University of Lagos/Makoko,12178114,temperature,35.3,2026-03-24T12:00:00Z,6.517912,3.385983
 Lagos State,Sagamu Road - Ikorodu,13844885,pm25,24.6,2026-03-23T13:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844885,pm25,32.0,2026-03-23T14:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844885,pm25,25.2,2026-03-23T15:00:00Z,6.63512,3.51558
@@ -197,18 +180,10 @@ Lagos State,Sagamu Road - Ikorodu,13844885,pm25,26.6,2026-03-23T21:00:00Z,6.6351
 Lagos State,Sagamu Road - Ikorodu,13844885,pm25,31.0,2026-03-23T22:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844885,pm25,18.0,2026-03-23T23:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844885,pm25,11.1,2026-03-24T00:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,63.0,2026-03-23T01:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,63.0,2026-03-23T02:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,64.0,2026-03-23T03:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,63.0,2026-03-23T04:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,64.0,2026-03-23T05:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,63.0,2026-03-23T06:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,59.0,2026-03-23T07:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,55.0,2026-03-23T08:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,53.0,2026-03-23T09:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,50.0,2026-03-23T10:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,47.0,2026-03-23T11:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,48.0,2026-03-23T12:00:00Z,6.63512,3.51558
+Lagos State,Sagamu Road - Ikorodu,13844885,pm25,12.4,2026-03-24T01:00:00Z,6.63512,3.51558
+Lagos State,Sagamu Road - Ikorodu,13844885,pm25,10.9,2026-03-24T02:00:00Z,6.63512,3.51558
+Lagos State,Sagamu Road - Ikorodu,13844885,pm25,16.8,2026-03-24T03:00:00Z,6.63512,3.51558
+Lagos State,Sagamu Road - Ikorodu,13844885,pm25,21.7,2026-03-24T04:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,50.0,2026-03-23T13:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,53.0,2026-03-23T14:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,54.0,2026-03-23T15:00:00Z,6.63512,3.51558
@@ -221,18 +196,10 @@ Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,62.0,2026-03-23T21:0
 Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,63.0,2026-03-23T22:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,63.0,2026-03-23T23:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,63.0,2026-03-24T00:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.6,2026-03-23T01:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.5,2026-03-23T02:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.4,2026-03-23T03:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.4,2026-03-23T04:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.3,2026-03-23T05:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.5,2026-03-23T06:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844887,temperature,31.0,2026-03-23T07:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844887,temperature,32.1,2026-03-23T08:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844887,temperature,32.7,2026-03-23T09:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844887,temperature,33.1,2026-03-23T10:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844887,temperature,34.1,2026-03-23T11:00:00Z,6.63512,3.51558
-Lagos State,Sagamu Road - Ikorodu,13844887,temperature,34.1,2026-03-23T12:00:00Z,6.63512,3.51558
+Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,62.0,2026-03-24T01:00:00Z,6.63512,3.51558
+Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,63.0,2026-03-24T02:00:00Z,6.63512,3.51558
+Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,63.0,2026-03-24T03:00:00Z,6.63512,3.51558
+Lagos State,Sagamu Road - Ikorodu,13844886,relativehumidity,63.0,2026-03-24T04:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844887,temperature,33.6,2026-03-23T13:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844887,temperature,32.8,2026-03-23T14:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844887,temperature,32.6,2026-03-23T15:00:00Z,6.63512,3.51558
@@ -245,18 +212,10 @@ Lagos State,Sagamu Road - Ikorodu,13844887,temperature,30.1,2026-03-23T21:00:00Z
 Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.9,2026-03-23T22:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.7,2026-03-23T23:00:00Z,6.63512,3.51558
 Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.7,2026-03-24T00:00:00Z,6.63512,3.51558
-Lagos State,M.K.O Abiola Gardens,13851866,pm25,11.7,2026-03-23T01:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851866,pm25,11.7,2026-03-23T02:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851866,pm25,8.1,2026-03-23T03:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851866,pm25,12.4,2026-03-23T04:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851866,pm25,17.8,2026-03-23T05:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851866,pm25,22.5,2026-03-23T06:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851866,pm25,22.1,2026-03-23T07:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851866,pm25,19.5,2026-03-23T08:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851866,pm25,13.1,2026-03-23T09:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851866,pm25,19.7,2026-03-23T10:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851866,pm25,17.5,2026-03-23T11:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851866,pm25,17.0,2026-03-23T12:00:00Z,6.621462,3.362492
+Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.9,2026-03-24T01:00:00Z,6.63512,3.51558
+Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.6,2026-03-24T02:00:00Z,6.63512,3.51558
+Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.5,2026-03-24T03:00:00Z,6.63512,3.51558
+Lagos State,Sagamu Road - Ikorodu,13844887,temperature,29.8,2026-03-24T04:00:00Z,6.63512,3.51558
 Lagos State,M.K.O Abiola Gardens,13851866,pm25,16.2,2026-03-23T13:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851866,pm25,17.3,2026-03-23T14:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851866,pm25,15.2,2026-03-23T15:00:00Z,6.621462,3.362492
@@ -269,18 +228,18 @@ Lagos State,M.K.O Abiola Gardens,13851866,pm25,16.0,2026-03-23T21:00:00Z,6.62146
 Lagos State,M.K.O Abiola Gardens,13851866,pm25,9.2,2026-03-23T22:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851866,pm25,5.6,2026-03-23T23:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851866,pm25,6.4,2026-03-24T00:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-23T01:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-23T02:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-23T03:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-23T04:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-23T05:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-23T06:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-23T07:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,52.0,2026-03-23T08:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,51.0,2026-03-23T09:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,50.0,2026-03-23T10:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,48.0,2026-03-23T11:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,48.0,2026-03-23T12:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851866,pm25,13.5,2026-03-24T01:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851866,pm25,15.6,2026-03-24T02:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851866,pm25,13.2,2026-03-24T03:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851866,pm25,10.3,2026-03-24T04:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851866,pm25,17.9,2026-03-24T05:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851866,pm25,27.0,2026-03-24T06:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851866,pm25,22.9,2026-03-24T07:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851866,pm25,8.3,2026-03-24T08:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851866,pm25,11.7,2026-03-24T09:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851866,pm25,6.5,2026-03-24T10:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851866,pm25,16.7,2026-03-24T11:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851866,pm25,18.8,2026-03-24T12:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,47.0,2026-03-23T13:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,47.0,2026-03-23T14:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,46.0,2026-03-23T15:00:00Z,6.621462,3.362492
@@ -293,18 +252,18 @@ Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,52.0,2026-03-23T21:00
 Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,52.0,2026-03-23T22:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,52.0,2026-03-23T23:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,52.0,2026-03-24T00:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.7,2026-03-23T01:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.7,2026-03-23T02:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.6,2026-03-23T03:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.4,2026-03-23T04:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.4,2026-03-23T05:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.3,2026-03-23T06:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.5,2026-03-23T07:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.7,2026-03-23T08:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851868,temperature,32.1,2026-03-23T09:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851868,temperature,32.5,2026-03-23T10:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851868,temperature,32.8,2026-03-23T11:00:00Z,6.621462,3.362492
-Lagos State,M.K.O Abiola Gardens,13851868,temperature,33.1,2026-03-23T12:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-24T01:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-24T02:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-24T03:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-24T04:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-24T05:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,53.0,2026-03-24T06:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,54.0,2026-03-24T07:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,52.0,2026-03-24T08:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,51.0,2026-03-24T09:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,49.0,2026-03-24T10:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,47.0,2026-03-24T11:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851867,relativehumidity,46.0,2026-03-24T12:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851868,temperature,33.2,2026-03-23T13:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851868,temperature,33.3,2026-03-23T14:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851868,temperature,34.0,2026-03-23T15:00:00Z,6.621462,3.362492
@@ -317,10 +276,18 @@ Lagos State,M.K.O Abiola Gardens,13851868,temperature,32.3,2026-03-23T21:00:00Z,
 Lagos State,M.K.O Abiola Gardens,13851868,temperature,32.3,2026-03-23T22:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851868,temperature,32.2,2026-03-23T23:00:00Z,6.621462,3.362492
 Lagos State,M.K.O Abiola Gardens,13851868,temperature,32.0,2026-03-24T00:00:00Z,6.621462,3.362492
-Lagos State,Shagisha - Magodo,13418561,pm25,10.4,2026-03-23T01:00:00Z,6.613897882603808,3.37470481094047
-Lagos State,Shagisha - Magodo,13418561,pm25,10.7,2026-03-23T02:00:00Z,6.613897882603808,3.37470481094047
-Lagos State,Shagisha - Magodo,13418561,pm25,9.7,2026-03-23T03:00:00Z,6.613897882603808,3.37470481094047
-Lagos State,Shagisha - Magodo,13418561,pm25,17.5,2026-03-23T04:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.9,2026-03-24T01:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.8,2026-03-24T02:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.7,2026-03-24T03:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.7,2026-03-24T04:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.6,2026-03-24T05:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.5,2026-03-24T06:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.7,2026-03-24T07:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851868,temperature,31.8,2026-03-24T08:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851868,temperature,32.1,2026-03-24T09:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851868,temperature,32.6,2026-03-24T10:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851868,temperature,33.0,2026-03-24T11:00:00Z,6.621462,3.362492
+Lagos State,M.K.O Abiola Gardens,13851868,temperature,33.3,2026-03-24T12:00:00Z,6.621462,3.362492
 Lagos State,Shagisha - Magodo,13418561,pm25,14.4,2026-03-23T16:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418561,pm25,10.6,2026-03-23T17:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418561,pm25,15.9,2026-03-23T18:00:00Z,6.613897882603808,3.37470481094047
@@ -330,10 +297,11 @@ Lagos State,Shagisha - Magodo,13418561,pm25,14.4,2026-03-23T21:00:00Z,6.61389788
 Lagos State,Shagisha - Magodo,13418561,pm25,7.7,2026-03-23T22:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418561,pm25,7.0,2026-03-23T23:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418561,pm25,7.1,2026-03-24T00:00:00Z,6.613897882603808,3.37470481094047
-Lagos State,Shagisha - Magodo,13418562,relativehumidity,59.0,2026-03-23T01:00:00Z,6.613897882603808,3.37470481094047
-Lagos State,Shagisha - Magodo,13418562,relativehumidity,59.0,2026-03-23T02:00:00Z,6.613897882603808,3.37470481094047
-Lagos State,Shagisha - Magodo,13418562,relativehumidity,60.0,2026-03-23T03:00:00Z,6.613897882603808,3.37470481094047
-Lagos State,Shagisha - Magodo,13418562,relativehumidity,62.0,2026-03-23T04:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418561,pm25,4.7,2026-03-24T01:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418561,pm25,5.3,2026-03-24T02:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418561,pm25,5.9,2026-03-24T03:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418561,pm25,8.7,2026-03-24T04:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418561,pm25,16.4,2026-03-24T05:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418562,relativehumidity,57.0,2026-03-23T16:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418562,relativehumidity,48.0,2026-03-23T17:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418562,relativehumidity,53.0,2026-03-23T18:00:00Z,6.613897882603808,3.37470481094047
@@ -343,10 +311,11 @@ Lagos State,Shagisha - Magodo,13418562,relativehumidity,55.0,2026-03-23T21:00:00
 Lagos State,Shagisha - Magodo,13418562,relativehumidity,75.0,2026-03-23T22:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418562,relativehumidity,58.0,2026-03-23T23:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418562,relativehumidity,57.0,2026-03-24T00:00:00Z,6.613897882603808,3.37470481094047
-Lagos State,Shagisha - Magodo,13418563,temperature,30.7,2026-03-23T01:00:00Z,6.613897882603808,3.37470481094047
-Lagos State,Shagisha - Magodo,13418563,temperature,30.7,2026-03-23T02:00:00Z,6.613897882603808,3.37470481094047
-Lagos State,Shagisha - Magodo,13418563,temperature,30.2,2026-03-23T03:00:00Z,6.613897882603808,3.37470481094047
-Lagos State,Shagisha - Magodo,13418563,temperature,29.5,2026-03-23T04:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418562,relativehumidity,58.0,2026-03-24T01:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418562,relativehumidity,58.0,2026-03-24T02:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418562,relativehumidity,58.0,2026-03-24T03:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418562,relativehumidity,60.0,2026-03-24T04:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418562,relativehumidity,59.0,2026-03-24T05:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418563,temperature,29.9,2026-03-23T16:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418563,temperature,32.9,2026-03-23T17:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418563,temperature,32.4,2026-03-23T18:00:00Z,6.613897882603808,3.37470481094047
@@ -356,10 +325,11 @@ Lagos State,Shagisha - Magodo,13418563,temperature,32.1,2026-03-23T21:00:00Z,6.6
 Lagos State,Shagisha - Magodo,13418563,temperature,26.2,2026-03-23T22:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418563,temperature,30.9,2026-03-23T23:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Shagisha - Magodo,13418563,temperature,31.3,2026-03-24T00:00:00Z,6.613897882603808,3.37470481094047
-Lagos State,Ketu - Lagos,13512808,pm25,20.9,2026-03-23T01:00:00Z,6.597049977017641,3.3887163100637974
-Lagos State,Ketu - Lagos,13512808,pm25,22.9,2026-03-23T02:00:00Z,6.597049977017641,3.3887163100637974
-Lagos State,Ketu - Lagos,13512808,pm25,25.3,2026-03-23T03:00:00Z,6.597049977017641,3.3887163100637974
-Lagos State,Ketu - Lagos,13512808,pm25,30.2,2026-03-23T04:00:00Z,6.597049977017641,3.3887163100637974
+Lagos State,Shagisha - Magodo,13418563,temperature,31.1,2026-03-24T01:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418563,temperature,31.1,2026-03-24T02:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418563,temperature,31.0,2026-03-24T03:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418563,temperature,30.6,2026-03-24T04:00:00Z,6.613897882603808,3.37470481094047
+Lagos State,Shagisha - Magodo,13418563,temperature,30.7,2026-03-24T05:00:00Z,6.613897882603808,3.37470481094047
 Lagos State,Ketu - Lagos,13512808,pm25,24.0,2026-03-23T18:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512808,pm25,25.1,2026-03-23T19:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512808,pm25,34.0,2026-03-23T20:00:00Z,6.597049977017641,3.3887163100637974
@@ -367,10 +337,10 @@ Lagos State,Ketu - Lagos,13512808,pm25,23.6,2026-03-23T21:00:00Z,6.5970499770176
 Lagos State,Ketu - Lagos,13512808,pm25,13.4,2026-03-23T22:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512808,pm25,20.0,2026-03-23T23:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512808,pm25,13.4,2026-03-24T00:00:00Z,6.597049977017641,3.3887163100637974
-Lagos State,Ketu - Lagos,13512809,relativehumidity,61.0,2026-03-23T01:00:00Z,6.597049977017641,3.3887163100637974
-Lagos State,Ketu - Lagos,13512809,relativehumidity,61.0,2026-03-23T02:00:00Z,6.597049977017641,3.3887163100637974
-Lagos State,Ketu - Lagos,13512809,relativehumidity,62.0,2026-03-23T03:00:00Z,6.597049977017641,3.3887163100637974
-Lagos State,Ketu - Lagos,13512809,relativehumidity,62.0,2026-03-23T04:00:00Z,6.597049977017641,3.3887163100637974
+Lagos State,Ketu - Lagos,13512808,pm25,11.2,2026-03-24T01:00:00Z,6.597049977017641,3.3887163100637974
+Lagos State,Ketu - Lagos,13512808,pm25,12.9,2026-03-24T02:00:00Z,6.597049977017641,3.3887163100637974
+Lagos State,Ketu - Lagos,13512808,pm25,20.0,2026-03-24T03:00:00Z,6.597049977017641,3.3887163100637974
+Lagos State,Ketu - Lagos,13512808,pm25,27.4,2026-03-24T04:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512809,relativehumidity,64.0,2026-03-23T18:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512809,relativehumidity,60.0,2026-03-23T19:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512809,relativehumidity,60.0,2026-03-23T20:00:00Z,6.597049977017641,3.3887163100637974
@@ -378,10 +348,10 @@ Lagos State,Ketu - Lagos,13512809,relativehumidity,60.0,2026-03-23T21:00:00Z,6.5
 Lagos State,Ketu - Lagos,13512809,relativehumidity,60.0,2026-03-23T22:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512809,relativehumidity,59.0,2026-03-23T23:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512809,relativehumidity,61.0,2026-03-24T00:00:00Z,6.597049977017641,3.3887163100637974
-Lagos State,Ketu - Lagos,13512810,temperature,29.9,2026-03-23T01:00:00Z,6.597049977017641,3.3887163100637974
-Lagos State,Ketu - Lagos,13512810,temperature,29.8,2026-03-23T02:00:00Z,6.597049977017641,3.3887163100637974
-Lagos State,Ketu - Lagos,13512810,temperature,29.6,2026-03-23T03:00:00Z,6.597049977017641,3.3887163100637974
-Lagos State,Ketu - Lagos,13512810,temperature,29.6,2026-03-23T04:00:00Z,6.597049977017641,3.3887163100637974
+Lagos State,Ketu - Lagos,13512809,relativehumidity,61.0,2026-03-24T01:00:00Z,6.597049977017641,3.3887163100637974
+Lagos State,Ketu - Lagos,13512809,relativehumidity,60.0,2026-03-24T02:00:00Z,6.597049977017641,3.3887163100637974
+Lagos State,Ketu - Lagos,13512809,relativehumidity,61.0,2026-03-24T03:00:00Z,6.597049977017641,3.3887163100637974
+Lagos State,Ketu - Lagos,13512809,relativehumidity,61.0,2026-03-24T04:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512810,temperature,29.2,2026-03-23T18:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512810,temperature,30.3,2026-03-23T19:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512810,temperature,30.3,2026-03-23T20:00:00Z,6.597049977017641,3.3887163100637974
@@ -389,18 +359,10 @@ Lagos State,Ketu - Lagos,13512810,temperature,30.4,2026-03-23T21:00:00Z,6.597049
 Lagos State,Ketu - Lagos,13512810,temperature,30.3,2026-03-23T22:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512810,temperature,30.3,2026-03-23T23:00:00Z,6.597049977017641,3.3887163100637974
 Lagos State,Ketu - Lagos,13512810,temperature,30.1,2026-03-24T00:00:00Z,6.597049977017641,3.3887163100637974
-Ogun State,Arepo - Ogun State,13534811,temperature,31.0,2026-03-23T01:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534811,temperature,30.9,2026-03-23T02:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534811,temperature,30.8,2026-03-23T03:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534811,temperature,30.7,2026-03-23T04:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534811,temperature,30.6,2026-03-23T05:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534811,temperature,30.5,2026-03-23T06:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534811,temperature,30.8,2026-03-23T07:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534811,temperature,31.3,2026-03-23T08:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534811,temperature,31.9,2026-03-23T09:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534811,temperature,32.3,2026-03-23T10:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534811,temperature,32.6,2026-03-23T11:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534811,temperature,32.8,2026-03-23T12:00:00Z,6.696900148176493,3.425331320586317
+Lagos State,Ketu - Lagos,13512810,temperature,30.1,2026-03-24T01:00:00Z,6.597049977017641,3.3887163100637974
+Lagos State,Ketu - Lagos,13512810,temperature,30.0,2026-03-24T02:00:00Z,6.597049977017641,3.3887163100637974
+Lagos State,Ketu - Lagos,13512810,temperature,30.0,2026-03-24T03:00:00Z,6.597049977017641,3.3887163100637974
+Lagos State,Ketu - Lagos,13512810,temperature,29.9,2026-03-24T04:00:00Z,6.597049977017641,3.3887163100637974
 Ogun State,Arepo - Ogun State,13534811,temperature,32.9,2026-03-23T13:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534811,temperature,33.0,2026-03-23T14:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534811,temperature,33.0,2026-03-23T15:00:00Z,6.696900148176493,3.425331320586317
@@ -413,18 +375,18 @@ Ogun State,Arepo - Ogun State,13534811,temperature,31.7,2026-03-23T21:00:00Z,6.6
 Ogun State,Arepo - Ogun State,13534811,temperature,31.7,2026-03-23T22:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534811,temperature,31.5,2026-03-23T23:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534811,temperature,31.4,2026-03-24T00:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534809,pm25,22.0,2026-03-23T01:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534809,pm25,22.2,2026-03-23T02:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534809,pm25,8.6,2026-03-23T03:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534809,pm25,7.5,2026-03-23T04:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534809,pm25,16.9,2026-03-23T05:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534809,pm25,25.7,2026-03-23T06:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534809,pm25,28.3,2026-03-23T07:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534809,pm25,17.4,2026-03-23T08:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534809,pm25,16.7,2026-03-23T09:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534809,pm25,10.9,2026-03-23T10:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534809,pm25,12.3,2026-03-23T11:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534809,pm25,11.9,2026-03-23T12:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534811,temperature,31.3,2026-03-24T01:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534811,temperature,31.3,2026-03-24T02:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534811,temperature,31.2,2026-03-24T03:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534811,temperature,31.0,2026-03-24T04:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534811,temperature,30.9,2026-03-24T05:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534811,temperature,30.9,2026-03-24T06:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534811,temperature,31.3,2026-03-24T07:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534811,temperature,31.7,2026-03-24T08:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534811,temperature,32.0,2026-03-24T09:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534811,temperature,32.4,2026-03-24T10:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534811,temperature,32.7,2026-03-24T11:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534811,temperature,32.9,2026-03-24T12:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534809,pm25,18.9,2026-03-23T13:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534809,pm25,49.7,2026-03-23T14:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534809,pm25,18.7,2026-03-23T15:00:00Z,6.696900148176493,3.425331320586317
@@ -437,18 +399,18 @@ Ogun State,Arepo - Ogun State,13534809,pm25,12.8,2026-03-23T21:00:00Z,6.69690014
 Ogun State,Arepo - Ogun State,13534809,pm25,11.2,2026-03-23T22:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534809,pm25,7.8,2026-03-23T23:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534809,pm25,11.0,2026-03-24T00:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534810,relativehumidity,58.0,2026-03-23T01:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534810,relativehumidity,58.0,2026-03-23T02:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534810,relativehumidity,57.0,2026-03-23T03:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534810,relativehumidity,57.0,2026-03-23T04:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534810,relativehumidity,58.0,2026-03-23T05:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534810,relativehumidity,58.0,2026-03-23T06:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534810,relativehumidity,58.0,2026-03-23T07:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534810,relativehumidity,56.0,2026-03-23T08:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534810,relativehumidity,52.0,2026-03-23T09:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534810,relativehumidity,50.0,2026-03-23T10:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534810,relativehumidity,49.0,2026-03-23T11:00:00Z,6.696900148176493,3.425331320586317
-Ogun State,Arepo - Ogun State,13534810,relativehumidity,49.0,2026-03-23T12:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534809,pm25,6.6,2026-03-24T01:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534809,pm25,6.6,2026-03-24T02:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534809,pm25,10.0,2026-03-24T03:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534809,pm25,18.8,2026-03-24T04:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534809,pm25,10.1,2026-03-24T05:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534809,pm25,12.3,2026-03-24T06:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534809,pm25,15.4,2026-03-24T07:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534809,pm25,16.0,2026-03-24T08:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534809,pm25,15.2,2026-03-24T09:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534809,pm25,19.0,2026-03-24T10:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534809,pm25,14.3,2026-03-24T11:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534809,pm25,9.1,2026-03-24T12:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534810,relativehumidity,48.0,2026-03-23T13:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534810,relativehumidity,49.0,2026-03-23T14:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534810,relativehumidity,48.0,2026-03-23T15:00:00Z,6.696900148176493,3.425331320586317
@@ -461,13 +423,18 @@ Ogun State,Arepo - Ogun State,13534810,relativehumidity,55.0,2026-03-23T21:00:00
 Ogun State,Arepo - Ogun State,13534810,relativehumidity,55.0,2026-03-23T22:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534810,relativehumidity,55.0,2026-03-23T23:00:00Z,6.696900148176493,3.425331320586317
 Ogun State,Arepo - Ogun State,13534810,relativehumidity,56.0,2026-03-24T00:00:00Z,6.696900148176493,3.425331320586317
-Lagos State,Ikorodu Bus Terminal,13553849,pm25,21.1,2026-03-23T01:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553849,pm25,21.4,2026-03-23T02:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553849,pm25,28.7,2026-03-23T03:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553849,pm25,71.6,2026-03-23T04:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553849,pm25,80.2,2026-03-23T06:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553849,pm25,60.0,2026-03-23T07:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553849,pm25,44.4,2026-03-23T08:00:00Z,6.620901238525096,3.502717467376165
+Ogun State,Arepo - Ogun State,13534810,relativehumidity,57.0,2026-03-24T01:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534810,relativehumidity,57.0,2026-03-24T02:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534810,relativehumidity,57.0,2026-03-24T03:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534810,relativehumidity,58.0,2026-03-24T04:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534810,relativehumidity,58.0,2026-03-24T05:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534810,relativehumidity,58.0,2026-03-24T06:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534810,relativehumidity,57.0,2026-03-24T07:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534810,relativehumidity,54.0,2026-03-24T08:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534810,relativehumidity,52.0,2026-03-24T09:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534810,relativehumidity,50.0,2026-03-24T10:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534810,relativehumidity,49.0,2026-03-24T11:00:00Z,6.696900148176493,3.425331320586317
+Ogun State,Arepo - Ogun State,13534810,relativehumidity,46.0,2026-03-24T12:00:00Z,6.696900148176493,3.425331320586317
 Lagos State,Ikorodu Bus Terminal,13553849,pm25,40.2,2026-03-23T15:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553849,pm25,35.1,2026-03-23T16:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553849,pm25,33.9,2026-03-23T17:00:00Z,6.620901238525096,3.502717467376165
@@ -478,13 +445,12 @@ Lagos State,Ikorodu Bus Terminal,13553849,pm25,35.8,2026-03-23T21:00:00Z,6.62090
 Lagos State,Ikorodu Bus Terminal,13553849,pm25,49.5,2026-03-23T22:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553849,pm25,33.3,2026-03-23T23:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553849,pm25,19.2,2026-03-24T00:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,86.0,2026-03-23T01:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,86.0,2026-03-23T02:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,86.0,2026-03-23T03:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,86.0,2026-03-23T04:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,85.0,2026-03-23T06:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,80.0,2026-03-23T07:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,75.0,2026-03-23T08:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553849,pm25,17.2,2026-03-24T01:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553849,pm25,19.5,2026-03-24T02:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553849,pm25,29.3,2026-03-24T03:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553849,pm25,52.4,2026-03-24T04:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553849,pm25,58.9,2026-03-24T05:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553849,pm25,97.5,2026-03-24T06:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,69.0,2026-03-23T15:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,71.0,2026-03-23T16:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,75.0,2026-03-23T17:00:00Z,6.620901238525096,3.502717467376165
@@ -495,13 +461,12 @@ Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,83.0,2026-03-23T21:00
 Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,84.0,2026-03-23T22:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,84.0,2026-03-23T23:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,84.0,2026-03-24T00:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553851,temperature,28.8,2026-03-23T01:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553851,temperature,28.8,2026-03-23T02:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553851,temperature,28.8,2026-03-23T03:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553851,temperature,28.5,2026-03-23T04:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553851,temperature,29.0,2026-03-23T06:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553851,temperature,30.5,2026-03-23T07:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Ikorodu Bus Terminal,13553851,temperature,31.7,2026-03-23T08:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,85.0,2026-03-24T01:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,85.0,2026-03-24T02:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,86.0,2026-03-24T03:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,86.0,2026-03-24T04:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,86.0,2026-03-24T05:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553850,relativehumidity,85.0,2026-03-24T06:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553851,temperature,33.8,2026-03-23T15:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553851,temperature,32.5,2026-03-23T16:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553851,temperature,31.0,2026-03-23T17:00:00Z,6.620901238525096,3.502717467376165
@@ -512,18 +477,12 @@ Lagos State,Ikorodu Bus Terminal,13553851,temperature,29.6,2026-03-23T21:00:00Z,
 Lagos State,Ikorodu Bus Terminal,13553851,temperature,29.5,2026-03-23T22:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553851,temperature,29.4,2026-03-23T23:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Ikorodu Bus Terminal,13553851,temperature,29.3,2026-03-24T00:00:00Z,6.620901238525096,3.502717467376165
-Lagos State,Oshodi Bus Terminal 3,13573593,pm25,23.2,2026-03-23T01:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573593,pm25,20.9,2026-03-23T02:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573593,pm25,19.3,2026-03-23T03:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573593,pm25,26.8,2026-03-23T04:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573593,pm25,38.7,2026-03-23T05:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573593,pm25,43.8,2026-03-23T06:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573593,pm25,36.2,2026-03-23T07:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573593,pm25,28.0,2026-03-23T08:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573593,pm25,28.6,2026-03-23T09:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573593,pm25,28.5,2026-03-23T10:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573593,pm25,29.1,2026-03-23T11:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573593,pm25,29.7,2026-03-23T12:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Ikorodu Bus Terminal,13553851,temperature,29.0,2026-03-24T01:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553851,temperature,28.8,2026-03-24T02:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553851,temperature,28.7,2026-03-24T03:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553851,temperature,28.9,2026-03-24T04:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553851,temperature,28.8,2026-03-24T05:00:00Z,6.620901238525096,3.502717467376165
+Lagos State,Ikorodu Bus Terminal,13553851,temperature,28.9,2026-03-24T06:00:00Z,6.620901238525096,3.502717467376165
 Lagos State,Oshodi Bus Terminal 3,13573593,pm25,33.0,2026-03-23T13:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573593,pm25,32.9,2026-03-23T14:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573593,pm25,31.0,2026-03-23T15:00:00Z,6.556652608079174,3.352284660968298
@@ -536,18 +495,18 @@ Lagos State,Oshodi Bus Terminal 3,13573593,pm25,36.4,2026-03-23T21:00:00Z,6.5566
 Lagos State,Oshodi Bus Terminal 3,13573593,pm25,29.1,2026-03-23T22:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573593,pm25,33.4,2026-03-23T23:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573593,pm25,27.7,2026-03-24T00:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,84.0,2026-03-23T01:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,84.0,2026-03-23T02:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,86.0,2026-03-23T03:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,87.0,2026-03-23T04:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,88.0,2026-03-23T05:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,86.0,2026-03-23T06:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,80.0,2026-03-23T07:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,76.0,2026-03-23T08:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,70.0,2026-03-23T09:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,65.0,2026-03-23T10:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,60.0,2026-03-23T11:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,62.0,2026-03-23T12:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573593,pm25,19.2,2026-03-24T01:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573593,pm25,20.4,2026-03-24T02:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573593,pm25,26.0,2026-03-24T03:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573593,pm25,23.0,2026-03-24T04:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573593,pm25,25.7,2026-03-24T05:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573593,pm25,26.6,2026-03-24T06:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573593,pm25,24.0,2026-03-24T07:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573593,pm25,17.8,2026-03-24T08:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573593,pm25,27.7,2026-03-24T09:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573593,pm25,35.3,2026-03-24T10:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573593,pm25,27.8,2026-03-24T11:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573593,pm25,29.8,2026-03-24T12:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,66.0,2026-03-23T13:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,67.0,2026-03-23T14:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,67.0,2026-03-23T15:00:00Z,6.556652608079174,3.352284660968298
@@ -560,18 +519,18 @@ Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,83.0,2026-03-23T21:0
 Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,81.0,2026-03-23T22:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,81.0,2026-03-23T23:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,84.0,2026-03-24T00:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573595,temperature,29.2,2026-03-23T01:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573595,temperature,29.2,2026-03-23T02:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573595,temperature,28.6,2026-03-23T03:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573595,temperature,28.3,2026-03-23T04:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573595,temperature,28.2,2026-03-23T05:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573595,temperature,28.5,2026-03-23T06:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573595,temperature,30.2,2026-03-23T07:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573595,temperature,31.1,2026-03-23T08:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573595,temperature,32.6,2026-03-23T09:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573595,temperature,33.8,2026-03-23T10:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573595,temperature,35.2,2026-03-23T11:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Oshodi Bus Terminal 3,13573595,temperature,35.0,2026-03-23T12:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,84.0,2026-03-24T01:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,83.0,2026-03-24T02:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,84.0,2026-03-24T03:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,85.0,2026-03-24T04:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,85.0,2026-03-24T05:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,85.0,2026-03-24T06:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,81.0,2026-03-24T07:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,76.0,2026-03-24T08:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,74.0,2026-03-24T09:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,66.0,2026-03-24T10:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,64.0,2026-03-24T11:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573594,relativehumidity,63.0,2026-03-24T12:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573595,temperature,33.8,2026-03-23T13:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573595,temperature,33.6,2026-03-23T14:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573595,temperature,33.7,2026-03-23T15:00:00Z,6.556652608079174,3.352284660968298
@@ -584,10 +543,18 @@ Lagos State,Oshodi Bus Terminal 3,13573595,temperature,29.8,2026-03-23T21:00:00Z
 Lagos State,Oshodi Bus Terminal 3,13573595,temperature,29.8,2026-03-23T22:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573595,temperature,29.7,2026-03-23T23:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Oshodi Bus Terminal 3,13573595,temperature,29.5,2026-03-24T00:00:00Z,6.556652608079174,3.352284660968298
-Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,19.6,2026-03-23T01:00:00Z,6.631341496657129,3.3246618554587486
-Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,17.9,2026-03-23T02:00:00Z,6.631341496657129,3.3246618554587486
-Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,22.0,2026-03-23T03:00:00Z,6.631341496657129,3.3246618554587486
-Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,28.7,2026-03-23T04:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Oshodi Bus Terminal 3,13573595,temperature,29.4,2026-03-24T01:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573595,temperature,29.3,2026-03-24T02:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573595,temperature,29.1,2026-03-24T03:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573595,temperature,28.9,2026-03-24T04:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573595,temperature,28.8,2026-03-24T05:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573595,temperature,29.0,2026-03-24T06:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573595,temperature,29.8,2026-03-24T07:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573595,temperature,30.9,2026-03-24T08:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573595,temperature,31.8,2026-03-24T09:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573595,temperature,34.1,2026-03-24T10:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573595,temperature,33.6,2026-03-24T11:00:00Z,6.556652608079174,3.352284660968298
+Lagos State,Oshodi Bus Terminal 3,13573595,temperature,33.8,2026-03-24T12:00:00Z,6.556652608079174,3.352284660968298
 Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,18.5,2026-03-23T14:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,19.1,2026-03-23T15:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,21.0,2026-03-23T16:00:00Z,6.631341496657129,3.3246618554587486
@@ -599,10 +566,13 @@ Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,24.3,2026-03-23T21:00:00Z,6.
 Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,22.3,2026-03-23T22:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,20.6,2026-03-23T23:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,13.2,2026-03-24T00:00:00Z,6.631341496657129,3.3246618554587486
-Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,89.0,2026-03-23T01:00:00Z,6.631341496657129,3.3246618554587486
-Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,89.0,2026-03-23T02:00:00Z,6.631341496657129,3.3246618554587486
-Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,89.0,2026-03-23T03:00:00Z,6.631341496657129,3.3246618554587486
-Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,89.0,2026-03-23T04:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,9.2,2026-03-24T01:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,9.8,2026-03-24T02:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,22.6,2026-03-24T03:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,32.3,2026-03-24T04:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,37.4,2026-03-24T05:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,39.2,2026-03-24T06:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578379,pm25,32.3,2026-03-24T07:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,67.0,2026-03-23T14:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,67.0,2026-03-23T15:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,71.0,2026-03-23T16:00:00Z,6.631341496657129,3.3246618554587486
@@ -614,10 +584,13 @@ Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,85.0,2026-03-23T
 Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,85.0,2026-03-23T22:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,84.0,2026-03-23T23:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,86.0,2026-03-24T00:00:00Z,6.631341496657129,3.3246618554587486
-Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,28.1,2026-03-23T01:00:00Z,6.631341496657129,3.3246618554587486
-Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,28.2,2026-03-23T02:00:00Z,6.631341496657129,3.3246618554587486
-Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,27.8,2026-03-23T03:00:00Z,6.631341496657129,3.3246618554587486
-Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,27.4,2026-03-23T04:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,88.0,2026-03-24T01:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,88.0,2026-03-24T02:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,88.0,2026-03-24T03:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,89.0,2026-03-24T04:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,89.0,2026-03-24T05:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,88.0,2026-03-24T06:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578380,relativehumidity,84.0,2026-03-24T07:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,33.0,2026-03-23T14:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,33.0,2026-03-23T15:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,31.8,2026-03-23T16:00:00Z,6.631341496657129,3.3246618554587486
@@ -629,18 +602,13 @@ Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,29.2,2026-03-23T21:00
 Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,29.1,2026-03-23T22:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,29.0,2026-03-23T23:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,28.8,2026-03-24T00:00:00Z,6.631341496657129,3.3246618554587486
-Lagos State,Agege Redline Train Station,13578919,pm25,27.4,2026-03-23T01:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578919,pm25,23.4,2026-03-23T02:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578919,pm25,26.4,2026-03-23T03:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578919,pm25,35.2,2026-03-23T04:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578919,pm25,41.1,2026-03-23T05:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578919,pm25,43.4,2026-03-23T06:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578919,pm25,39.9,2026-03-23T07:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578919,pm25,20.4,2026-03-23T08:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578919,pm25,31.8,2026-03-23T09:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578919,pm25,17.8,2026-03-23T10:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578919,pm25,19.3,2026-03-23T11:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578919,pm25,21.1,2026-03-23T12:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,28.5,2026-03-24T01:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,28.4,2026-03-24T02:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,28.4,2026-03-24T03:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,28.2,2026-03-24T04:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,28.0,2026-03-24T05:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,28.3,2026-03-24T06:00:00Z,6.631341496657129,3.3246618554587486
+Lagos State,Ifako-Ijaiye Bus Terminal,13578381,temperature,29.3,2026-03-24T07:00:00Z,6.631341496657129,3.3246618554587486
 Lagos State,Agege Redline Train Station,13578919,pm25,21.2,2026-03-23T13:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578919,pm25,20.5,2026-03-23T14:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578919,pm25,14.6,2026-03-23T15:00:00Z,6.620994137087932,3.325885204452219
@@ -653,18 +621,14 @@ Lagos State,Agege Redline Train Station,13578919,pm25,23.6,2026-03-23T21:00:00Z,
 Lagos State,Agege Redline Train Station,13578919,pm25,21.2,2026-03-23T22:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578919,pm25,20.5,2026-03-23T23:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578919,pm25,19.7,2026-03-24T00:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578920,relativehumidity,87.0,2026-03-23T01:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578920,relativehumidity,88.0,2026-03-23T02:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578920,relativehumidity,88.0,2026-03-23T03:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578920,relativehumidity,88.0,2026-03-23T04:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578920,relativehumidity,89.0,2026-03-23T05:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578920,relativehumidity,88.0,2026-03-23T06:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578920,relativehumidity,82.0,2026-03-23T07:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578920,relativehumidity,78.0,2026-03-23T08:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578920,relativehumidity,74.0,2026-03-23T09:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578920,relativehumidity,64.0,2026-03-23T10:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578920,relativehumidity,62.0,2026-03-23T11:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578920,relativehumidity,65.0,2026-03-23T12:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578919,pm25,19.2,2026-03-24T01:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578919,pm25,20.7,2026-03-24T02:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578919,pm25,23.4,2026-03-24T03:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578919,pm25,31.6,2026-03-24T04:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578919,pm25,41.3,2026-03-24T05:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578919,pm25,44.1,2026-03-24T06:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578919,pm25,33.6,2026-03-24T07:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578919,pm25,24.3,2026-03-24T08:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578920,relativehumidity,64.0,2026-03-23T13:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578920,relativehumidity,68.0,2026-03-23T14:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578920,relativehumidity,66.0,2026-03-23T15:00:00Z,6.620994137087932,3.325885204452219
@@ -677,18 +641,14 @@ Lagos State,Agege Redline Train Station,13578920,relativehumidity,85.0,2026-03-2
 Lagos State,Agege Redline Train Station,13578920,relativehumidity,85.0,2026-03-23T22:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578920,relativehumidity,83.0,2026-03-23T23:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578920,relativehumidity,86.0,2026-03-24T00:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578921,temperature,28.3,2026-03-23T01:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578921,temperature,28.3,2026-03-23T02:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578921,temperature,27.9,2026-03-23T03:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578921,temperature,27.5,2026-03-23T04:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578921,temperature,27.5,2026-03-23T05:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578921,temperature,28.0,2026-03-23T06:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578921,temperature,29.7,2026-03-23T07:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578921,temperature,30.5,2026-03-23T08:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578921,temperature,31.3,2026-03-23T09:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578921,temperature,34.1,2026-03-23T10:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578921,temperature,34.8,2026-03-23T11:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Agege Redline Train Station,13578921,temperature,33.9,2026-03-23T12:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578920,relativehumidity,87.0,2026-03-24T01:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578920,relativehumidity,87.0,2026-03-24T02:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578920,relativehumidity,87.0,2026-03-24T03:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578920,relativehumidity,88.0,2026-03-24T04:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578920,relativehumidity,88.0,2026-03-24T05:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578920,relativehumidity,87.0,2026-03-24T06:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578920,relativehumidity,83.0,2026-03-24T07:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578920,relativehumidity,79.0,2026-03-24T08:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578921,temperature,33.8,2026-03-23T13:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578921,temperature,33.0,2026-03-23T14:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578921,temperature,33.2,2026-03-23T15:00:00Z,6.620994137087932,3.325885204452219
@@ -701,11 +661,14 @@ Lagos State,Agege Redline Train Station,13578921,temperature,29.2,2026-03-23T21:
 Lagos State,Agege Redline Train Station,13578921,temperature,29.1,2026-03-23T22:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578921,temperature,29.0,2026-03-23T23:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Agege Redline Train Station,13578921,temperature,28.8,2026-03-24T00:00:00Z,6.620994137087932,3.325885204452219
-Lagos State,Abule Egaba Bus Terminal,13860205,pm25,261.6,2026-03-23T08:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860205,pm25,29.9,2026-03-23T09:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860205,pm25,61.1,2026-03-23T10:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860205,pm25,30.5,2026-03-23T11:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860205,pm25,23.3,2026-03-23T12:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Agege Redline Train Station,13578921,temperature,28.6,2026-03-24T01:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578921,temperature,28.5,2026-03-24T02:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578921,temperature,28.5,2026-03-24T03:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578921,temperature,28.3,2026-03-24T04:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578921,temperature,28.2,2026-03-24T05:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578921,temperature,28.6,2026-03-24T06:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578921,temperature,29.6,2026-03-24T07:00:00Z,6.620994137087932,3.325885204452219
+Lagos State,Agege Redline Train Station,13578921,temperature,30.1,2026-03-24T08:00:00Z,6.620994137087932,3.325885204452219
 Lagos State,Abule Egaba Bus Terminal,13860205,pm25,26.2,2026-03-23T13:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860205,pm25,29.3,2026-03-23T14:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860205,pm25,28.4,2026-03-23T15:00:00Z,6.64748483724529,3.30651086882426
@@ -718,11 +681,12 @@ Lagos State,Abule Egaba Bus Terminal,13860205,pm25,36.0,2026-03-23T21:00:00Z,6.6
 Lagos State,Abule Egaba Bus Terminal,13860205,pm25,41.9,2026-03-23T22:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860205,pm25,24.0,2026-03-23T23:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860205,pm25,13.1,2026-03-24T00:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,66.0,2026-03-23T08:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,63.0,2026-03-23T09:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,58.0,2026-03-23T10:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,56.0,2026-03-23T11:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,55.0,2026-03-23T12:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860205,pm25,12.5,2026-03-24T01:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860205,pm25,9.2,2026-03-24T02:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860205,pm25,67.1,2026-03-24T09:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860205,pm25,22.3,2026-03-24T10:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860205,pm25,21.4,2026-03-24T11:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860205,pm25,19.7,2026-03-24T12:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,54.0,2026-03-23T13:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,59.0,2026-03-23T14:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,59.0,2026-03-23T15:00:00Z,6.64748483724529,3.30651086882426
@@ -735,11 +699,12 @@ Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,77.0,2026-03-23T2
 Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,76.0,2026-03-23T22:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,76.0,2026-03-23T23:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,77.0,2026-03-24T00:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860207,temperature,34.9,2026-03-23T08:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860207,temperature,35.5,2026-03-23T09:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860207,temperature,36.7,2026-03-23T10:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860207,temperature,36.9,2026-03-23T11:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Abule Egaba Bus Terminal,13860207,temperature,37.4,2026-03-23T12:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,79.0,2026-03-24T01:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,80.0,2026-03-24T02:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,64.0,2026-03-24T09:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,58.0,2026-03-24T10:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,56.0,2026-03-24T11:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860206,relativehumidity,54.0,2026-03-24T12:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860207,temperature,37.5,2026-03-23T13:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860207,temperature,36.1,2026-03-23T14:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860207,temperature,35.9,2026-03-23T15:00:00Z,6.64748483724529,3.30651086882426
@@ -752,39 +717,33 @@ Lagos State,Abule Egaba Bus Terminal,13860207,temperature,31.4,2026-03-23T21:00:
 Lagos State,Abule Egaba Bus Terminal,13860207,temperature,31.7,2026-03-23T22:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860207,temperature,31.6,2026-03-23T23:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Abule Egaba Bus Terminal,13860207,temperature,31.5,2026-03-24T00:00:00Z,6.64748483724529,3.30651086882426
-Lagos State,Ojota Bus Terminal,13843845,pm25,17.5,2026-03-23T08:00:00Z,6.589392842358532,3.3780244498389376
-Lagos State,Ojota Bus Terminal,13843845,pm25,20.2,2026-03-23T09:00:00Z,6.589392842358532,3.3780244498389376
-Lagos State,Ojota Bus Terminal,13843845,pm25,15.1,2026-03-23T11:00:00Z,6.589392842358532,3.3780244498389376
-Lagos State,Ojota Bus Terminal,13843845,pm25,16.3,2026-03-23T12:00:00Z,6.589392842358532,3.3780244498389376
+Lagos State,Abule Egaba Bus Terminal,13860207,temperature,31.0,2026-03-24T01:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860207,temperature,30.8,2026-03-24T02:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860207,temperature,35.0,2026-03-24T09:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860207,temperature,36.9,2026-03-24T10:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860207,temperature,36.7,2026-03-24T11:00:00Z,6.64748483724529,3.30651086882426
+Lagos State,Abule Egaba Bus Terminal,13860207,temperature,37.0,2026-03-24T12:00:00Z,6.64748483724529,3.30651086882426
 Lagos State,Ojota Bus Terminal,13843845,pm25,11.5,2026-03-23T13:00:00Z,6.589392842358532,3.3780244498389376
 Lagos State,Ojota Bus Terminal,13843845,pm25,24.9,2026-03-23T14:00:00Z,6.589392842358532,3.3780244498389376
 Lagos State,Ojota Bus Terminal,13843845,pm25,12.4,2026-03-23T15:00:00Z,6.589392842358532,3.3780244498389376
-Lagos State,Ojota Bus Terminal,13843846,relativehumidity,70.0,2026-03-23T08:00:00Z,6.589392842358532,3.3780244498389376
-Lagos State,Ojota Bus Terminal,13843846,relativehumidity,69.0,2026-03-23T09:00:00Z,6.589392842358532,3.3780244498389376
-Lagos State,Ojota Bus Terminal,13843846,relativehumidity,59.0,2026-03-23T11:00:00Z,6.589392842358532,3.3780244498389376
-Lagos State,Ojota Bus Terminal,13843846,relativehumidity,61.0,2026-03-23T12:00:00Z,6.589392842358532,3.3780244498389376
+Lagos State,Ojota Bus Terminal,13843845,pm25,17.6,2026-03-24T09:00:00Z,6.589392842358532,3.3780244498389376
+Lagos State,Ojota Bus Terminal,13843845,pm25,192.6,2026-03-24T10:00:00Z,6.589392842358532,3.3780244498389376
+Lagos State,Ojota Bus Terminal,13843845,pm25,9.1,2026-03-24T11:00:00Z,6.589392842358532,3.3780244498389376
+Lagos State,Ojota Bus Terminal,13843845,pm25,23.5,2026-03-24T12:00:00Z,6.589392842358532,3.3780244498389376
 Lagos State,Ojota Bus Terminal,13843846,relativehumidity,60.0,2026-03-23T13:00:00Z,6.589392842358532,3.3780244498389376
 Lagos State,Ojota Bus Terminal,13843846,relativehumidity,68.0,2026-03-23T14:00:00Z,6.589392842358532,3.3780244498389376
 Lagos State,Ojota Bus Terminal,13843846,relativehumidity,68.0,2026-03-23T15:00:00Z,6.589392842358532,3.3780244498389376
-Lagos State,Ojota Bus Terminal,13843847,temperature,32.8,2026-03-23T08:00:00Z,6.589392842358532,3.3780244498389376
-Lagos State,Ojota Bus Terminal,13843847,temperature,33.1,2026-03-23T09:00:00Z,6.589392842358532,3.3780244498389376
-Lagos State,Ojota Bus Terminal,13843847,temperature,34.9,2026-03-23T11:00:00Z,6.589392842358532,3.3780244498389376
-Lagos State,Ojota Bus Terminal,13843847,temperature,35.0,2026-03-23T12:00:00Z,6.589392842358532,3.3780244498389376
+Lagos State,Ojota Bus Terminal,13843846,relativehumidity,74.0,2026-03-24T09:00:00Z,6.589392842358532,3.3780244498389376
+Lagos State,Ojota Bus Terminal,13843846,relativehumidity,69.0,2026-03-24T10:00:00Z,6.589392842358532,3.3780244498389376
+Lagos State,Ojota Bus Terminal,13843846,relativehumidity,64.0,2026-03-24T11:00:00Z,6.589392842358532,3.3780244498389376
+Lagos State,Ojota Bus Terminal,13843846,relativehumidity,62.0,2026-03-24T12:00:00Z,6.589392842358532,3.3780244498389376
 Lagos State,Ojota Bus Terminal,13843847,temperature,34.8,2026-03-23T13:00:00Z,6.589392842358532,3.3780244498389376
 Lagos State,Ojota Bus Terminal,13843847,temperature,33.3,2026-03-23T14:00:00Z,6.589392842358532,3.3780244498389376
 Lagos State,Ojota Bus Terminal,13843847,temperature,33.1,2026-03-23T15:00:00Z,6.589392842358532,3.3780244498389376
-Lagos State,Lawanson QBC,13843850,pm25,16.5,2026-03-23T01:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843850,pm25,17.0,2026-03-23T02:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843850,pm25,25.7,2026-03-23T03:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843850,pm25,37.7,2026-03-23T04:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843850,pm25,44.4,2026-03-23T05:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843850,pm25,70.7,2026-03-23T06:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843850,pm25,36.8,2026-03-23T07:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843850,pm25,33.5,2026-03-23T08:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843850,pm25,17.2,2026-03-23T09:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843850,pm25,15.6,2026-03-23T10:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843850,pm25,16.0,2026-03-23T11:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843850,pm25,14.5,2026-03-23T12:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Ojota Bus Terminal,13843847,temperature,31.9,2026-03-24T09:00:00Z,6.589392842358532,3.3780244498389376
+Lagos State,Ojota Bus Terminal,13843847,temperature,33.5,2026-03-24T10:00:00Z,6.589392842358532,3.3780244498389376
+Lagos State,Ojota Bus Terminal,13843847,temperature,33.8,2026-03-24T11:00:00Z,6.589392842358532,3.3780244498389376
+Lagos State,Ojota Bus Terminal,13843847,temperature,34.3,2026-03-24T12:00:00Z,6.589392842358532,3.3780244498389376
 Lagos State,Lawanson QBC,13843850,pm25,16.2,2026-03-23T13:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843850,pm25,15.4,2026-03-23T14:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843850,pm25,19.9,2026-03-23T15:00:00Z,6.512309246137081,3.34810632702351
@@ -797,18 +756,18 @@ Lagos State,Lawanson QBC,13843850,pm25,19.9,2026-03-23T21:00:00Z,6.5123092461370
 Lagos State,Lawanson QBC,13843850,pm25,28.3,2026-03-23T22:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843850,pm25,16.7,2026-03-23T23:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843850,pm25,10.2,2026-03-24T00:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843851,relativehumidity,83.0,2026-03-23T01:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843851,relativehumidity,83.0,2026-03-23T02:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843851,relativehumidity,86.0,2026-03-23T03:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843851,relativehumidity,86.0,2026-03-23T04:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843851,relativehumidity,86.0,2026-03-23T05:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843851,relativehumidity,84.0,2026-03-23T06:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843851,relativehumidity,76.0,2026-03-23T07:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843851,relativehumidity,66.0,2026-03-23T08:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843851,relativehumidity,59.0,2026-03-23T09:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843851,relativehumidity,54.0,2026-03-23T10:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843851,relativehumidity,54.0,2026-03-23T11:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843851,relativehumidity,56.0,2026-03-23T12:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843850,pm25,9.0,2026-03-24T01:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843850,pm25,11.8,2026-03-24T02:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843850,pm25,16.5,2026-03-24T03:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843850,pm25,26.9,2026-03-24T04:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843850,pm25,33.9,2026-03-24T05:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843850,pm25,46.5,2026-03-24T06:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843850,pm25,36.4,2026-03-24T07:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843850,pm25,26.7,2026-03-24T08:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843850,pm25,18.3,2026-03-24T09:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843850,pm25,19.4,2026-03-24T10:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843850,pm25,16.1,2026-03-24T11:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843850,pm25,18.7,2026-03-24T12:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843851,relativehumidity,61.0,2026-03-23T13:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843851,relativehumidity,63.0,2026-03-23T14:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843851,relativehumidity,65.0,2026-03-23T15:00:00Z,6.512309246137081,3.34810632702351
@@ -821,18 +780,18 @@ Lagos State,Lawanson QBC,13843851,relativehumidity,81.0,2026-03-23T21:00:00Z,6.5
 Lagos State,Lawanson QBC,13843851,relativehumidity,81.0,2026-03-23T22:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843851,relativehumidity,82.0,2026-03-23T23:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843851,relativehumidity,83.0,2026-03-24T00:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843852,temperature,29.5,2026-03-23T01:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843852,temperature,29.6,2026-03-23T02:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843852,temperature,28.8,2026-03-23T03:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843852,temperature,28.8,2026-03-23T04:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843852,temperature,28.8,2026-03-23T05:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843852,temperature,29.4,2026-03-23T06:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843852,temperature,31.6,2026-03-23T07:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843852,temperature,34.4,2026-03-23T08:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843852,temperature,36.7,2026-03-23T09:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843852,temperature,38.1,2026-03-23T10:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843852,temperature,38.5,2026-03-23T11:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,Lawanson QBC,13843852,temperature,37.9,2026-03-23T12:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843851,relativehumidity,82.0,2026-03-24T01:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843851,relativehumidity,83.0,2026-03-24T02:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843851,relativehumidity,83.0,2026-03-24T03:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843851,relativehumidity,82.0,2026-03-24T04:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843851,relativehumidity,83.0,2026-03-24T05:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843851,relativehumidity,82.0,2026-03-24T06:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843851,relativehumidity,77.0,2026-03-24T07:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843851,relativehumidity,70.0,2026-03-24T08:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843851,relativehumidity,68.0,2026-03-24T09:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843851,relativehumidity,58.0,2026-03-24T10:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843851,relativehumidity,58.0,2026-03-24T11:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843851,relativehumidity,55.0,2026-03-24T12:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843852,temperature,35.9,2026-03-23T13:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843852,temperature,35.4,2026-03-23T14:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843852,temperature,34.5,2026-03-23T15:00:00Z,6.512309246137081,3.34810632702351
@@ -845,9 +804,18 @@ Lagos State,Lawanson QBC,13843852,temperature,30.2,2026-03-23T21:00:00Z,6.512309
 Lagos State,Lawanson QBC,13843852,temperature,30.1,2026-03-23T22:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843852,temperature,29.9,2026-03-23T23:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,Lawanson QBC,13843852,temperature,29.8,2026-03-24T00:00:00Z,6.512309246137081,3.34810632702351
-Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,9.5,2026-03-23T10:00:00Z,6.442321082249053,3.427424708820077
-Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,27.5,2026-03-23T11:00:00Z,6.442321082249053,3.427424708820077
-Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,5.9,2026-03-23T12:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,Lawanson QBC,13843852,temperature,29.7,2026-03-24T01:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843852,temperature,29.6,2026-03-24T02:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843852,temperature,29.7,2026-03-24T03:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843852,temperature,29.4,2026-03-24T04:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843852,temperature,29.3,2026-03-24T05:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843852,temperature,30.1,2026-03-24T06:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843852,temperature,31.4,2026-03-24T07:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843852,temperature,33.2,2026-03-24T08:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843852,temperature,34.1,2026-03-24T09:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843852,temperature,37.1,2026-03-24T10:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843852,temperature,36.2,2026-03-24T11:00:00Z,6.512309246137081,3.34810632702351
+Lagos State,Lawanson QBC,13843852,temperature,37.1,2026-03-24T12:00:00Z,6.512309246137081,3.34810632702351
 Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,6.8,2026-03-23T13:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,7.4,2026-03-23T14:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,8.0,2026-03-23T15:00:00Z,6.442321082249053,3.427424708820077
@@ -860,9 +828,17 @@ Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,7.8,2026-03-23T21:00:00Z
 Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,6.5,2026-03-23T22:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,6.9,2026-03-23T23:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,6.7,2026-03-24T00:00:00Z,6.442321082249053,3.427424708820077
-Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,70.0,2026-03-23T10:00:00Z,6.442321082249053,3.427424708820077
-Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,80.0,2026-03-23T11:00:00Z,6.442321082249053,3.427424708820077
-Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,84.0,2026-03-23T12:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,6.1,2026-03-24T01:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,6.2,2026-03-24T02:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,5.5,2026-03-24T03:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,13.3,2026-03-24T04:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,28.1,2026-03-24T05:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,16.2,2026-03-24T06:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,12.3,2026-03-24T08:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,9.9,2026-03-24T09:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,5.1,2026-03-24T10:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,6.9,2026-03-24T11:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843860,pm25,5.8,2026-03-24T12:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,87.0,2026-03-23T13:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,86.0,2026-03-23T14:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,86.0,2026-03-23T15:00:00Z,6.442321082249053,3.427424708820077
@@ -875,9 +851,17 @@ Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,93.0,2026-03
 Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,94.0,2026-03-23T22:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,92.0,2026-03-23T23:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,94.0,2026-03-24T00:00:00Z,6.442321082249053,3.427424708820077
-Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,28.4,2026-03-23T10:00:00Z,6.442321082249053,3.427424708820077
-Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,33.7,2026-03-23T11:00:00Z,6.442321082249053,3.427424708820077
-Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,32.5,2026-03-23T12:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,94.0,2026-03-24T01:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,94.0,2026-03-24T02:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,94.0,2026-03-24T03:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,89.0,2026-03-24T04:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,95.0,2026-03-24T05:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,93.0,2026-03-24T06:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,94.0,2026-03-24T08:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,88.0,2026-03-24T09:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,82.0,2026-03-24T10:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,80.0,2026-03-24T11:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843861,relativehumidity,82.0,2026-03-24T12:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,31.8,2026-03-23T13:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,31.9,2026-03-23T14:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,31.7,2026-03-23T15:00:00Z,6.442321082249053,3.427424708820077
@@ -890,17 +874,17 @@ Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,29.8,2026-03-23T2
 Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,29.7,2026-03-23T22:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,29.8,2026-03-23T23:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,29.6,2026-03-24T00:00:00Z,6.442321082249053,3.427424708820077
-Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,13.0,2026-03-23T01:00:00Z,6.4461,3.395
-Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,15.0,2026-03-23T02:00:00Z,6.4461,3.395
-Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,12.0,2026-03-23T03:00:00Z,6.4461,3.395
-Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,12.0,2026-03-23T04:00:00Z,6.4461,3.395
-Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,14.0,2026-03-23T05:00:00Z,6.4461,3.395
-Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,24.0,2026-03-23T06:00:00Z,6.4461,3.395
-Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,36.0,2026-03-23T07:00:00Z,6.4461,3.395
-Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,21.0,2026-03-23T08:00:00Z,6.4461,3.395
-Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,18.0,2026-03-23T09:00:00Z,6.4461,3.395
-Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,23.0,2026-03-23T10:00:00Z,6.4461,3.395
-Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,25.0,2026-03-23T11:00:00Z,6.4461,3.395
+Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,29.6,2026-03-24T01:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,29.6,2026-03-24T02:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,29.6,2026-03-24T03:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,29.2,2026-03-24T04:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,29.1,2026-03-24T05:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,29.8,2026-03-24T06:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,29.7,2026-03-24T08:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,30.8,2026-03-24T09:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,32.1,2026-03-24T10:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,32.1,2026-03-24T11:00:00Z,6.442321082249053,3.427424708820077
+Lagos State,LASWA - Five Cowries Terminal,13843862,temperature,32.3,2026-03-24T12:00:00Z,6.442321082249053,3.427424708820077
 Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,18.0,2026-03-23T13:00:00Z,6.4461,3.395
 Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,21.0,2026-03-23T14:00:00Z,6.4461,3.395
 Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,22.0,2026-03-23T15:00:00Z,6.4461,3.395
@@ -910,18 +894,18 @@ Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,20.0,2026-03-23T18:00:00Z,6
 Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,15.0,2026-03-23T19:00:00Z,6.4461,3.395
 Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,14.0,2026-03-23T20:00:00Z,6.4461,3.395
 Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,13.0,2026-03-23T21:00:00Z,6.4461,3.395
-Lagos State,Mile 2 Interchange,13923457,pm25,11.0,2026-03-23T01:00:00Z,6.4383,3.2634
-Lagos State,Mile 2 Interchange,13923457,pm25,10.0,2026-03-23T02:00:00Z,6.4383,3.2634
-Lagos State,Mile 2 Interchange,13923457,pm25,9.0,2026-03-23T03:00:00Z,6.4383,3.2634
-Lagos State,Mile 2 Interchange,13923457,pm25,11.0,2026-03-23T04:00:00Z,6.4383,3.2634
-Lagos State,Mile 2 Interchange,13923457,pm25,19.0,2026-03-23T05:00:00Z,6.4383,3.2634
-Lagos State,Mile 2 Interchange,13923457,pm25,27.0,2026-03-23T06:00:00Z,6.4383,3.2634
-Lagos State,Mile 2 Interchange,13923457,pm25,20.0,2026-03-23T07:00:00Z,6.4383,3.2634
-Lagos State,Mile 2 Interchange,13923457,pm25,18.0,2026-03-23T08:00:00Z,6.4383,3.2634
-Lagos State,Mile 2 Interchange,13923457,pm25,17.0,2026-03-23T09:00:00Z,6.4383,3.2634
-Lagos State,Mile 2 Interchange,13923457,pm25,17.0,2026-03-23T10:00:00Z,6.4383,3.2634
-Lagos State,Mile 2 Interchange,13923457,pm25,18.0,2026-03-23T11:00:00Z,6.4383,3.2634
-Lagos State,Mile 2 Interchange,13923457,pm25,15.0,2026-03-23T12:00:00Z,6.4383,3.2634
+Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,11.0,2026-03-23T22:00:00Z,6.4461,3.395
+Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,10.0,2026-03-23T23:00:00Z,6.4461,3.395
+Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,12.0,2026-03-24T00:00:00Z,6.4461,3.395
+Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,13.0,2026-03-24T01:00:00Z,6.4461,3.395
+Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,14.0,2026-03-24T02:00:00Z,6.4461,3.395
+Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,12.0,2026-03-24T03:00:00Z,6.4461,3.395
+Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,12.0,2026-03-24T04:00:00Z,6.4461,3.395
+Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,17.0,2026-03-24T05:00:00Z,6.4461,3.395
+Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,26.0,2026-03-24T06:00:00Z,6.4461,3.395
+Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,25.0,2026-03-24T07:00:00Z,6.4461,3.395
+Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,20.0,2026-03-24T08:00:00Z,6.4461,3.395
+Lagos State,MARINA INTERCHANGE STATION,13923456,pm25,17.0,2026-03-24T09:00:00Z,6.4461,3.395
 Lagos State,Mile 2 Interchange,13923457,pm25,15.0,2026-03-23T13:00:00Z,6.4383,3.2634
 Lagos State,Mile 2 Interchange,13923457,pm25,14.0,2026-03-23T14:00:00Z,6.4383,3.2634
 Lagos State,Mile 2 Interchange,13923457,pm25,16.0,2026-03-23T15:00:00Z,6.4383,3.2634
@@ -931,18 +915,18 @@ Lagos State,Mile 2 Interchange,13923457,pm25,15.0,2026-03-23T18:00:00Z,6.4383,3.
 Lagos State,Mile 2 Interchange,13923457,pm25,15.0,2026-03-23T19:00:00Z,6.4383,3.2634
 Lagos State,Mile 2 Interchange,13923457,pm25,12.0,2026-03-23T20:00:00Z,6.4383,3.2634
 Lagos State,Mile 2 Interchange,13923457,pm25,14.0,2026-03-23T21:00:00Z,6.4383,3.2634
-Ogun State,Justrite - Ogolonto,13923470,pm25,23.0,2026-03-23T01:00:00Z,6.6187,3.4757
-Ogun State,Justrite - Ogolonto,13923470,pm25,22.0,2026-03-23T02:00:00Z,6.6187,3.4757
-Ogun State,Justrite - Ogolonto,13923470,pm25,18.0,2026-03-23T03:00:00Z,6.6187,3.4757
-Ogun State,Justrite - Ogolonto,13923470,pm25,27.0,2026-03-23T04:00:00Z,6.6187,3.4757
-Ogun State,Justrite - Ogolonto,13923470,pm25,47.0,2026-03-23T05:00:00Z,6.6187,3.4757
-Ogun State,Justrite - Ogolonto,13923470,pm25,55.0,2026-03-23T06:00:00Z,6.6187,3.4757
-Ogun State,Justrite - Ogolonto,13923470,pm25,46.0,2026-03-23T07:00:00Z,6.6187,3.4757
-Ogun State,Justrite - Ogolonto,13923470,pm25,36.0,2026-03-23T08:00:00Z,6.6187,3.4757
-Ogun State,Justrite - Ogolonto,13923470,pm25,26.0,2026-03-23T09:00:00Z,6.6187,3.4757
-Ogun State,Justrite - Ogolonto,13923470,pm25,19.0,2026-03-23T10:00:00Z,6.6187,3.4757
-Ogun State,Justrite - Ogolonto,13923470,pm25,20.0,2026-03-23T11:00:00Z,6.6187,3.4757
-Ogun State,Justrite - Ogolonto,13923470,pm25,21.0,2026-03-23T12:00:00Z,6.6187,3.4757
+Lagos State,Mile 2 Interchange,13923457,pm25,11.0,2026-03-23T22:00:00Z,6.4383,3.2634
+Lagos State,Mile 2 Interchange,13923457,pm25,9.0,2026-03-23T23:00:00Z,6.4383,3.2634
+Lagos State,Mile 2 Interchange,13923457,pm25,7.0,2026-03-24T00:00:00Z,6.4383,3.2634
+Lagos State,Mile 2 Interchange,13923457,pm25,7.0,2026-03-24T01:00:00Z,6.4383,3.2634
+Lagos State,Mile 2 Interchange,13923457,pm25,8.0,2026-03-24T02:00:00Z,6.4383,3.2634
+Lagos State,Mile 2 Interchange,13923457,pm25,11.0,2026-03-24T03:00:00Z,6.4383,3.2634
+Lagos State,Mile 2 Interchange,13923457,pm25,9.0,2026-03-24T04:00:00Z,6.4383,3.2634
+Lagos State,Mile 2 Interchange,13923457,pm25,18.0,2026-03-24T05:00:00Z,6.4383,3.2634
+Lagos State,Mile 2 Interchange,13923457,pm25,21.0,2026-03-24T06:00:00Z,6.4383,3.2634
+Lagos State,Mile 2 Interchange,13923457,pm25,19.0,2026-03-24T07:00:00Z,6.4383,3.2634
+Lagos State,Mile 2 Interchange,13923457,pm25,21.0,2026-03-24T08:00:00Z,6.4383,3.2634
+Lagos State,Mile 2 Interchange,13923457,pm25,22.0,2026-03-24T09:00:00Z,6.4383,3.2634
 Ogun State,Justrite - Ogolonto,13923470,pm25,29.0,2026-03-23T13:00:00Z,6.6187,3.4757
 Ogun State,Justrite - Ogolonto,13923470,pm25,40.0,2026-03-23T14:00:00Z,6.6187,3.4757
 Ogun State,Justrite - Ogolonto,13923470,pm25,26.0,2026-03-23T15:00:00Z,6.6187,3.4757
@@ -952,18 +936,18 @@ Ogun State,Justrite - Ogolonto,13923470,pm25,29.0,2026-03-23T18:00:00Z,6.6187,3.
 Ogun State,Justrite - Ogolonto,13923470,pm25,46.0,2026-03-23T19:00:00Z,6.6187,3.4757
 Ogun State,Justrite - Ogolonto,13923470,pm25,22.0,2026-03-23T20:00:00Z,6.6187,3.4757
 Ogun State,Justrite - Ogolonto,13923470,pm25,20.0,2026-03-23T21:00:00Z,6.6187,3.4757
-FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,51.4,2026-03-23T01:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,51.1,2026-03-23T02:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,50.2,2026-03-23T03:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,46.7,2026-03-23T04:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,41.2,2026-03-23T05:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,31.0,2026-03-23T06:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,29.5,2026-03-23T07:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,28.2,2026-03-23T08:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,26.8,2026-03-23T09:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,25.7,2026-03-23T10:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,25.7,2026-03-23T11:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,25.8,2026-03-23T12:00:00Z,9.076479,7.398574
+Ogun State,Justrite - Ogolonto,13923470,pm25,29.0,2026-03-23T22:00:00Z,6.6187,3.4757
+Ogun State,Justrite - Ogolonto,13923470,pm25,13.0,2026-03-23T23:00:00Z,6.6187,3.4757
+Ogun State,Justrite - Ogolonto,13923470,pm25,13.0,2026-03-24T00:00:00Z,6.6187,3.4757
+Ogun State,Justrite - Ogolonto,13923470,pm25,14.0,2026-03-24T01:00:00Z,6.6187,3.4757
+Ogun State,Justrite - Ogolonto,13923470,pm25,14.0,2026-03-24T02:00:00Z,6.6187,3.4757
+Ogun State,Justrite - Ogolonto,13923470,pm25,13.0,2026-03-24T03:00:00Z,6.6187,3.4757
+Ogun State,Justrite - Ogolonto,13923470,pm25,27.0,2026-03-24T04:00:00Z,6.6187,3.4757
+Ogun State,Justrite - Ogolonto,13923470,pm25,26.0,2026-03-24T05:00:00Z,6.6187,3.4757
+Ogun State,Justrite - Ogolonto,13923470,pm25,63.0,2026-03-24T06:00:00Z,6.6187,3.4757
+Ogun State,Justrite - Ogolonto,13923470,pm25,40.0,2026-03-24T07:00:00Z,6.6187,3.4757
+Ogun State,Justrite - Ogolonto,13923470,pm25,24.0,2026-03-24T08:00:00Z,6.6187,3.4757
+Ogun State,Justrite - Ogolonto,13923470,pm25,24.0,2026-03-24T09:00:00Z,6.6187,3.4757
 FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,25.5,2026-03-23T13:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,24.2,2026-03-23T14:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,24.1,2026-03-23T15:00:00Z,9.076479,7.398574
@@ -976,18 +960,18 @@ FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,32.8,2026-03-23T21:00:00Z,9.076479,7.
 FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,38.5,2026-03-23T22:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,43.3,2026-03-23T23:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,49.0,2026-03-24T00:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,31.0,2026-03-23T01:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,32.0,2026-03-23T02:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,32.0,2026-03-23T03:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,33.0,2026-03-23T04:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,35.0,2026-03-23T05:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,38.0,2026-03-23T06:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,39.0,2026-03-23T07:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,35.0,2026-03-23T08:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,34.0,2026-03-23T09:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,33.0,2026-03-23T10:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,33.0,2026-03-23T11:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,34.0,2026-03-23T12:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,49.8,2026-03-24T01:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,48.7,2026-03-24T02:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,46.7,2026-03-24T03:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,44.5,2026-03-24T04:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,42.8,2026-03-24T05:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,41.4,2026-03-24T06:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,40.0,2026-03-24T07:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,37.2,2026-03-24T08:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,34.5,2026-03-24T09:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,32.7,2026-03-24T10:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,32.8,2026-03-24T11:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980967,pm25,32.8,2026-03-24T12:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,33.0,2026-03-23T13:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,31.0,2026-03-23T14:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,32.0,2026-03-23T15:00:00Z,9.076479,7.398574
@@ -1000,18 +984,18 @@ FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,30.0,2026-03-23T21:00:00Z
 FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,30.0,2026-03-23T22:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,31.0,2026-03-23T23:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,31.0,2026-03-24T00:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.7,2026-03-23T01:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.5,2026-03-23T02:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.4,2026-03-23T03:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.2,2026-03-23T04:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.1,2026-03-23T05:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.3,2026-03-23T06:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.6,2026-03-23T07:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,33.0,2026-03-23T08:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,33.2,2026-03-23T09:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,33.9,2026-03-23T10:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,33.6,2026-03-23T11:00:00Z,9.076479,7.398574
-FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,33.7,2026-03-23T12:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,32.0,2026-03-24T01:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,33.0,2026-03-24T02:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,34.0,2026-03-24T03:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,35.0,2026-03-24T04:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,36.0,2026-03-24T05:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,36.0,2026-03-24T06:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,36.0,2026-03-24T07:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,35.0,2026-03-24T08:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,34.0,2026-03-24T09:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,33.0,2026-03-24T10:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,33.0,2026-03-24T11:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980968,relativehumidity,34.0,2026-03-24T12:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,34.0,2026-03-23T13:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,35.0,2026-03-23T14:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,34.4,2026-03-23T15:00:00Z,9.076479,7.398574
@@ -1024,18 +1008,18 @@ FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,33.4,2026-03-23T21:00:00Z,9.07
 FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,33.2,2026-03-23T22:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,33.0,2026-03-23T23:00:00Z,9.076479,7.398574
 FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.8,2026-03-24T00:00:00Z,9.076479,7.398574
-Lagos State,Ojuelegba QBC,14374451,pm25,20.3,2026-03-23T01:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374451,pm25,29.5,2026-03-23T02:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374451,pm25,20.0,2026-03-23T03:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374451,pm25,24.7,2026-03-23T04:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374451,pm25,31.7,2026-03-23T05:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374451,pm25,40.6,2026-03-23T06:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374451,pm25,29.1,2026-03-23T07:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374451,pm25,18.2,2026-03-23T08:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374451,pm25,16.3,2026-03-23T09:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374451,pm25,14.1,2026-03-23T10:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374451,pm25,17.9,2026-03-23T11:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374451,pm25,17.6,2026-03-23T12:00:00Z,6.510316056732983,3.3628513749513247
+FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.6,2026-03-24T01:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.4,2026-03-24T02:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.2,2026-03-24T03:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.1,2026-03-24T04:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,31.9,2026-03-24T05:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,31.8,2026-03-24T06:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.3,2026-03-24T07:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,32.9,2026-03-24T08:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,33.1,2026-03-24T09:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,33.3,2026-03-24T10:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,33.8,2026-03-24T11:00:00Z,9.076479,7.398574
+FCT Abuja,"WEP/DH360, Abuja",13980969,temperature,33.6,2026-03-24T12:00:00Z,9.076479,7.398574
 Lagos State,Ojuelegba QBC,14374451,pm25,19.5,2026-03-23T13:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374451,pm25,18.0,2026-03-23T14:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374451,pm25,21.9,2026-03-23T15:00:00Z,6.510316056732983,3.3628513749513247
@@ -1048,18 +1032,18 @@ Lagos State,Ojuelegba QBC,14374451,pm25,25.7,2026-03-23T21:00:00Z,6.510316056732
 Lagos State,Ojuelegba QBC,14374451,pm25,15.7,2026-03-23T22:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374451,pm25,15.6,2026-03-23T23:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374451,pm25,16.7,2026-03-24T00:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374452,relativehumidity,85.0,2026-03-23T01:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374452,relativehumidity,85.0,2026-03-23T02:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374452,relativehumidity,86.0,2026-03-23T03:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374452,relativehumidity,87.0,2026-03-23T04:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374452,relativehumidity,88.0,2026-03-23T05:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374452,relativehumidity,83.0,2026-03-23T06:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374452,relativehumidity,75.0,2026-03-23T07:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374452,relativehumidity,63.0,2026-03-23T08:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374452,relativehumidity,58.0,2026-03-23T09:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374452,relativehumidity,58.0,2026-03-23T10:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374452,relativehumidity,59.0,2026-03-23T11:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374452,relativehumidity,61.0,2026-03-23T12:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374451,pm25,11.9,2026-03-24T01:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374451,pm25,13.5,2026-03-24T02:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374451,pm25,14.7,2026-03-24T03:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374451,pm25,16.1,2026-03-24T04:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374451,pm25,19.3,2026-03-24T05:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374451,pm25,31.5,2026-03-24T06:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374451,pm25,26.4,2026-03-24T07:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374451,pm25,17.0,2026-03-24T08:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374451,pm25,23.7,2026-03-24T09:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374451,pm25,18.6,2026-03-24T10:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374451,pm25,17.3,2026-03-24T11:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374451,pm25,21.2,2026-03-24T12:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374452,relativehumidity,66.0,2026-03-23T13:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374452,relativehumidity,67.0,2026-03-23T14:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374452,relativehumidity,69.0,2026-03-23T15:00:00Z,6.510316056732983,3.3628513749513247
@@ -1072,18 +1056,18 @@ Lagos State,Ojuelegba QBC,14374452,relativehumidity,84.0,2026-03-23T21:00:00Z,6.
 Lagos State,Ojuelegba QBC,14374452,relativehumidity,83.0,2026-03-23T22:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374452,relativehumidity,84.0,2026-03-23T23:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374452,relativehumidity,85.0,2026-03-24T00:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374453,temperature,29.2,2026-03-23T01:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374453,temperature,29.2,2026-03-23T02:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374453,temperature,28.7,2026-03-23T03:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374453,temperature,28.5,2026-03-23T04:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374453,temperature,28.4,2026-03-23T05:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374453,temperature,29.6,2026-03-23T06:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374453,temperature,31.9,2026-03-23T07:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374453,temperature,35.7,2026-03-23T08:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374453,temperature,37.1,2026-03-23T09:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374453,temperature,36.9,2026-03-23T10:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374453,temperature,36.7,2026-03-23T11:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,Ojuelegba QBC,14374453,temperature,36.5,2026-03-23T12:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374452,relativehumidity,85.0,2026-03-24T01:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374452,relativehumidity,84.0,2026-03-24T02:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374452,relativehumidity,85.0,2026-03-24T03:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374452,relativehumidity,84.0,2026-03-24T04:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374452,relativehumidity,85.0,2026-03-24T05:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374452,relativehumidity,83.0,2026-03-24T06:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374452,relativehumidity,78.0,2026-03-24T07:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374452,relativehumidity,72.0,2026-03-24T08:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374452,relativehumidity,69.0,2026-03-24T09:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374452,relativehumidity,61.0,2026-03-24T10:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374452,relativehumidity,63.0,2026-03-24T11:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374452,relativehumidity,61.0,2026-03-24T12:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374453,temperature,34.5,2026-03-23T13:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374453,temperature,34.1,2026-03-23T14:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374453,temperature,33.6,2026-03-23T15:00:00Z,6.510316056732983,3.3628513749513247
@@ -1096,12 +1080,18 @@ Lagos State,Ojuelegba QBC,14374453,temperature,29.7,2026-03-23T21:00:00Z,6.51031
 Lagos State,Ojuelegba QBC,14374453,temperature,29.7,2026-03-23T22:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374453,temperature,29.6,2026-03-23T23:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,Ojuelegba QBC,14374453,temperature,29.4,2026-03-24T00:00:00Z,6.510316056732983,3.3628513749513247
-Lagos State,LAMATA Place,14396503,pm25,24.7,2026-03-23T01:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396503,pm25,27.3,2026-03-23T02:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396503,pm25,31.7,2026-03-23T03:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396503,pm25,40.3,2026-03-23T10:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396503,pm25,39.8,2026-03-23T11:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396503,pm25,38.3,2026-03-23T12:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,Ojuelegba QBC,14374453,temperature,29.4,2026-03-24T01:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374453,temperature,29.2,2026-03-24T02:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374453,temperature,29.3,2026-03-24T03:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374453,temperature,28.9,2026-03-24T04:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374453,temperature,28.8,2026-03-24T05:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374453,temperature,29.8,2026-03-24T06:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374453,temperature,31.1,2026-03-24T07:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374453,temperature,32.7,2026-03-24T08:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374453,temperature,34.1,2026-03-24T09:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374453,temperature,36.2,2026-03-24T10:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374453,temperature,34.7,2026-03-24T11:00:00Z,6.510316056732983,3.3628513749513247
+Lagos State,Ojuelegba QBC,14374453,temperature,34.8,2026-03-24T12:00:00Z,6.510316056732983,3.3628513749513247
 Lagos State,LAMATA Place,14396503,pm25,39.0,2026-03-23T13:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396503,pm25,37.9,2026-03-23T14:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396503,pm25,34.0,2026-03-23T15:00:00Z,6.594365727074691,3.383247245085032
@@ -1114,12 +1104,18 @@ Lagos State,LAMATA Place,14396503,pm25,44.7,2026-03-23T21:00:00Z,6.5943657270746
 Lagos State,LAMATA Place,14396503,pm25,40.5,2026-03-23T22:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396503,pm25,35.0,2026-03-23T23:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396503,pm25,26.5,2026-03-24T00:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396504,relativehumidity,87.0,2026-03-23T01:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396504,relativehumidity,87.0,2026-03-23T02:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396504,relativehumidity,88.0,2026-03-23T03:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396504,relativehumidity,60.0,2026-03-23T10:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396504,relativehumidity,57.0,2026-03-23T11:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396504,relativehumidity,58.0,2026-03-23T12:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396503,pm25,20.8,2026-03-24T01:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396503,pm25,22.7,2026-03-24T02:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396503,pm25,38.7,2026-03-24T03:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396503,pm25,39.5,2026-03-24T04:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396503,pm25,49.9,2026-03-24T05:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396503,pm25,43.6,2026-03-24T06:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396503,pm25,36.4,2026-03-24T07:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396503,pm25,30.7,2026-03-24T08:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396503,pm25,37.4,2026-03-24T09:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396503,pm25,35.9,2026-03-24T10:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396503,pm25,40.2,2026-03-24T11:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396503,pm25,38.4,2026-03-24T12:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396504,relativehumidity,61.0,2026-03-23T13:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396504,relativehumidity,63.0,2026-03-23T14:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396504,relativehumidity,62.0,2026-03-23T15:00:00Z,6.594365727074691,3.383247245085032
@@ -1132,12 +1128,18 @@ Lagos State,LAMATA Place,14396504,relativehumidity,83.0,2026-03-23T21:00:00Z,6.5
 Lagos State,LAMATA Place,14396504,relativehumidity,82.0,2026-03-23T22:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396504,relativehumidity,82.0,2026-03-23T23:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396504,relativehumidity,84.0,2026-03-24T00:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396505,temperature,28.8,2026-03-23T01:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396505,temperature,28.8,2026-03-23T02:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396505,temperature,28.6,2026-03-23T03:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396505,temperature,36.1,2026-03-23T10:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396505,temperature,36.9,2026-03-23T11:00:00Z,6.594365727074691,3.383247245085032
-Lagos State,LAMATA Place,14396505,temperature,36.6,2026-03-23T12:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396504,relativehumidity,85.0,2026-03-24T01:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396504,relativehumidity,85.0,2026-03-24T02:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396504,relativehumidity,86.0,2026-03-24T03:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396504,relativehumidity,87.0,2026-03-24T04:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396504,relativehumidity,87.0,2026-03-24T05:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396504,relativehumidity,86.0,2026-03-24T06:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396504,relativehumidity,80.0,2026-03-24T07:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396504,relativehumidity,74.0,2026-03-24T08:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396504,relativehumidity,69.0,2026-03-24T09:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396504,relativehumidity,63.0,2026-03-24T10:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396504,relativehumidity,61.0,2026-03-24T11:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396504,relativehumidity,58.0,2026-03-24T12:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396505,temperature,35.9,2026-03-23T13:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396505,temperature,35.2,2026-03-23T14:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396505,temperature,35.7,2026-03-23T15:00:00Z,6.594365727074691,3.383247245085032
@@ -1150,3 +1152,15 @@ Lagos State,LAMATA Place,14396505,temperature,30.1,2026-03-23T21:00:00Z,6.594365
 Lagos State,LAMATA Place,14396505,temperature,30.2,2026-03-23T22:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396505,temperature,29.9,2026-03-23T23:00:00Z,6.594365727074691,3.383247245085032
 Lagos State,LAMATA Place,14396505,temperature,29.6,2026-03-24T00:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396505,temperature,29.4,2026-03-24T01:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396505,temperature,29.3,2026-03-24T02:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396505,temperature,29.2,2026-03-24T03:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396505,temperature,29.0,2026-03-24T04:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396505,temperature,28.9,2026-03-24T05:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396505,temperature,29.2,2026-03-24T06:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396505,temperature,30.9,2026-03-24T07:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396505,temperature,32.3,2026-03-24T08:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396505,temperature,34.0,2026-03-24T09:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396505,temperature,35.8,2026-03-24T10:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396505,temperature,35.4,2026-03-24T11:00:00Z,6.594365727074691,3.383247245085032
+Lagos State,LAMATA Place,14396505,temperature,36.3,2026-03-24T12:00:00Z,6.594365727074691,3.383247245085032
