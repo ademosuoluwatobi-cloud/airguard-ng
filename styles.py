@@ -248,8 +248,11 @@ def device_status_bar(st, location_label=""):
 
 
 # ── AUTO CLOUD SYNC ──────────────────────────────────────────
-import subprocess, threading
-from datetime import datetime, timezone, timedelta
+try:
+    import subprocess, threading
+    from datetime import datetime, timezone, timedelta
+except Exception:
+    pass
 
 WAT = timezone(timedelta(hours=1))
 _sync_running = False
