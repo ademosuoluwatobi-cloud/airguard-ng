@@ -1,28 +1,29 @@
-"""
-AirGuard NG — Auto Git Push
-Runs extraction + transformation then pushes updated CSV to GitHub
-so Streamlit Cloud stays live. Run this in a terminal alongside your dashboard.
-"""
-import subprocess, time, os
-from datetime import datetime
+import os
+import time
+import subprocess
+from datetime import datetime, timezone, timedelta
 
-INTERVAL = 300  # push every 5 minutes
+# Nigerian time — WAT is UTC+1
+WAT = timezone(timedelta(hours=1))
 
-def run(cmd):
-    result = subprocess.run(cmd, shell=True, cwd=r"C:\Users\user\Documents\airguard-ng")
-    return result.returncode
+# Files to sync
+DATA_FILES = ["esp32_data.json", "raw_data.csv", "transformed_data.csv", "sensor_locations.csv"]
 
-def push_data():
-    now = datetime.now().strftime("%d %b %Y, %H:%M")
-    print(f"\n[{now}] Running pipeline...")
-    run("python extraction.py")
-    run("python transformation.py")
-    print(f"[{now}] Pushing to GitHub...")
-    run("git add raw_data.csv transformed_data.csv sensor_locations.csv esp32_data.json")
-    run(f'git commit -m "Auto data update {now}" --allow-empty')
-    run("git push")
-    print(f"[{now}] ✓ Done — Streamlit Cloud will update in ~30 seconds")
+def sync_data():
+    try:
+        for file in DATA_FILES:
+            if os.path.exists(file):
+                subprocess.run(["git", "add", file], check=True)
+        
+        timestamp = datetime.now(WAT).strftime("%d %b %Y, %H:%M:%S WAT")
+        subprocess.run(["git", "commit", "-m", f"Data Sync: {timestamp}"], check=True)
+        subprocess.run(["git", "push", "origin", "main"], check=True)
+        print(f"[{timestamp}] Sync Successful.")
+    except Exception:
+        pass
 
-while True:
-    push_data()
-    time.sleep(INTERVAL) 
+if __name__ == "__main__":
+    print("AirGuard NG Cloud Sync Active — Nigerian Time (WAT UTC+1)")
+    while True:
+        sync_data()
+        time.sleep(30)
