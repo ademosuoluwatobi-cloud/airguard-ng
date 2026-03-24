@@ -1,8 +1,6 @@
 """AirGuard NG — Shared Design System"""
 import json, os, pandas as pd
-from datetime import datetime, timezone, timedelta
-WAT = timezone(timedelta(hours=1)), timezone, timedelta
-WAT = timezone(timedelta(hours=1))
+from datetime import datetime
 import streamlit as st
 
 BASE_CSS = """
@@ -342,6 +340,8 @@ def plotly_layout(height=300, legend=True):
 
 def device_status_bar(st, location_label=""):
     device, _ = load_device_data()
+    from datetime import datetime, timezone, timedelta
+    WAT = timezone(timedelta(hours=1))
     now_str = datetime.now(WAT).strftime("%d %b %Y, %H:%M")
     if device is None:
         st.markdown(
