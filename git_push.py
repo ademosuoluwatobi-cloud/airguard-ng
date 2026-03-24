@@ -26,4 +26,4 @@ if __name__ == "__main__":
     print("AirGuard NG Cloud Sync Active — Nigerian Time (WAT UTC+1)")
     while True:
         sync_data()
-        time.sleep(30)
+        time.sleep(0.5)

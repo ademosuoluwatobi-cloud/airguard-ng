@@ -2,6 +2,7 @@ import streamlit as st, pandas as pd, os
 from datetime import datetime
 from streamlit_autorefresh import st_autorefresh
 import sys; sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from styles import render_nav_button
 from styles import *
 
 st.set_page_config(page_title="Alerts Log — AirGuard NG",page_icon="🚨",layout="wide")

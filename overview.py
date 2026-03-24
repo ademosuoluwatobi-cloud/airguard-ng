@@ -10,20 +10,13 @@ from styles import (
     BASE_CSS, RISK_COLORS, RISK_BG, RISK_BORDER, RISK_ADVICE, CONDITION_ADVICE,
     CITY_RENAME, MONITORED_STATES, STATE_COORDS, DEFAULT_LAT, DEFAULT_LON,
     section, badge, plotly_layout, calculate_hrs, load_device_data,
-    classify_gas, gas_is_dangerous, device_status_bar,
+    classify_gas, gas_is_dangerous, device_status_bar, render_nav_button,
     get_user_location, get_temp_hum_for_city,
 )
 
 st.set_page_config(page_title="AirGuard NG",page_icon="🛡️",layout="wide",initial_sidebar_state="expanded")
 st.markdown(BASE_CSS, unsafe_allow_html=True)
-st_autorefresh(interval=4000, key="ov_refresh")
-
-# AUTO SYNC — only runs locally, not on Streamlit Cloud
-try:
-    from styles import start_cloud_sync
-    start_cloud_sync()
-except Exception:
-    pass
+st_autorefresh(interval=10000, key="ov_refresh")
 
 def md(h): st.markdown(h, unsafe_allow_html=True)
 
@@ -132,6 +125,7 @@ elif st.session_state.onboarding_done:
 
     # ── DEVICE BAR ───────────────────────────────────────────
     device_status_bar(st, location_label=user_state or "")
+    render_nav_button(st)
 
     # ── GAS DANGER BANNER ────────────────────────────────────
     if device and gas_is_dangerous(int(device.get("gas_raw",0) or 0)):
