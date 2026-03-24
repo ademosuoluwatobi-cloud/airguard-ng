@@ -5,7 +5,8 @@ import plotly.graph_objects as go
 import folium, json, os
 from streamlit_folium import st_folium
 from streamlit_autorefresh import st_autorefresh
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
+WAT = timezone(timedelta(hours=1))
 from styles import (
     BASE_CSS, RISK_COLORS, RISK_BG, RISK_BORDER, RISK_ADVICE, CONDITION_ADVICE,
     CITY_RENAME, MONITORED_STATES, STATE_COORDS, DEFAULT_LAT, DEFAULT_LON,
@@ -18,9 +19,6 @@ st.set_page_config(page_title="AirGuard NG",page_icon="🛡️",layout="wide",in
 st.markdown(BASE_CSS, unsafe_allow_html=True)
 st_autorefresh(interval=4000, key="ov_refresh")
 
-# AUTO SYNC
-from styles import start_cloud_sync
-start_cloud_sync()
 
 def md(h): st.markdown(h, unsafe_allow_html=True)
 
@@ -92,9 +90,8 @@ elif st.session_state.onboarding_done:
     user_city      = st.session_state.user_city
     user_state_s,user_city_s,user_lat,user_lon,user_loc_label = get_user_location(st.session_state)
     from datetime import datetime, timezone, timedelta
-    WAT = timezone(timedelta(hours=1))
     now_str = datetime.now(WAT).strftime("%d %b %Y, %H:%M")
-    hour    = datetime.now().hour
+    hour    = datetime.now(WAT).hour
     greeting= "Good morning" if hour<12 else "Good afternoon" if hour<17 else "Good evening"
     fn      = user_name.split()[0]
 
