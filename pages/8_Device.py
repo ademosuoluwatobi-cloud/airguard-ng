@@ -253,7 +253,7 @@ border-radius:12px;padding:16px">
     if history and len(history) > 1:
         section(st, "Reading History — Gas & Temperature Trend")
         hdf = pd.DataFrame(history)
-        hdf["timestamp"] = pd.to_datetime(hdf["timestamp"])
+        hdf["timestamp"] = pd.to_datetime(hdf["timestamp"], utc=True, format="mixed", errors="coerce")
         hdf = hdf.sort_values("timestamp")
 
         fig = go.Figure()
