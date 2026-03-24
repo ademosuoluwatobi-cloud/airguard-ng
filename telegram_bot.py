@@ -1,70 +1,110 @@
 """
 AirGuard NG — Telegram Alert Bot
 ===================================
-Sends automatic alerts when:
-  - Any city air quality reaches Unhealthy or worse
-  - Arduino device gas level reaches BAD or worse (raw >= 250)
+Real-time alerts for:
+  • Gas danger from Arduino (fires within 3 seconds of detection)
+  • Air quality threshold breach for any monitored city
+  • Gas-cleared all-clear when danger subsides
 
 Commands:
-  /status  — live city air quality readings
-  /device  — latest hardware sensor reading
-  /help    — show all commands
+  /status  — live city air quality
+  /device  — latest hardware reading
+  /help    — all commands
 
-Run: python telegram_bot.py
+Timing:
+  • Gas danger check  : every 3 s  (matches hardware refresh rate)
+  • AQ threshold check: every 30 s (OpenAQ data updates ~hourly)
+  • Command poll      : every 3 s
+
+Run:
+  python telegram_bot.py
 """
 
-import os, json, time, requests, pandas as pd
-from datetime import datetime
+import os
+import json
+import time
+import requests
+import pandas as pd
+from datetime import datetime, timezone, timedelta
 from styles import load_device_data, classify_gas, gas_is_dangerous, RISK_ADVICE
 from dotenv import load_dotenv
 
-# Load keys
+# ── CONFIG ────────────────────────────────────────────────────
 load_dotenv(dotenv_path="key.env")
 
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHAT_ID   = os.getenv("TELEGRAM_CHAT_ID")
 
 if not BOT_TOKEN or not CHAT_ID:
-    print("ERROR: Telegram credentials missing in key.env")
+    print("ERROR: TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID missing in key.env")
     raise SystemExit(1)
 
-USER_NAME = "Oluwatobi"
-BASE_URL  = f"https://api.telegram.org/bot{BOT_TOKEN}"
-# ... (rest of your logic remains the same)
+USER_NAME  = "Oluwatobi"
+BASE_URL   = f"https://api.telegram.org/bot{BOT_TOKEN}"
+WAT        = timezone(timedelta(hours=1))
 
-POLL_EVERY  = 30   # seconds between threshold checks
-CMD_EVERY   =  3   # seconds between command polls
+# Poll intervals (seconds)
+GAS_CHECK_EVERY = 3    # hardware gas danger — check very frequently
+CMD_POLL_EVERY  = 3    # Telegram command poll
+AQ_CHECK_EVERY  = 30   # OpenAQ city air quality check
 
-RISK_ORDER = ["Good","Moderate","Unhealthy for Sensitive Groups",
-              "Unhealthy","Very Unhealthy","Hazardous"]
+# ── CONSTANTS ────────────────────────────────────────────────
+RISK_ORDER = [
+    "Good", "Moderate", "Unhealthy for Sensitive Groups",
+    "Unhealthy", "Very Unhealthy", "Hazardous",
+]
 RISK_EMOJI = {
-    "Good":"🟢","Moderate":"🟡","Unhealthy for Sensitive Groups":"🟠",
-    "Unhealthy":"🔴","Very Unhealthy":"🟣","Hazardous":"☠️","No Data":"⚫",
+    "Good": "🟢", "Moderate": "🟡",
+    "Unhealthy for Sensitive Groups": "🟠",
+    "Unhealthy": "🔴", "Very Unhealthy": "🟣",
+    "Hazardous": "☠️", "No Data": "⚫",
 }
 STATE_FLAG = {
-    "Lagos State":"🏙","Ogun State":"🌿",
-    "Cross River State":"🌊","FCT Abuja":"🏛",
+    "Lagos State": "🏙", "Ogun State": "🌿",
+    "Cross River State": "🌊", "FCT Abuja": "🏛",
 }
 
-_alerted_cities = set()
-_alerted_gas    = False
-_last_update_id = 0
+# ── ALERT STATE ───────────────────────────────────────────────
+# Track what we've already alerted so we don't spam
+_alerted_cities: set  = set()   # cities currently in Unhealthy+ state
+_gas_alerted:    bool = False    # True while gas danger is active
+_last_update_id: int  = 0
 
 
-# ── TELEGRAM ─────────────────────────────────────────────────
-def send(text: str):
-    try:
-        r = requests.post(
-            f"{BASE_URL}/sendMessage",
-            data={"chat_id": CHAT_ID, "text": text, "parse_mode": "HTML"},
-            timeout=10,
-        )
-        if r.status_code != 200:
-            print(f"  Telegram error {r.status_code}: {r.text[:100]}")
-    except Exception as e:
-        print(f"  Send failed: {e}")
+# ── TELEGRAM HELPERS ─────────────────────────────────────────
+def send(text: str, retries: int = 3) -> bool:
+    """Send a Telegram message. Retries up to `retries` times on failure."""
+    for attempt in range(1, retries + 1):
+        try:
+            r = requests.post(
+                f"{BASE_URL}/sendMessage",
+                data={
+                    "chat_id":    CHAT_ID,
+                    "text":       text,
+                    "parse_mode": "HTML",
+                },
+                timeout=10,
+            )
+            if r.status_code == 200:
+                return True
+            # 429 = rate limited — back off
+            if r.status_code == 429:
+                retry_after = r.json().get("parameters", {}).get("retry_after", 5)
+                print(f"  Rate limited — waiting {retry_after}s")
+                time.sleep(retry_after)
+                continue
+            print(f"  Telegram {r.status_code}: {r.text[:120]}")
+        except requests.exceptions.Timeout:
+            print(f"  Telegram timeout (attempt {attempt}/{retries})")
+        except Exception as e:
+            print(f"  Telegram error: {e}")
+        if attempt < retries:
+            time.sleep(2)
+    return False
 
-def get_updates(offset=0):
+
+def get_updates(offset: int = 0) -> list:
+    """Poll Telegram for new messages."""
     try:
         r = requests.get(
             f"{BASE_URL}/getUpdates",
@@ -76,23 +116,39 @@ def get_updates(offset=0):
         return []
 
 
-# ── DATA ─────────────────────────────────────────────────────
-def load_aq():
-    try:    return pd.read_csv("transformed_data.csv")
-    except: return pd.DataFrame()
+# ── DATA LOADERS ─────────────────────────────────────────────
+def load_aq() -> pd.DataFrame:
+    """Load the latest transformed city-level AQ data."""
+    try:
+        df = pd.read_csv("transformed_data.csv")
+        return df if not df.empty else pd.DataFrame()
+    except Exception:
+        return pd.DataFrame()
 
-def is_worse_or_equal(risk_a, risk_b):
-    a = RISK_ORDER.index(risk_a) if risk_a in RISK_ORDER else -1
-    b = RISK_ORDER.index(risk_b) if risk_b in RISK_ORDER else -1
-    return a >= b
+
+def risk_rank(risk: str) -> int:
+    """Return numeric rank of a risk level (higher = worse)."""
+    try:
+        return RISK_ORDER.index(risk)
+    except ValueError:
+        return -1
+
+
+def is_unhealthy_or_worse(risk: str) -> bool:
+    return risk_rank(risk) >= risk_rank("Unhealthy")
 
 
 # ── MESSAGE BUILDERS ─────────────────────────────────────────
-def msg_status():
-    df = load_aq()
+def msg_status() -> str:
+    df  = load_aq()
+    now = datetime.now(WAT).strftime("%d %b %Y, %H:%M WAT")
     if df.empty:
-        return "⚠️ No air quality data yet. Run extraction.py first."
-    now = datetime.now().strftime("%d %b %Y, %H:%M")
+        return (
+            f"🛡 <b>AirGuard NG — Status</b>\n"
+            f"<i>{now}</i>\n\n"
+            f"⚠️ No sensor data yet.\n"
+            f"Run <code>extraction.py</code> then <code>transformation.py</code> first."
+        )
     lines = [f"🛡 <b>AirGuard NG — Live Status</b>", f"<i>{now}</i>", ""]
     for _, row in df.iterrows():
         city  = row["city"]
@@ -100,159 +156,239 @@ def msg_status():
         flag  = STATE_FLAG.get(city, "📍")
         lines.append(
             f"{flag} <b>{city}</b>\n"
-            f"   {emoji} HRS <b>{row['hrs']}</b> · PM2.5 {round(row['value'],1)} µg/m³\n"
+            f"   {emoji} HRS <b>{row['hrs']}</b> · "
+            f"PM2.5 {round(float(row['value']), 1)} µg/m³\n"
             f"   <i>{row['risk_level']}</i>"
         )
     lines += ["", "Send /device for hardware readings."]
     return "\n".join(lines)
 
-def msg_device():
+
+def msg_device() -> str:
     device, _ = load_device_data()
     if not device:
-        return ("📡 <b>AirGuard Device</b>\n\n"
-                "Not connected. Run <code>serial_reader.py</code> "
-                "and connect your Arduino via USB.")
-    raw  = device.get("gas_raw", 0)
-    ppm  = device.get("gas_ppm", "—")
+        return (
+            "🔩 <b>AirGuard Device</b>\n\n"
+            "Not connected.\n"
+            "Run <code>serial_reader.py</code> and connect your Arduino via USB."
+        )
+    raw  = int(device.get("gas_raw", 0) or 0)
+    ppm  = device.get("gas_ppm",     "—")
     temp = device.get("temperature", "—")
-    hum  = device.get("humidity", "—")
-    risk = device.get("risk_level", "—")
+    hum  = device.get("humidity",    "—")
+    risk = device.get("risk_level",  "—")
+    did  = device.get("device_id",   "airguard-uno-01")
     gl, gc, _, _, gi, _ = classify_gas(raw)
     ts = "—"
-    try: ts = datetime.fromisoformat(device.get("timestamp","")).strftime("%d %b %Y, %H:%M:%S")
-    except: pass
-    return (f"🔩 <b>AirGuard Device — Live Reading</b>\n\n"
-            f"📟 Device: <code>{device.get('device_id','airguard-uno-01')}</code>\n"
-            f"🕐 Time:   {ts}\n\n"
-            f"{gi} Gas PPM:    <b>{ppm}</b> ({gl})\n"
-            f"🌡 Temp:       <b>{temp} °C</b>\n"
-            f"💧 Humidity:   <b>{hum} %</b>\n"
-            f"⚡ Risk level: <b>{risk}</b>")
+    try:
+        ts = datetime.fromisoformat(
+            device.get("timestamp", "")
+        ).strftime("%d %b %Y, %H:%M:%S")
+    except Exception:
+        pass
+    return (
+        f"🔩 <b>AirGuard Device — Live Reading</b>\n\n"
+        f"📟 Device:    <code>{did}</code>\n"
+        f"🕐 Time:      {ts}\n\n"
+        f"{gi} Gas PPM:    <b>{ppm}</b>  ({gl})\n"
+        f"🌡 Temp:       <b>{temp} °C</b>\n"
+        f"💧 Humidity:   <b>{hum} %</b>\n"
+        f"⚡ Risk level: <b>{risk}</b>"
+    )
 
-def alert_aq(city, hrs, risk, pm25):
-    emoji = RISK_EMOJI.get(risk, "🔴")
-    flag  = STATE_FLAG.get(city, "📍")
+
+def alert_aq(city: str, hrs, risk: str, pm25: float) -> str:
+    emoji  = RISK_EMOJI.get(risk, "🔴")
+    flag   = STATE_FLAG.get(city, "📍")
     advice = RISK_ADVICE.get(risk, "")
-    return (f"🚨 <b>Air Quality Alert — {city}</b>\n\n"
-            f"{flag} {emoji} <b>{risk}</b>\n"
-            f"HRS: <b>{hrs}</b> · PM2.5: <b>{pm25} µg/m³</b>\n\n"
-            f"⚕️ {advice}\n\n"
-            f"<i>Open AirGuard NG dashboard for full details.</i>")
+    now    = datetime.now(WAT).strftime("%H:%M WAT")
+    return (
+        f"🚨 <b>Air Quality Alert — {city}</b>\n\n"
+        f"{flag} {emoji} <b>{risk}</b>\n"
+        f"HRS: <b>{hrs}</b> · PM2.5: <b>{pm25} µg/m³</b>\n"
+        f"<i>Detected at {now}</i>\n\n"
+        f"⚕️ {advice}\n\n"
+        f"<i>Open AirGuard NG dashboard for full details.</i>"
+    )
 
-def alert_gas(ppm, raw, risk):
-    return (f"🔥 <b>GAS DANGER ALERT — AirGuard Device</b>\n\n"
-            f"⚡ Gas level:  <b>{ppm} PPM</b> (raw: {raw})\n"
-            f"🚨 Risk level: <b>{risk}</b>\n\n"
-            f"<b>Take immediate action:</b>\n"
-            f"• Open ALL windows and doors now\n"
-            f"• Do NOT use any electrical switches\n"
-            f"• Turn off gas cylinder at the source\n"
-            f"• Evacuate the room immediately\n\n"
-            f"🆘 Lagos Fire Service: <b>01-7944996</b>\n"
-            f"🆘 Emergency:          <b>112</b>\n"
-            f"🆘 NEMA:               <b>0800-CALLNEMA</b>")
 
-def clear_gas_alert(ppm):
-    return (f"✅ <b>Gas Level Cleared — AirGuard Device</b>\n\n"
-            f"Gas concentration has dropped to <b>{ppm} PPM</b> — now safe.\n"
-            f"Ensure area is well ventilated before re-entering.")
+def alert_gas(ppm, raw: int, risk: str) -> str:
+    now = datetime.now(WAT).strftime("%H:%M:%S WAT")
+    return (
+        f"🔥 <b>⚠️ GAS DANGER — AirGuard Device</b>\n\n"
+        f"⚡ Gas level:  <b>{ppm} PPM</b>  (raw: {raw})\n"
+        f"🚨 Risk level: <b>{risk}</b>\n"
+        f"🕐 Detected:   {now}\n\n"
+        f"<b>Take immediate action:</b>\n"
+        f"• Open ALL windows and doors NOW\n"
+        f"• Do NOT use any electrical switches\n"
+        f"• Turn off gas cylinder at the source\n"
+        f"• Evacuate the room immediately\n\n"
+        f"🆘 Lagos Fire Service: <b>01-7944996</b>\n"
+        f"🆘 Nigeria Emergency:  <b>112</b>\n"
+        f"🆘 NEMA:               <b>0800-CALLNEMA</b>"
+    )
+
+
+def alert_gas_cleared(ppm) -> str:
+    now = datetime.now(WAT).strftime("%H:%M:%S WAT")
+    return (
+        f"✅ <b>Gas Level Cleared — AirGuard Device</b>\n\n"
+        f"Gas concentration has dropped to <b>{ppm} PPM</b> — now safe.\n"
+        f"<i>Cleared at {now}</i>\n\n"
+        f"Ensure the area is well ventilated before re-entering.\n"
+        f"Check gas cylinder valve is fully closed."
+    )
 
 
 # ── COMMAND HANDLER ──────────────────────────────────────────
 def handle(text: str):
     cmd = text.strip().lower().split()[0]
     if cmd in ["/start", "/help"]:
-        send(f"👋 Hello {USER_NAME}!\n\n"
-             f"🛡 <b>AirGuard NG Alert Bot</b>\n\n"
-             f"I monitor Nigeria's air quality and your indoor gas sensor "
-             f"and alert you automatically when conditions become dangerous.\n\n"
-             f"<b>Commands:</b>\n"
-             f"/status  — live air quality for all monitored cities\n"
-             f"/device  — latest reading from your hardware sensor\n"
-             f"/help    — show this message\n\n"
-             f"<i>Automatic alerts fire when any city reaches Unhealthy "
-             f"or your device gas level reaches the BAD threshold.</i>")
-    elif cmd == "/status": send(msg_status())
-    elif cmd == "/device": send(msg_device())
-    else: send(f"Unknown command: <code>{text}</code>\nSend /help to see commands.")
+        send(
+            f"👋 Hello {USER_NAME}!\n\n"
+            f"🛡 <b>AirGuard NG Alert Bot</b>\n\n"
+            f"I monitor Nigeria's air quality and your indoor gas sensor "
+            f"and alert you automatically when conditions are dangerous.\n\n"
+            f"<b>Commands:</b>\n"
+            f"/status  — live AQ for all monitored cities\n"
+            f"/device  — latest hardware sensor reading\n"
+            f"/help    — show this message\n\n"
+            f"<b>Automatic alerts:</b>\n"
+            f"• Gas danger → fires within {GAS_CHECK_EVERY}s of detection\n"
+            f"• City AQ breach → checked every {AQ_CHECK_EVERY}s\n"
+            f"• Gas cleared → fires when danger subsides"
+        )
+    elif cmd == "/status":
+        send(msg_status())
+    elif cmd == "/device":
+        send(msg_device())
+    else:
+        send(f"Unknown command: <code>{text}</code>\nSend /help to see commands.")
 
 
-# ── THRESHOLD CHECKER ────────────────────────────────────────
-def check_thresholds():
-    global _alerted_cities, _alerted_gas
+# ── THRESHOLD CHECKERS ────────────────────────────────────────
+def check_gas():
+    """
+    Check hardware gas sensor every GAS_CHECK_EVERY seconds.
+    Fires alert immediately when dangerous, fires all-clear when safe again.
+    """
+    global _gas_alerted
 
-    # Air quality
-    df = load_aq()
-    if not df.empty:
-        for _, row in df.iterrows():
-            city = row["city"]
-            risk = row["risk_level"]
-            if is_worse_or_equal(risk, "Unhealthy"):
-                if city not in _alerted_cities:
-                    _alerted_cities.add(city)
-                    print(f"  [AQ ALERT] {city} → {risk}")
-                    send(alert_aq(city, row["hrs"], risk, round(row["value"],1)))
-                    time.sleep(1)
-            else:
-                _alerted_cities.discard(city)
-
-    # Gas / hardware
     device, _ = load_device_data()
-    if device:
-        raw  = int(device.get("gas_raw", 0) or 0)
-        ppm  = device.get("gas_ppm", 0)
-        risk = device.get("risk_level", "Safe")
-        if gas_is_dangerous(raw):
-            if not _alerted_gas:
-                _alerted_gas = True
-                print(f"  [GAS ALERT] {ppm} PPM — {risk}")
-                send(alert_gas(ppm, raw, risk))
+    if not device:
+        return
+
+    raw  = int(device.get("gas_raw", 0) or 0)
+    ppm  = device.get("gas_ppm",     0)
+    risk = device.get("risk_level",  "Safe")
+
+    if gas_is_dangerous(raw):
+        if not _gas_alerted:
+            _gas_alerted = True
+            ts = datetime.now(WAT).strftime("%H:%M:%S")
+            print(f"  [{ts} WAT] 🔥 GAS ALERT: {ppm} PPM — {risk}")
+            send(alert_gas(ppm, raw, risk))
+    else:
+        if _gas_alerted:
+            _gas_alerted = False
+            ts = datetime.now(WAT).strftime("%H:%M:%S")
+            print(f"  [{ts} WAT] ✅ Gas cleared: {ppm} PPM")
+            send(alert_gas_cleared(ppm))
+
+
+def check_air_quality():
+    """
+    Check city-level AQ from transformed_data.csv every AQ_CHECK_EVERY seconds.
+    Alerts once per city per breach episode; clears when city recovers.
+    """
+    global _alerted_cities
+
+    df = load_aq()
+    if df.empty:
+        return
+
+    for _, row in df.iterrows():
+        city = row["city"]
+        risk = row["risk_level"]
+
+        if is_unhealthy_or_worse(risk):
+            if city not in _alerted_cities:
+                _alerted_cities.add(city)
+                ts = datetime.now(WAT).strftime("%H:%M:%S")
+                print(f"  [{ts} WAT] 🏙 AQ ALERT: {city} → {risk}")
+                send(alert_aq(city, row["hrs"], risk, round(float(row["value"]), 1)))
+                time.sleep(1)   # small gap between back-to-back city alerts
         else:
-            if _alerted_gas:
-                # Gas cleared — send all-clear
-                _alerted_gas = False
-                send(clear_gas_alert(ppm))
+            _alerted_cities.discard(city)
 
 
 # ── MAIN ─────────────────────────────────────────────────────
 def main():
     global _last_update_id
-    print("=" * 55)
+
+    print("=" * 60)
     print("  AirGuard NG — Telegram Alert Bot")
-    print("=" * 55)
-    print(f"  Bot:     @airguardng_alert_bot")
-    print(f"  Chat:    {CHAT_ID} ({USER_NAME})")
-    print(f"  Check every {POLL_EVERY}s")
-    print("=" * 55)
+    print("=" * 60)
+    print(f"  Chat ID  : {CHAT_ID}  ({USER_NAME})")
+    print(f"  Gas check: every {GAS_CHECK_EVERY}s")
+    print(f"  AQ check : every {AQ_CHECK_EVERY}s")
+    print(f"  Cmd poll : every {CMD_POLL_EVERY}s")
+    print("=" * 60)
+    print()
 
-    send(f"🟢 <b>AirGuard NG Bot is online</b>\n\n"
-         f"Hello {USER_NAME}! Monitoring air quality across Nigeria "
-         f"and your indoor sensor.\n\nSend /help to see what I can do.")
-    print("\n  Startup message sent. Monitoring...\n")
+    # Startup message
+    now = datetime.now(WAT).strftime("%d %b %Y, %H:%M WAT")
+    send(
+        f"🟢 <b>AirGuard NG Bot is online</b>\n\n"
+        f"Hello {USER_NAME}! Monitoring Nigeria's air quality and your indoor sensor.\n"
+        f"<i>Started at {now}</i>\n\n"
+        f"Send /help to see available commands."
+    )
+    print("  ✓ Startup message sent. Monitoring...\n")
 
-    last_check = 0
-    last_cmd   = 0
+    last_aq_check  = 0.0
+    last_gas_check = 0.0
+    last_cmd_poll  = 0.0
 
     while True:
-        now = time.time()
+        now_ts = time.time()
 
-        # Poll commands every 3s
-        if now - last_cmd >= CMD_EVERY:
-            last_cmd = now
-            for u in get_updates(offset=_last_update_id + 1):
-                _last_update_id = u["update_id"]
-                msg  = u.get("message", {})
-                text = msg.get("text", "").strip()
-                if text:
-                    ts = datetime.fromtimestamp(msg.get("date",0)).strftime("%H:%M:%S")
-                    print(f"  [{ts}] Received: {text}")
-                    handle(text)
+        # ── Command polling ───────────────────────────────────
+        if now_ts - last_cmd_poll >= CMD_POLL_EVERY:
+            last_cmd_poll = now_ts
+            try:
+                updates = get_updates(offset=_last_update_id + 1)
+                for u in updates:
+                    _last_update_id = u["update_id"]
+                    msg  = u.get("message", {})
+                    text = msg.get("text", "").strip()
+                    if text:
+                        ts_fmt = datetime.fromtimestamp(
+                            msg.get("date", 0)
+                        ).strftime("%H:%M:%S")
+                        print(f"  [{ts_fmt}] ← {text}")
+                        handle(text)
+            except Exception as e:
+                print(f"  Command poll error: {e}")
 
-        # Check thresholds every 30s
-        if now - last_check >= POLL_EVERY:
-            last_check = now
-            print(f"  [{datetime.now().strftime('%H:%M:%S')}] Checking thresholds...")
-            check_thresholds()
+        # ── Gas danger check (high frequency) ────────────────
+        if now_ts - last_gas_check >= GAS_CHECK_EVERY:
+            last_gas_check = now_ts
+            try:
+                check_gas()
+            except Exception as e:
+                print(f"  Gas check error: {e}")
+
+        # ── Air quality check (lower frequency) ──────────────
+        if now_ts - last_aq_check >= AQ_CHECK_EVERY:
+            last_aq_check = now_ts
+            ts = datetime.now(WAT).strftime("%H:%M:%S")
+            print(f"  [{ts} WAT] Checking city AQ thresholds...")
+            try:
+                check_air_quality()
+            except Exception as e:
+                print(f"  AQ check error: {e}")
 
         time.sleep(1)
 
@@ -261,5 +397,6 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n\n  Stopped.")
+        ts = datetime.now(WAT).strftime("%H:%M:%S WAT")
+        print(f"\n  Stopped at {ts}.")
         send("🔴 <b>AirGuard NG Bot has been stopped.</b>")
