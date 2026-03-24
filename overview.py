@@ -16,7 +16,11 @@ from styles import (
 
 st.set_page_config(page_title="AirGuard NG",page_icon="🛡️",layout="wide",initial_sidebar_state="expanded")
 st.markdown(BASE_CSS, unsafe_allow_html=True)
-st_autorefresh(interval=10000, key="ov_refresh")
+st_autorefresh(interval=4000, key="ov_refresh")
+
+# AUTO SYNC
+from styles import start_cloud_sync
+start_cloud_sync()
 
 def md(h): st.markdown(h, unsafe_allow_html=True)
 
